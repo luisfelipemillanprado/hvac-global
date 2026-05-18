@@ -1,0 +1,39 @@
+{
+  "copyright": "Copyright y diseño por \u00A9 {year} Remiux LLC. Todos los derechos reservados.",
+  "contactInformation": {
+    "address": "Houston, Texas, EE. UU.",
+    "phone": "+1 (281) 442-7230",
+    "schedule": "Lun - Sáb (24 horas)",
+    "email": "henrystopnotchair@live.com"
+  },
+  "links": {
+    "quickLinks": "Enlaces Rápidos",
+    "allAboutUs": "Sobre Nosotros",
+    "home": "Inicio",
+    "allAreas": "Todas las Áreas",
+    "ourBlogs": "Nuestros Blogs",
+    "allReviews": "Todas las Reseñas",
+    "ourProcess": "Nuestro Proceso",
+    "specialOffers": "Ofertas Especiales",
+    "ourServices": "Nuestros Servicios",
+    "hvacSystemMaintenance": "Mantenimiento de Sistemas HVAC",
+    "hvacSystemInstallation": "Instalación de Sistemas HVAC",
+    "hvacSystemRepair": "Reparación de Sistemas HVAC",
+    "airQualitySolutions": "Soluciones de Calidad de Aire",
+    "acInstallation": "Instalación de Aire Acondicionado",
+    "breatheEasyBundle": "Paquete Respira Fácil",
+    "coolComfortDeal": "Oferta Confort Fresco"
+  },
+  "highlight": {
+    "quickLinks": "Enlaces Rápidos",
+    "ourServices": "Nuestros Servicios"
+  },
+  "certifiedExperts": {
+    "title": "Expertos HVAC Licenciados y Certificados.",
+    "description": "En Henry's Top Notch A/C & Heating Company, nos enorgullecemos de contar con un equipo de profesionales HVAC altamente capacitados.",
+    "license": {
+      "label": "LICENCIA DE CONTRATISTA:",
+      "number": "TACL B29190"
+    }
+  }
+}

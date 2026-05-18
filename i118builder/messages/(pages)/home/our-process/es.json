@@ -1,0 +1,48 @@
+{
+  "eyebrow": "PROCESO DE RESERVA",
+  "title": "Nuestro proceso de reserva es simple y rápido.",
+  "description": "En Henry’s Top Notch Air Conditioning & Heating Co, nuestro proceso de reserva está diseñado para que comenzar sea fácil y sin estrés. Nos enfocamos en la comodidad, la flexibilidad y la confiabilidad, asegurando que cada paso se sienta fluido. Nuestro objetivo es brindarte una experiencia sencilla para conectarte rápidamente con profesionales HVAC de confianza.",
+  "primaryCta": {
+    "text": "MÁS INFORMACIÓN"
+  },
+  "features": {
+    "energyEfficientSystems": {
+      "title": "Sistemas energéticamente eficientes.",
+      "description": "Los sistemas HVAC de alta eficiencia reducen el consumo de energía mientras mantienen un confort interior estable y constante.",
+      "moreDetails": "Más información"
+    },
+    "expertInstallationRepair": {
+      "title": "Instalación y reparación experta.",
+      "description": "Nuestros técnicos HVAC realizan instalaciones precisas y reparaciones confiables para garantizar un rendimiento óptimo del sistema.",
+      "moreDetails": "Más información"
+    },
+    "comfortForHomesBusinesses": {
+      "title": "Confort para hogares y negocios.",
+      "description": "Las soluciones avanzadas de climatización mantienen cómodos los espacios residenciales y comerciales durante todo el año.",
+      "moreDetails": "Más información"
+    },
+    "personalizedCustomerCare": {
+      "title": "Atención personalizada al cliente.",
+      "description": "Brindamos soluciones HVAC altamente personalizadas con atención inmediata, asegurando tu confort total y plena satisfacción en cada visita.",
+      "moreDetails": "Más información"
+    }
+  },
+  "steps": {
+    "bookYourService": {
+      "title": "Reserva tu servicio.",
+      "description": "Programa tu servicio fácilmente eligiendo una fecha y una hora convenientes que se ajusten a tu disponibilidad."
+    },
+    "weArriveOnTime": {
+      "title": "Llegamos a tiempo.",
+      "description": "Recibe un servicio puntual de técnicos que respetan tu horario y ofrecen soluciones HVAC confiables."
+    },
+    "affordablePricing": {
+      "title": "Precios asequibles.",
+      "description": "Disfruta de precios claros y accesibles sin cargos ocultos, para que tengas total confianza antes de comenzar."
+    },
+    "satisfactionGuaranteed": {
+      "title": "Satisfacción garantizada.",
+      "description": "Tu satisfacción está respaldada por un servicio confiable y resultados consistentes que cumplen tus expectativas."
+    }
+  }
+}

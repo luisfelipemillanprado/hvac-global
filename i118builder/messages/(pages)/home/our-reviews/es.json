@@ -1,0 +1,55 @@
+{
+  "eyebrow": "TESTIMONIOS DE CLIENTES",
+  "title": "Escucha a nuestros clientes satisfechos.",
+  "description": "Valoramos cada experiencia de nuestros clientes y compartimos con orgullo sus comentarios. Lee los testimonios para conocer cómo nuestro equipo mejora el confort, optimiza la eficiencia y ofrece resultados confiables. Con servicio experto, atención al detalle y soporte continuo, brindamos soluciones que generan confianza, satisfacción y tranquilidad a largo plazo.",
+  "primaryCta": {
+    "text": "TODAS LAS RESEÑAS"
+  },
+  "testimonials": {
+    "willBurnett": {
+      "name": "WILL BURNETT.",
+      "position": "Arquitecto, Houston, TX.",
+      "comment": "El equipo de Henry’s Top Notch reemplazó mi condensador y compresor, y quedé muy satisfecho. El Sr. Henry trabajó hasta tarde, instaló una cubierta para las líneas de freón y construyó una base personalizada lo suficientemente alta para ayudar a evitar inundaciones. Aprecio muchísimo todo el tiempo y esfuerzo. ¡Muchas gracias, Sr. Henry y equipo!"
+    },
+    "ginCowan": {
+      "name": "GIN COWAN.",
+      "position": "Propietaria, Houston, TX.",
+      "comment": "Henry’s Top Notch me instaló dos unidades de A/C con hornos nuevos y desde entonces cuento con ellos para el mantenimiento. Protegieron mi hogar con lonas y repararon rápidamente una unidad cuando dejó de funcionar. Su servicio es confiable, eficiente y a un precio justo."
+    },
+    "judyBarbour": {
+      "name": "JUDY BARBOUR.",
+      "position": "Gerente de oficina, Houston, TX.",
+      "comment": "Siempre he llamado al equipo de Henry’s Top Notch para encargarse de todas nuestras necesidades de aire acondicionado y calefacción. A lo largo de los años han sido confiables, profesionales y con precios justos. Los recomendaría sin dudarlo por su servicio constante y de confianza."
+    },
+    "rosieContreras": {
+      "name": "ROSIE CONTRERAS.",
+      "position": "Propietaria, Houston, TX.",
+      "comment": "¡Excelente servicio al cliente! Son muy claros con su trabajo y siempre se toman el tiempo de explicarlo todo en detalle. El equipo es amable, profesional y responde con mucha rapidez. Resuelven todas tus dudas y te hacen sentir segura."
+    },
+    "donnaWhite": {
+      "name": "DONNA WHITE.",
+      "position": "Gerente de instalaciones, Houston, TX.",
+      "comment": "Esta empresa siempre ha realizado una inspección completa de todos los aspectos mecánicos y visibles de los componentes de calefacción y aire acondicionado. Son amables, puntuales y profesionales en cada visita. Los recomiendo ampliamente por su constancia, atención y confiabilidad."
+    },
+    "marvinReyna": {
+      "name": "MARVIN REYNA.",
+      "position": "Propietario de negocio, Houston, TX.",
+      "comment": "Henry ha dado servicio a mi aire acondicionado varias veces y ha llegado rápidamente a ayudarme durante el verano cuando mi unidad dejó de funcionar. Es honesto, confiable y ofrece un gran servicio a un excelente precio. Es mi técnico de confianza y lo recomiendo mucho."
+    },
+    "abbyMarcotte": {
+      "name": "ABBY MARCOTTE.",
+      "position": "Propietaria de negocio, Houston, TX.",
+      "comment": "Servicio de cinco estrellas. Los técnicos fueron muy profesionales y competentes. Trabajaron perfectamente en equipo, encontraron el problema, lo solucionaron rápido y nos dieron consejos útiles para mejorar la eficiencia del A/C. Volveremos a contratarlos para mantenimiento anual y futuros servicios."
+    },
+    "vikkiCruz": {
+      "name": "VIKKI CRUZ.",
+      "position": "Propietaria de negocio, Houston, TX.",
+      "comment": "Siempre confiable y honesto. Servicio rápido y profesional en cada visita. Como propietaria, he visto muchas reparaciones innecesarias y cargos extra que otros contratistas intentan vender. No Henry; él es razonable, transparente y mantiene los costos dentro del presupuesto mientras entrega un trabajo de calidad."
+    },
+    "sarahAlvarez": {
+      "name": "SARAH ALVAREZ.",
+      "position": "Propietaria, Houston, TX.",
+      "comment": "Henry realizó una instalación completa de HVAC en mi hogar. Es profesional, organizado, honesto y confiable. Recomiendo mucho su servicio para cualquier necesidad de HVAC. Todo el proceso fue fluido, eficiente y se completó a tiempo con gran atención al detalle."
+    }
+  }
+}

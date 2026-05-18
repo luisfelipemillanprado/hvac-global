@@ -1,0 +1,26 @@
+{
+  "eyebrow": "POR QUÉ ELEGIRNOS",
+  "title": "Comodidad en la que puedes confiar cada día.",
+  "description": "Elegir nuestra empresa para servicios de calefacción y aire acondicionado significa confort, eficiencia y confiabilidad duradera. Brindamos servicio experto, asesoría honesta y soluciones personalizadas según tus necesidades. Nuestra misión es mantener tu hogar o negocio cómodo, eficiente y funcionando sin interrupciones ni contratiempos inesperados.",
+  "primaryCta": {
+    "text": "MÁS INFORMACIÓN"
+  },
+  "reasons": {
+    "trustedIndustryExperts": {
+      "affirmation": "Expertos confiables de la industria.",
+      "resume": "Nuestro equipo altamente capacitado maneja instalaciones, reparaciones y mantenimiento con precisión, garantizando resultados confiables y duraderos en cada proyecto."
+    },
+    "fastReliableService": {
+      "affirmation": "Servicio rápido y confiable.",
+      "resume": "Respetamos tu tiempo llegando según lo programado y completando cada trabajo con eficiencia, minimizando interrupciones y manteniendo tu sistema funcionando correctamente."
+    },
+    "fairTransparentPricing": {
+      "affirmation": "Precios justos y transparentes.",
+      "resume": "Sin cargos ocultos ni sorpresas. Ofrecemos presupuestos claros desde el inicio para que siempre sepas qué esperar antes de comenzar cualquier trabajo."
+    },
+    "satisfactionYouCanTrust": {
+      "affirmation": "Satisfacción en la que puedes confiar.",
+      "resume": "Tu comodidad es nuestra prioridad. Respaldamos nuestro trabajo y nos aseguramos de que cada servicio cumpla con los más altos estándares de calidad y confiabilidad."
+    }
+  }
+}

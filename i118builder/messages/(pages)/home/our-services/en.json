@@ -1,0 +1,66 @@
+{
+  "eyebrow": "SERVICES WE OFFER",
+  "title": "Access Expert HVAC Services Today.",
+  "description": "At Henry’s Top Notch A/C & Heating, we prioritize efficiency to lower energy costs. Our team eliminates uneven temperatures while enhancing system safety. Trust our expert workmanship and advanced technology for customized comfort and a refreshing, cost-effective indoor environment.",
+  "primaryCta": {
+    "text": "ALL SERVICES"
+  },
+  "services": {
+    "maintenance": {
+      "title": "HVAC System Maintenance.",
+      "description": "Prevent failures and maximize performance with essential annual home maintenance.",
+      "benefits": {
+        "freeEstimate": "Free Estimate.",
+        "fullWarranty": "Full Warranty.",
+        "precisionTuneUp": "Precision Tune-Up.",
+        "safetyInspections": "Safety Inspections.",
+        "efficiencyTesting": "Efficiency Testing."
+      },
+      "secondaryCta": {
+        "text": "BOOK NOW"
+      }
+    },
+    "repair": {
+      "title": "HVAC System Repair.",
+      "description": "Fast, trusted HVAC repairs that restore availability, and consistent performance.",
+      "benefits": {
+        "freeEstimate": "Free Estimate.",
+        "fullWarranty": "Full Warranty.",
+        "serviceGuarantee": "Service Guarantee.",
+        "emergencyService": "Emergency Service.",
+        "upfrontPricing": "Upfront Pricing."
+      },
+      "secondaryCta": {
+        "text": "BOOK NOW"
+      }
+    },
+    "installation": {
+      "title": "HVAC System Installation.",
+      "description": "Precision engineering delivers a seamless standard of luxury home comfort.",
+      "benefits": {
+        "freeEstimate": "Free Estimate.",
+        "fullWarranty": "Full Warranty.",
+        "precisionCapacity": "Precision Capacity.",
+        "energyOptimized": "Energy Optimized.",
+        "certifiedInstall": "Certified Install."
+      },
+      "secondaryCta": {
+        "text": "BOOK NOW"
+      }
+    },
+    "acInstallation": {
+      "title": "AC System Installation.",
+      "description": "Save money and boost cooling performance with precision system A/C installation.",
+      "benefits": {
+        "freeEstimate": "Free Estimate.",
+        "fullWarranty": "Full Warranty.",
+        "energyEfficiency": "Energy Efficiency.",
+        "smartIntegration": "Smart Integration.",
+        "certifiedInstall": "Certified Install."
+      },
+      "secondaryCta": {
+        "text": "BOOK NOW"
+      }
+    }
+  }
+}

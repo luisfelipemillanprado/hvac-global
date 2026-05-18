@@ -1,0 +1,30 @@
+{
+  "name": {
+    "label": "Nombre Completo",
+    "placeholder": "Juan Pérez..."
+  },
+  "email": {
+    "label": "Correo Electrónico",
+    "placeholder": "tu@ejemplo.com"
+  },
+  "phone": {
+    "label": "Número de Teléfono",
+    "placeholder": "+1 (555) 123-4567"
+  },
+  "problemDescription": {
+    "label": "Descripción (400 caracteres)",
+    "placeholder": "Cuéntanos tu situación..."
+  },
+  "primaryCta": "SOLICITAR LLAMADA",
+  "notifications": {
+    "success": {
+      "description": "Su información de contacto fue registrada exitosamente."
+    },
+    "error": {
+      "description": "No se pudo enviar la solicitud. Por favor intente de nuevo más tarde."
+    },
+    "rateLimit": {
+      "description": "Ha alcanzado el límite de envíos. Por favor intente de nuevo en unos minutos."
+    }
+  }
+}

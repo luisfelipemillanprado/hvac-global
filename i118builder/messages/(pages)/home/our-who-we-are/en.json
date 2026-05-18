@@ -1,0 +1,16 @@
+{
+  "eyebrow": "ABOUT COMPANY",
+  "title": "Efficient Heating And Cooling Systems.",
+  "description": "Since 2002, Henry’s Top Notch A/C & Heating has built a reputation for dependable HVAC solutions in Houston. With NATE certification, American Standard dealer status, and over 24 years of experience, we deliver expert installations, repairs, and maintenance backed by warranties and ratings.",
+  "primaryCta": {
+    "text": "LEARN MORE"
+  },
+  "benefits": {
+    "justOnTime": "Just On Time.",
+    "support247": "24-7 Support.",
+    "affordableHvacSolutions": "Affordable HVAC Solutions.",
+    "energyEfficientSystems": "Energy-Efficient Systems.",
+    "expertInstallationRepair": "Expert Installation & Repair.",
+    "comfortForHomesBusinesses": "Comfort for Homes & Businesses."
+  }
+}

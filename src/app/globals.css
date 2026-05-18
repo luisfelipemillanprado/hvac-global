@@ -1,0 +1,218 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Breakpoints — viewport widths (rem) */
+  --breakpoint-*: initial;
+  --breakpoint-m1x: 24.375rem; /* 390px */
+  --breakpoint-m2x: 25.75rem; /* 412px */
+  --breakpoint-m3x: 26.75rem; /* 428px */
+  --breakpoint-m4x: 27.4375rem; /* 439px */
+  --breakpoint-sm: 40rem; /* 640px */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 80rem; /* 1280px */
+  --breakpoint-1xl: 90rem; /* 1440px */
+  --breakpoint-2xl: 96rem; /* 1536px */
+  --breakpoint-3xl: 101.25rem; /* 1620px */
+  --breakpoint-4xl: 104rem; /* 1664px */
+  --breakpoint-5xl: 118.75rem; /* 1900px */
+
+  /* Colors — dashboard OKLCH palette */
+  --color-white: oklch(100% 0 0);
+  --color-shell: oklch(0.9831 0.008 278.64);
+  --color-violet: oklch(0.5234 0.2514 287.89);
+  --color-cornflower: oklch(0.625 0.201 266.34);
+  --color-steel: oklch(0.5561 0.0894 271.11);
+  --color-frost: oklch(0.9588 0.0138 272.69);
+  --color-ink: oklch(0.214 0.0759 284.65);
+  --color-muted: oklch(0.6963 0.0335 283.52);
+  --color-dim: oklch(0.6511 0.0401 281.88);
+  --color-lilac: oklch(0.934 0.0175 282.53);
+  --color-lilac-light: oklch(0.9591 0.0215 294.6);
+  --color-midnight: oklch(0.2342 0.024 264.05);
+  --color-rose: oklch(0.668 0.218 8.5);
+  --color-amber: oklch(0.864 0.174 91.3);
+  --color-forest: oklch(0.628 0.177 132.2);
+  --color-mint: oklch(0.961 0.052 123.5);
+
+  /* Overlay — horizontal gradient on photos */
+  --background-image-overlay: linear-gradient(
+    90deg,
+    oklch(from var(--color-midnight) l c h / 0.92) 0%,
+    oklch(from var(--color-midnight) l c h / 0.62) 48%,
+    oklch(from var(--color-midnight) l c h / 0.18) 100%
+  );
+
+  /* Overlay — bottom-up gradient on photos (e.g. service cards) */
+  --background-image-overlay-bottom: linear-gradient(
+    to top,
+    oklch(from var(--color-midnight) l c h / 0.92) 0%,
+    oklch(from var(--color-midnight) l c h / 0.62) 48%,
+    oklch(from var(--color-midnight) l c h / 0.18) 100%
+  );
+
+  /* Typography — body: mobile · md · lg */
+  --text-body: clamp(0.95625rem, 3.5vw, 0.9875rem);
+  --text-body-md: clamp(1.0125rem, 1.8vw, 1.05rem);
+  --text-body-lg: 1.05rem;
+
+  /* Typography — small: mobile · md · lg */
+  --text-small: clamp(0.75rem, 3.2vw, 0.775rem);
+  --text-small-md: clamp(0.8rem, 1.7vw, 0.8125rem);
+  --text-small-lg: 0.8125rem;
+
+  /* Typography — titles (fluid) */
+  --text-main-title: clamp(2rem, 8vw, 3.75rem);
+  --text-secondary-title: clamp(1.1125rem, 3.5vw, 1.14375rem);
+  --text-tertiary-title: clamp(1rem, 4.2vw, 1.125rem);
+
+  /* Typography — line heights */
+  --leading-main: 0.95;
+  --leading-title: 1.25;
+  --leading-body: 1.625;
+  --leading-small: 1.25;
+
+  /* Animate — animate-* utilities */
+  --animate-slow-pulse: slowPulse 2.7s ease-out infinite;
+  @keyframes slowPulse {
+    0% {
+      transform: scale(0.8);
+      opacity: 1;
+    }
+    70% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  --animate-soft-pulse: softPulse 2.9s ease-in-out infinite;
+  @keyframes softPulse {
+    0% {
+      transform: scale(0.8);
+      opacity: 1;
+    }
+    70% {
+      transform: scale(1.12);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  --animate-float-y: floatY 4s ease-in-out infinite;
+  @keyframes floatY {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+  --animate-tada: tada 1.5s ease-in-out infinite;
+  @keyframes tada {
+    from {
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+    10%,
+    20% {
+      transform: rotate3d(0, 0, 1, -10deg);
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: rotate3d(0, 0, 1, 10deg);
+    }
+    40%,
+    60%,
+    80% {
+      transform: rotate3d(0, 0, 1, -10deg);
+    }
+    to {
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+  }
+  --animate-wiggle: wiggle 0.8s ease-in-out infinite;
+  @keyframes wiggle {
+    from {
+      transform: translateX(0);
+    }
+    30% {
+      transform: translateX(0.075em);
+    }
+    60% {
+      transform: translateX(-0.075em);
+    }
+    75% {
+      transform: translateX(0.025em);
+    }
+    90% {
+      transform: translateX(-0.025em);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+/* Base — smooth scroll and hidden scrollbar */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+    overflow-y: scroll;
+  }
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Layout — centered row flex */
+@utility horizontal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+/* Layout — centered column flex */
+@utility vertical {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/* Shadow — navbar and light elevation */
+@utility shadow-nav {
+  @apply shadow-steel/12 shadow-sm;
+}
+
+/* Shadow — cards and panels */
+@utility shadow-panel {
+  @apply shadow-steel/10 shadow-md;
+}
+
+/* Shadow — booking CTA */
+@utility shadow-cta {
+  @apply shadow-cornflower/25 shadow-lg;
+}
+
+/* Shadow — panel menu mobile */
+@utility shadow-flyout {
+  @apply shadow-violet/22 shadow-xl;
+}
+
+/* Shadow — nav icons and active links */
+@utility shadow-control {
+  @apply shadow-violet/25 shadow-lg;
+}

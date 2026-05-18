@@ -1,0 +1,92 @@
+{
+  "name": "henrys-top-notch",
+  "type": "module",
+  "version": "0.1.0",
+  "author": "Remiux <remiuxsoft@gmail.com>",
+  "homepage": "https://henrys-top-notch.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Remiux/henrys-top-notch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Remiux/henrys-top-notch/issues"
+  },
+  "private": true,
+  "browserslist": [
+    "last 2 chrome versions",
+    "last 2 firefox versions",
+    "last 2 edge versions",
+    "safari >= 14"
+  ],
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "frontend",
+    "henrys-top-notch",
+    "landing-page",
+    "design-system",
+    "ui-components",
+    "responsive",
+    "performance",
+    "accessibility",
+    "web-application",
+    "agency",
+    "startup"
+  ],
+  "scripts": {
+    "dev": "concurrently \"tsx i118builder/index.ts --watch\" \"next dev\"",
+    "build": "tsx i118builder/index.ts && next build",
+    "i18n:build": "tsx i118builder/index.ts",
+    "start": "next start",
+    "lint": "eslint",
+    "prepare": "husky",
+    "type-check": "tsc --noEmit",
+    "i18n-check": "i18n-check --source en --locales messages",
+    "i18n-check-unused": "i18n-check --source en --locales messages --unused src/ --format next-intl"
+  },
+  "dependencies": {
+    "@aws-sdk/client-sesv2": "^3.995.0",
+    "@heroicons/react": "^2.2.0",
+    "@heroui/react": "3.0.0-beta.8",
+    "@heroui/styles": "3.0.0-beta.8",
+    "@icons-pack/react-simple-icons": "^13.8.0",
+    "next": "16.1.6",
+    "next-intl": "^4.9.0",
+    "next-themes": "^0.4.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "sharp": "^0.34.5",
+    "swiper": "^12.0.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
+    "@lingual/i18n-check": "^0.9.3",
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.13.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "concurrently": "^9.2.1",
+    "eslint": "10.0.3",
+    "eslint-config-next": "16.1.6",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "3.7.4",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4.1.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ]
+  }
+}

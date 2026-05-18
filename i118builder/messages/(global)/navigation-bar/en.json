@@ -1,0 +1,13 @@
+{
+  "getStartedButton": { "text": "Get Started" },
+  "links": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "areas": "Areas",
+    "process": "Process",
+    "reviews": "Reviews",
+    "offers": "Offers",
+    "blogs": "Blogs"
+  }
+}

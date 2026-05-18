@@ -1,0 +1,48 @@
+{
+  "eyebrow": "BOOKING PROCESS",
+  "title": "Our Simple And Fast Booking Process.",
+  "description": "At Henry’s Top Notch A/C & Heating, we redefine service booking with effortless elegance and truly unparalleled ease. Every step is curated with exquisite precision for absolute simplicity, connecting you seamlessly with our elite team of prestigious and master HVAC professionals.",
+  "primaryCta": {
+    "text": "LEARN MORE"
+  },
+  "features": {
+    "energyEfficientSystems": {
+      "title": "Energy-Efficient Systems.",
+      "description": "High efficiency HVAC systems reduce energy consumption while maintaining stable, optimal, and consistent indoor comfort levels.",
+      "moreDetails": "Learn more"
+    },
+    "expertInstallationRepair": {
+      "title": "Expert Installation & Repair.",
+      "description": "Our HVAC technicians perform precise installations and reliable repairs, ensuring optimal system performance always consistently.",
+      "moreDetails": "Learn more"
+    },
+    "comfortForHomesBusinesses": {
+      "title": "Comfort For Homes & Businesses.",
+      "description": "Advanced climate control solutions keep residential and commercial spaces perfectly comfortable throughout every season year round.",
+      "moreDetails": "Learn more"
+    },
+    "personalizedCustomerCare": {
+      "title": "Personalized Customer Care.",
+      "description": "Delivering highly tailored HVAC solutions with prompt attention, ensuring your complete comfort and total satisfaction every single time.",
+      "moreDetails": "Learn more"
+    }
+  },
+  "steps": {
+    "bookYourService": {
+      "title": "Book Your Service.",
+      "description": "Easily book your service by selecting a convenient date and time that fits your schedule perfectly without any unnecessary delays."
+    },
+    "weArriveOnTime": {
+      "title": "We Arrive On Time.",
+      "description": "Receive punctual service from technicians who respect your schedule and deliver dependable HVAC solutions professionally."
+    },
+    "affordablePricing": {
+      "title": "Affordable Pricing.",
+      "description": "Enjoy transparent and affordable pricing with no hidden fees, giving you total confidence before our expert service begins."
+    },
+    "satisfactionGuaranteed": {
+      "title": "Satisfaction Guaranteed.",
+      "description": "Your satisfaction is guaranteed through reliable service and consistent results that meet your expectations without any hassle."
+    }
+  }
+}

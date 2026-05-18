@@ -1,0 +1,66 @@
+{
+  "eyebrow": "SERVICIOS QUE OFRECEMOS",
+  "title": "Accede hoy a servicios HVAC expertos.",
+  "description": "Explora nuestra gama completa de servicios HVAC diseñados para cubrir tus necesidades de confort durante todo el año. Nuestro equipo experimentado ofrece soluciones confiables de calefacción y aire acondicionado, enfocadas en la eficiencia, el rendimiento y los resultados duraderos para que tu hogar o negocio se mantenga cómodo, seguro y funcionando sin problemas en cada temporada.",
+  "primaryCta": {
+    "text": "TODOS LOS SERVICIOS"
+  },
+  "services": {
+    "maintenance": {
+      "title": "Mantenimiento de sistemas HVAC.",
+      "description": "Mantén tu sistema HVAC eficiente con un mantenimiento experto que reduce costos de energía y ayuda a prevenir averías.",
+      "benefits": {
+        "freeEstimate": "Estimado gratis.",
+        "allWarranty": "Garantía incluida.",
+        "seasonalTuneUp": "Ajuste de temporada.",
+        "filterChange": "Cambio de filtro.",
+        "energySavings": "Ahorro de energía."
+      },
+      "secondaryCta": {
+        "text": "RESERVAR AHORA"
+      }
+    },
+    "repair": {
+      "title": "Reparación de sistemas HVAC.",
+      "description": "Nuestros servicios de reparación HVAC resuelven problemas rápidamente, restauran la confiabilidad y garantizan un rendimiento constante.",
+      "benefits": {
+        "freeEstimate": "Estimado gratis.",
+        "allWarranty": "Garantía incluida.",
+        "sameDayRepair": "Reparación el mismo día.",
+        "emergencyService": "Servicio de emergencia.",
+        "quickDiagnosis": "Diagnóstico rápido."
+      },
+      "secondaryCta": {
+        "text": "RESERVAR AHORA"
+      }
+    },
+    "installation": {
+      "title": "Instalación de sistemas HVAC.",
+      "description": "Transforma tu comodidad con servicios de instalación HVAC pensados para el rendimiento, la confiabilidad y la durabilidad a largo plazo.",
+      "benefits": {
+        "freeEstimate": "Estimado gratis.",
+        "allWarranty": "Garantía incluida.",
+        "properSizing": "Dimensionamiento correcto.",
+        "efficientUnits": "Unidades eficientes.",
+        "expertInstall": "Instalación experta."
+      },
+      "secondaryCta": {
+        "text": "RESERVAR AHORA"
+      }
+    },
+    "acInstallation": {
+      "title": "Instalación de sistemas de aire acondicionado.",
+      "description": "Obtén una instalación de aire acondicionado de alta calidad que maximiza la eficiencia, reduce costos de energía y brinda confort confiable todos los días.",
+      "benefits": {
+        "freeEstimate": "Estimado gratis.",
+        "allWarranty": "Garantía incluida.",
+        "highEfficiency": "Alta eficiencia.",
+        "smartSetup": "Configuración inteligente.",
+        "betterAirflow": "Mejor flujo de aire."
+      },
+      "secondaryCta": {
+        "text": "RESERVAR AHORA"
+      }
+    }
+  }
+}

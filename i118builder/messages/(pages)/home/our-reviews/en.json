@@ -1,0 +1,55 @@
+{
+  "eyebrow": "CUSTOMER TESTIMONIALS",
+  "title": "Hear From Our Happy Customers.",
+  "description": "We appreciate our clients and share their success stories. Learn why local families choose us for reliable service. Primarily through honest communication and precision, we achieve excellence. Our mission is to provide a seamless experience. Discover how we create comfort through dedication!",
+  "primaryCta": {
+    "text": "ALL REVIEWS"
+  },
+  "testimonials": {
+    "willBurnett": {
+      "name": "WILL BURNETT.",
+      "position": "Architect, Houston, TX.",
+      "comment": "The Henry’s Top Notch team replaced my condenser/compressor. I am very satisfied. Mr. Henry worked late, installed a cover for the Freon lines, and built a custom slab high enough to prevent flooding. I truly appreciate all the time and effort. Thank you so much, Mr. Henry and team! Great!"
+    },
+    "ginCowan": {
+      "name": "GIN COWAN.",
+      "position": "Homeowner, Houston, TX.",
+      "comment": "Henry’s Top Notch team installed 2 A/C units with new furnaces, and I have relied on them for maintenance ever since. They do a thorough job, protected my home with tarps, and quickly they repaired a failed unit when it stopped working. Their service is reliable, efficient, and fairly priced."
+    },
+    "judyBarbour": {
+      "name": "JUDY BARBOUR.",
+      "position": "Office Manager, Houston, TX.",
+      "comment": "I have always called the Henry’s Top Notch team to handle absolutely all our air conditioning and heating needs. Over the years, they have been reliable, professional, and fairly priced. I would recommend them to anyone without hesitation for always excellent, dependable service."
+    },
+    "rosieContreras": {
+      "name": "ROSIE CONTRERAS.",
+      "position": "Homeowner, Houston, TX.",
+      "comment": "Awesome customer service! They are very clear about their work and consistently take the time to explain everything in detail. The team is very friendly, professional, and incredibly quick to respond. They make sure to answer any questions you may have and leave you feeling very confident."
+    },
+    "donnaWhite": {
+      "name": "DONNA WHITE.",
+      "position": "Facility Manager, Houston, TX.",
+      "comment": "This company has always provided a thorough inspection of all mechanical and visible aspects of both heating and AC components. They’re always so friendly, punctual, and professional during every visit. I would highly recommend them for their consistent service, attention, and reliability."
+    },
+    "marvinReyna": {
+      "name": "MARVIN REYNA.",
+      "position": "Business Owner, Houston, TX.",
+      "comment": "Henry has serviced my AC multiple times and has also been there quickly to help me out in the hot summer when my unit stopped working. He is always honest, reliable and provides great service at a great value. He is my go to AC guy and I highly recommend him to everyone I know."
+    },
+    "abbyMarcotte": {
+      "name": "ABBY MARCOTTE.",
+      "position": "Business Owner, Houston, TX.",
+      "comment": "Five-star service. The technicians were highly professional and competent. They worked perfectly as a team, they found the problem, fixed it quickly, and gave us helpful tips to improve our AC’s efficiency. We’ll be hiring them for all annual maintenance and future A/C services."
+    },
+    "vikkiCruz": {
+      "name": "VIKKI CRUZ.",
+      "position": "Business Owner, Houston, TX.",
+      "comment": "Always reliable and honest. Fast, professional service every time. As a female homeowner, I have seen many unnecessary repairs and extra service charges that contractors often try to sell. Not Henry; he is reasonable, transparent, and keeps costs within budget while delivering."
+    },
+    "sarahAlvarez": {
+      "name": "SARAH ALVAREZ.",
+      "position": "Homeowner, Houston, TX.",
+      "comment": "Henry did a complete install for my HVAC system. He is professional, organized, honest, and reliable. I highly recommend his service for any HVAC needs. The entire process was smooth, efficient, and completed on time with careful attention to every detail throughout the entire job."
+    }
+  }
+}

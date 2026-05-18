@@ -1,0 +1,26 @@
+{
+  "eyebrow": "WHY CHOOSE US",
+  "title": "Comfort You Can Trust Every Day.",
+  "description": "Appointing Henry’s Top Notch A/C & Heating ensures peak efficiency to decrease energy bills. Our specialists resolve airflow issues while prioritizing maximum safety. Rely on our superior craftsmanship and innovative tech for personalized luxury in a fresh, low-cost environment.",
+  "primaryCta": {
+    "text": "LEARN MORE"
+  },
+  "reasons": {
+    "trustedIndustryExperts": {
+      "affirmation": "Certified Industry Experts.",
+      "resume": "Our elite technicians bring specialized mastery to every installation, repair, and maintenance task, delivering precision-driven results that extend your system's lifespan while ensuring peak performance and total year-round mechanical reliability."
+    },
+    "fastReliableService": {
+      "affirmation": "Punctual & Efficient Service.",
+      "resume": "We value your schedule. Our team arrives on time and works diligently to restore your comfort quickly, minimizing downtime with seamless, professional execution and a commitment to prompt, dependable service."
+    },
+    "fairTransparentPricing": {
+      "affirmation": "Honest & Upfront Pricing.",
+      "resume": "No hidden fees or unexpected costs. We provide detailed, transparent estimates so you can make informed decisions with total confidence before any technical work begins on your vital HVAC equipment."
+    },
+    "satisfactionYouCanTrust": {
+      "affirmation": "Guaranteed Peace of Mind.",
+      "resume": "Your comfort is our ultimate mission. We back every project with a quality guarantee, ensuring our workmanship meets the highest standards of excellence and integrity for absolute peace of mind."
+    }
+  }
+}

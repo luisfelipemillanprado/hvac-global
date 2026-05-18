@@ -1,0 +1,167 @@
+---
+description: Mandatory team standards (ES/EN) — read before any change | Regla obligatoria del equipo — leer antes de cualquier cambio
+alwaysApply: true
+---
+
+# Team workflow · Estilo de trabajo del equipo
+
+|               |                                        |
+| ------------- | -------------------------------------- |
+| **Project**   | Henry's Top Notch — HVAC dashboard     |
+| **Rule file** | `.cursor/rules/team-workflow.mdc`      |
+| **Languages** | Español + English (both apply equally) |
+
+---
+
+## 0. AI — read first · IA — leer primero
+
+|        |                                                                                                                                                                                                                                                                                                          |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **EN** | Before **any** change in this repo (code, refactor, components, data, styles, rules), the AI **must** read and follow this file. Verify every section below. Do not introduce patterns that break these rules. If the user request conflicts with this guide, explain it and align **before** editing.   |
+| **ES** | Antes de **cualquier** cambio en este repo (código, refactor, componentes, data, estilos, reglas), la IA **debe** leer y aplicar este archivo. Comprobar todas las secciones. No introducir patrones que rompan estas reglas. Si lo pedido entra en conflicto, explicarlo y alinear **antes** de editar. |
+
+**Checklist**
+
+- [ ] Read `.cursor/rules/team-workflow.mdc`
+- [ ] No hardcoded site copy in components
+- [ ] Colors / overlay / type only via `@theme` in `globals.css`; components use `bg-*`, `text-*`, `ring-*` from tokens
+- [ ] Shadows only via `@utility` in `globals.css` (`shadow-nav`, `shadow-panel`, …) — not `--shadow-*` in `@theme`, not long `box-shadow` in JSX
+- [ ] Links use `text-body md:text-body-md lg:text-body-lg`; labels use `text-small md:… lg:…`
+- [ ] Atomic design respected
+- [ ] No unnecessary abstractions
+- [ ] DOM: no extra wrappers only for `ref` / layout unless required (see §9)
+- [ ] Layout: positioned containing block clear before `fixed` / portal / Context (see §9)
+
+---
+
+## 1. Clean code · Código directo
+
+|        |                                                                                                                                                                                                                                                                                                                                                                        |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **EN** | Keep components readable. No helpers, intermediate variables, or props used only once unless they add real clarity. Put Tailwind classes and `aria-label` directly in JSX (`className`, `clsx`). Never store Tailwind classes, `image sizes`, or technical config in data files. Avoid legacy bloat (mega-components, useless `variant`/`theme`, `className` in data). |
+| **ES** | Código legible en el componente. Sin helpers, variables intermedias ni props de un solo uso sin claridad real. Clases Tailwind y `aria-label` directos en el JSX (`className`, `clsx`). No guardar clases Tailwind, `image sizes` ni config técnica en data. Evitar herencias infladas (mega-componentes, `variant`/`theme` innecesarios, `className` en data).        |
+
+---
+
+## 2. Atomic design · Diseño atómico
+
+|        |                                                                                                                                                    |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **EN** | Follow **atoms → molecules → organisms** so one file does not do everything. Split when a component has too many responsibilities.                 |
+| **ES** | Respetar **atoms → molecules → organisms** para no sobrecargar un solo archivo. Dividir cuando un componente acumule demasiadas responsabilidades. |
+
+| Level · Nivel | Path · Ruta                       | Role · Rol                                  | Examples · Ejemplos                                       |
+| ------------- | --------------------------------- | ------------------------------------------- | --------------------------------------------------------- |
+| Atom          | `common/*/components/atoms`       | Single responsibility · Una responsabilidad | `AvatarStack`, `ActionLink`, `ActionButton`, `NavbarLink` |
+| Molecule      | `features/*/components/molecules` | Combines atoms · Combina atoms              | `FeaturedService`, `LocationCard`                         |
+| Organism      | `features/*/components/organisms` | Layout sections · Secciones del layout      | `HeroPanel`, `DashboardLayout`                            |
+
+---
+
+## 3. Data vs UI · Datos vs UI
+
+|        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **EN** | **Business content & config** → `src/utils/data/static/pages/` (`homeAssets`). **Styles, layout, icons, structure** → components in `common/` or `features/`. **No component** (atom, molecule, or organism) may hardcode site text: labels, titles, descriptions, placeholders, `aria-label`, `alt`, CTAs, etc. All copy comes from `homeAssets` via props. Organisms (or top layout) import data and pass `copy` / `config` down.                               |
+| **ES** | **Contenido y config de negocio** → `src/utils/data/static/pages/` (`homeAssets`). **Estilos, layout, iconos y estructura** → componentes en `common/` o `features/`. **Ningún componente** (atom, molecule u organism) puede hardcodear texto del sitio: labels, títulos, descripciones, placeholders, `aria-label`, `alt`, CTAs, etc. Todo sale de `homeAssets` por props. Los organisms (o layout superior) importan y reparten `copy` / `config` hacia abajo. |
+
+---
+
+## 4. Folders · Carpetas
+
+| Path                 | EN                                           | ES                                           |
+| -------------------- | -------------------------------------------- | -------------------------------------------- |
+| `src/common/`        | Reusable HVAC dashboard UI pieces            | Componentes reutilizables del dashboard HVAC |
+| `src/features/home/` | Home-specific composition (atomic structure) | Composición de la home (estructura atómica)  |
+
+---
+
+## 5. Call actions · Acciones
+
+| Component      | EN                                                    | ES                                                |
+| -------------- | ----------------------------------------------------- | ------------------------------------------------- |
+| `ActionLink`   | Link actions with `href` — variants `text`, `booking` | Acciones con `href` — variantes `text`, `booking` |
+| `ActionButton` | Native button (no link) — `icon` + `ariaLabel`        | Botón nativo (sin link) — `icon` + `ariaLabel`    |
+
+|        |                                                                                                                                                                                                                     |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **EN** | **Links** (`ActionLink`, `NavbarLink`, `<a>`) → `text-body md:text-body-md lg:text-body-lg`. **Labels / eyebrows / meta** → `text-small md:text-small-md lg:text-small-lg`. Do not mix link scale with label scale. |
+| **ES** | **Enlaces** → `text-body md:text-body-md lg:text-body-lg`. **Labels / eyebrows / meta** → `text-small md:text-small-md lg:text-small-lg`. No mezclar escala de enlaces con la de labels.                            |
+
+---
+
+## 6. Design tokens · Tokens en `globals.css`
+
+All tokens live in `src/app/globals.css` (`@theme` + `@utility`). New values go there first — never arbitrary colors or shadows in components.
+
+### 6.1 Colors · Colores
+
+|        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **EN** | Name `--color-*` after the **color** (`white`, `violet`, `rose`, `midnight`), not UI roles (`primary`, `badge`, `accent`). If a name collides with Tailwind auto-utilities (e.g. `shadow-rose` vs pink badge), pick another **color name** or a clear variant — do not reuse a color token name for unrelated semantics. Use `bg-white`, `text-ink`, `bg-violet`, etc. — all must map to `@theme` tokens. **Forbidden in components:** `#hex`, `rgb`/`rgba`, `bg-[#…]`, raw Tailwind palette (`bg-gray-500`) unless added to `@theme` first. |
+| **ES** | Nombrar `--color-*` por el **color** (`white`, `violet`, `rose`, `midnight`), no por rol de UI (`primary`, `badge`, `accent`). Si choca con utilidades auto de Tailwind, otro nombre de color o variante clara. Usar `bg-white`, `text-ink`, etc. desde `@theme`. **Prohibido en componentes:** `#hex`, `rgb`/`rgba`, `bg-[#…]`, paleta Tailwind suelta sin token.                                                                                                                                                                           |
+
+**Palette · Paleta:** `white`, `shell`, `violet`, `cornflower`, `steel`, `frost`, `ink`, `muted`, `dim`, `lilac`, `lilac-light`, `midnight`, `rose`, `amber`, `forest`, `mint`.
+
+### 6.2 Shadows · Sombras
+
+|        |                                                                                                                                                                                                                                                                                                                                                   |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **EN** | Shadows are **`@utility` classes** (Tailwind size + token color via `@apply`), **not** `--shadow-*` in `@theme`. Name by **UI surface type**, not by color alone. Do **not** use a utility name identical to `--color-*` alone (Tailwind may treat `shadow-{color}` as shadow **color** only — e.g. pink `shadow-rose` bug). Use the table below. |
+| **ES** | Sombras como **`@utility`** (`@apply` con tamaño Tailwind + color del token), **no** `--shadow-*` en `@theme`. Nombrar por **tipo de superficie**, no solo por color. No usar utilidad con el mismo nombre que un `--color-*` aislado. Usar la tabla.                                                                                             |
+
+| Utility · Utilidad | Use · Uso                                      |
+| ------------------ | ---------------------------------------------- |
+| `shadow-nav`       | Navbar, light elevation on thumbnails/badges   |
+| `shadow-panel`     | Cards, hero block, section panels              |
+| `shadow-cta`       | Booking / primary CTA (`ActionLink` booking)   |
+| `shadow-flyout`    | Mobile menu dropdown panel                     |
+| `shadow-control`   | Violet nav icons, menu button, active nav link |
+
+### 6.3 Typography · Tipografía
+
+|        |                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **EN** | `--text-*` and `--leading-*` in `@theme`. Titles: `DashboardTitle` + `text-main-title` / `text-secondary-title` / `text-tertiary-title` + `leading-main` / `leading-title`. Body chain: `text-body md:text-body-md lg:text-body-lg` + `leading-body`. Small chain: `text-small md:text-small-md lg:text-small-lg` + `leading-small`. **Forbidden:** `text-[…]`, redefining Tailwind `text-sm`/`text-lg` in `@theme`. |
+| **ES** | `--text-*` y `--leading-*` en `@theme`. Títulos: `DashboardTitle` + tokens de título. Body: `text-body md:text-body-md lg:text-body-lg`. Small: `text-small md:text-small-md lg:text-small-lg`. **Prohibido:** `text-[…]`, redefinir `text-sm`/`text-lg` de Tailwind en `@theme`.                                                                                                                                    |
+
+### 6.4 Image overlay · Overlay de imagen
+
+|        |                                                                                                                                                                       |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **EN** | Single token: `bg-overlay` (`--background-image-overlay`), built from `--color-midnight`. Use on photos via `VisualImage` `overlayClassName` or a `bg-overlay` layer. |
+| **ES** | Un solo token: `bg-overlay`, derivado de `--color-midnight`. En fotos vía `VisualImage` o capa `bg-overlay`.                                                          |
+
+---
+
+## 7. Layout
+
+|        |                                                                                  |
+| ------ | -------------------------------------------------------------------------------- |
+| **EN** | Prefer `grid` and `gap` over `padding` to separate blocks when possible.         |
+| **ES** | Preferir `grid` y `gap` sobre `padding` para separar bloques cuando sea posible. |
+
+---
+
+## 8. DOM & layout discipline · DOM y layout sin inventiva
+
+|        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **EN** | **No invented structure.** Do not add wrapper `motion.div` / `span` **only** to attach `ref` or `className` when a native element (`button`, `input`, Next `Link`) can take `ref` and classes directly. Do **not** add `createPortal`, React `Context` providers, or split components (Provider / Trigger / Panel) unless the **current** DOM in this repo cannot achieve the result with normal composition. Before overlays / dropdowns / width alignment: identify the **positioned containing block** (`fixed`, `relative`, …). Prefer **`absolute` + `inset-x-0`** under the **same** positioned ancestor (e.g. dashboard `nav` + `NavbarMobileMenu`) instead of a second `fixed` layer with duplicated `calc(100% - …)` width. When adding behavior, **match existing files** in this repo (e.g. `NavbarLink.tsx`, `ActionLink.tsx`); do not paste patterns from unrelated codebases. |
+| **ES** | **Sin estructura inventada.** No añadir envoltorios **solo** para `ref` o `className` si el elemento nativo admite `ref` y clases. **No** `createPortal`, `Context` ni Provider/Trigger/Panel salvo necesidad real. Identificar el **bloque de posicionamiento** antes de overlays. Preferir **`absolute` + `inset-x-0`** bajo el mismo ancestro (`nav` + `NavbarMobileMenu`). Alinear con archivos existentes (`NavbarLink.tsx`, `ActionLink.tsx`).                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+
+---
+
+## Quick reference · Referencia rápida
+
+| Topic · Tema                | Do · Hacer                                                                    | Don't · Evitar                                                                     |
+| --------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Copy · Texto                | `homeAssets` → props                                                          | Hardcode in JSX                                                                    |
+| Colors · Colores            | `@theme` tokens (`bg-white`, `text-ink`, `bg-violet`, …)                      | `#hex`, `rgb`, `bg-[#…]`, role names that clash with Tailwind (`accent` for pink)  |
+| Shadows · Sombras           | `shadow-nav`, `shadow-panel`, `shadow-cta`, `shadow-flyout`, `shadow-control` | `--shadow-*` in `@theme`, raw `box-shadow`, `shadow-{color}` expecting a composite |
+| Typography · Tipografía     | `text-body md:… lg:…` / `text-small md:…` / `DashboardTitle`                  | `text-[…]`, links on `text-small`                                                  |
+| Overlay · Overlay           | `bg-overlay`                                                                  | Inline gradients in JSX                                                            |
+| Structure · Estructura      | atoms / molecules / organisms                                                 | One overloaded component                                                           |
+| Styling · Estilo            | Tailwind in JSX                                                               | Classes in data files                                                              |
+| Actions                     | `ActionLink` / `ActionButton`                                                 | One component for both                                                             |
+| DOM / layout · DOM / layout | `ref` on `button`/`Link`; `absolute` under same `nav`                         | Wrappers only for `ref`; duplicate `fixed` + `calc`; Portal/Context (§8)           |

@@ -1,0 +1,32 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "always"
+  },
+  "prettier.requireConfig": true,
+  "eslint.format.enable": false,
+  "files.eol": "\n",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "tailwindCSS.experimental.configFile": null,
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Use conventional commit format: type(scope): :gitmoji: description"
+    },
+    { "text": "Use imperative mood: 'Add feature' not 'Added feature'" },
+    { "text": "Keep subject line under 50 characters" },
+    {
+      "text": "Use types: feat, fix, docs, style, refactor, perf, test, chore, ci"
+    },
+    { "text": "Include scope when relevant (e.g., api, ui, auth)" },
+    {
+      "text": "Use always a gitmoji defined in https://gitmoji.dev/ after type(scope): and before description"
+    },
+    { "text": "Reference issue numbers with # prefix" }
+  ],
+  "conventionalCommits.scopes": ["linter"],
+  "cSpell.words": []
+}

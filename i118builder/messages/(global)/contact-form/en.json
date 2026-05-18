@@ -1,0 +1,30 @@
+{
+  "name": {
+    "label": "Full Name",
+    "placeholder": "John Dohe..."
+  },
+  "email": {
+    "label": "Email Address",
+    "placeholder": "you@example.com"
+  },
+  "phone": {
+    "label": "Phone Number",
+    "placeholder": "+1 (555) 123-4567"
+  },
+  "problemDescription": {
+    "label": "Description (400 characters)",
+    "placeholder": "Tell us your situation..."
+  },
+  "primaryCta": "LET’S TALK",
+  "notifications": {
+    "success": {
+      "description": "Your contact information was successfully registered."
+    },
+    "error": {
+      "description": "The request could not be submitted. Please try again later."
+    },
+    "rateLimit": {
+      "description": "You have reached the submission limit. Please try again in a few minutes."
+    }
+  }
+}
