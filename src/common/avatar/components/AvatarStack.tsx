@@ -11,21 +11,13 @@ import Image from 'next/image'
  */
 export const AvatarStack = ({ avatars, ariaLabel }: AvatarStackProps) => {
   return (
-    <div className={'flex -space-x-2'} aria-label={ariaLabel}>
+    <div className="flex -space-x-2" aria-label={ariaLabel}>
       {avatars.map((avatar) => (
         <span
           key={avatar.id}
-          className={
-            'bg-frost relative inline-flex size-10 overflow-hidden rounded-full border-2 border-white'
-          }
+          className="border-river/40 relative inline-flex size-10 overflow-hidden rounded-full border-2"
         >
-          <Image
-            src={avatar.image}
-            alt={avatar.imageAlt}
-            fill
-            sizes={'2.5rem'}
-            className={'object-cover'}
-          />
+          <Image src={avatar.image} alt={avatar.imageAlt} fill sizes="2.5rem" className="object-cover" />
         </span>
       ))}
     </div>

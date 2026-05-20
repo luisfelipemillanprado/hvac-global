@@ -47,19 +47,19 @@ export const NavbarLink = ({ item, mobile = false, onClick }: NavbarLinkProps) =
       className={clsx(
         'text-body md:text-body-md lg:text-body-lg flex items-center gap-2 font-medium transition-colors',
         mobile
-          ? 'border-cornflower/30 min-h-22 flex-col justify-center rounded-3xl border px-3 py-4 text-center'
+          ? 'border-river/40 min-h-22 flex-col justify-center rounded-3xl border px-3 py-4 text-center'
           : 'rounded-2xl px-4 py-2.5',
         item.active && 'bg-violet shadow-control text-white',
         !item.active &&
           (mobile
-            ? 'text-dim shadow-nav hover:bg-lilac-light hover:text-violet bg-white'
-            : 'text-dim hover:bg-lilac-light hover:text-violet')
+            ? 'text-ash shadow-nav bg-charleston hover:bg-river hover:text-porcelain'
+            : 'text-ash hover:bg-charleston hover:text-porcelain')
       )}
     >
       <span
         className={clsx(
           mobile && 'inline-flex size-10 items-center justify-center rounded-2xl',
-          mobile && (item.active ? 'bg-white/20 text-white' : 'bg-lilac-light text-violet')
+          mobile && (item.active ? 'bg-white/20 text-white' : 'bg-river text-capri')
         )}
       >
         {renderNavbarIcon(item.icon, mobile)}

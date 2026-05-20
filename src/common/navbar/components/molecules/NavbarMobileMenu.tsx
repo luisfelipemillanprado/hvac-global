@@ -46,7 +46,7 @@ export const NavbarMobileMenu = ({ items, menuAriaLabel }: NavbarMobileMenuProps
       <div
         ref={panelRef}
         className={clsx(
-          'border-cornflower/30 bg-shell shadow-flyout absolute inset-x-0 top-full z-50 mt-3 rounded-3xl border p-3 transition duration-300 lg:hidden',
+          'border-river/40 bg-graphite shadow-flyout absolute inset-x-0 top-full z-50 mt-3 rounded-3xl border p-3 transition duration-300 lg:hidden',
           isOpen
             ? 'pointer-events-auto translate-y-0 opacity-100'
             : 'pointer-events-none -translate-y-2 opacity-0'

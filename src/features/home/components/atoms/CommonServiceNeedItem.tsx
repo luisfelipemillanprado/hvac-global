@@ -1,10 +1,10 @@
-import type { CommonServiceNeed } from '@/features/home/types'
+import type { CommonServiceNeedItemComponentProps } from '@/features/home/types'
 import { PlayIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 
 const COMMON_SERVICE_NEED_IMAGE_SIZES = '44px'
 
-export const CommonServiceNeedItem = ({ href, item }: { href: string; item: CommonServiceNeed }) => {
+export const CommonServiceNeedItem = ({ href, item }: CommonServiceNeedItemComponentProps) => {
   return (
     <a
       href={href}

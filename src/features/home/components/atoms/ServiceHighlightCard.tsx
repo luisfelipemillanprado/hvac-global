@@ -1,35 +1,27 @@
-import { DashboardText } from '@/common/text/components/DashboardText'
-import type { ServiceHighlight } from '@/features/home/types'
+import type { ServiceHighlightCardProps } from '@/features/home/types'
 import { PlayIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 
-const SERVICE_HIGHLIGHT_IMAGE_SIZES = '180px'
-
-export const ServiceHighlightCard = ({ badge, item }: { badge: string; item: ServiceHighlight }) => {
+export const ServiceHighlightCard = ({ item, playAriaLabel }: ServiceHighlightCardProps) => {
   return (
-    <article className="group bg-midnight relative min-h-28 overflow-hidden rounded-4xl p-3 text-white lg:min-h-0">
-      <Image
-        src={item.image}
-        alt={item.title}
-        fill
-        sizes={SERVICE_HIGHLIGHT_IMAGE_SIZES}
-        className="object-cover"
-      />
-      <div className="bg-overlay absolute inset-0" />
-      <div className="relative z-10 grid h-full min-h-22 grid-rows-[auto_1fr_auto]">
-        <span className="text-small md:text-small-md lg:text-small-lg bg-rose w-fit rounded-full px-2 py-0.5 font-bold">
-          {badge}
-        </span>
-        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-2 self-end">
-          <div>
-            <p className="text-small md:text-small-md lg:text-small-lg line-clamp-1 font-black">
-              {item.title}
-            </p>
-            <DashboardText text={item.subtitle} variant="onDark" truncate />
-          </div>
-          <span className="text-violet grid size-7 shrink-0 place-items-center rounded-full bg-white">
-            <PlayIcon className="size-3.5" />
-          </span>
+    <article className="shadow-panel border-river/40 bg-charleston grid aspect-square max-h-35 w-full grid-cols-1 grid-rows-1 overflow-hidden rounded-3xl border-2">
+      <div className="relative min-h-0 min-w-0 overflow-hidden rounded-3xl">
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          sizes="(max-width: 64rem) 50vw, 11rem"
+          className="object-cover"
+        />
+        <div className="bg-overlay-bottom absolute inset-0" />
+        <div className="absolute inset-0 z-10 grid place-items-center">
+          <button
+            type="button"
+            aria-label={playAriaLabel}
+            className="shadow-nav border-porcelain/10 bg-porcelain/15 grid size-10 place-items-center rounded-full border backdrop-blur-2xl"
+          >
+            <PlayIcon className="text-porcelain size-5.5 pl-px" aria-hidden />
+          </button>
         </div>
       </div>
     </article>

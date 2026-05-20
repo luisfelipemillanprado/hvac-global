@@ -28,5 +28,7 @@
     { "text": "Reference issue numbers with # prefix" }
   ],
   "conventionalCommits.scopes": ["linter"],
-  "cSpell.words": []
+  "cSpell.words": [
+    "unitless"
+  ]
 }

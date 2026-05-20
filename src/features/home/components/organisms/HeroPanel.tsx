@@ -2,20 +2,12 @@ import { AvatarStack } from '@/common/avatar/components/AvatarStack'
 import { DashboardText } from '@/common/text/components/DashboardText'
 import { DashboardTitle } from '@/common/titles/components/DashboardTitle'
 import { VisualImage } from '@/common/visual/components/VisualImage'
-import type { DashboardConfig, DashboardCopy, HeroReviewAvatar } from '@/features/home/types'
+import type { HeroPanelProps } from '@/features/home/types'
 import { StarIcon } from '@heroicons/react/24/solid'
 
 const HERO_IMAGE_SIZES = '(max-width: 1024px) 100vw, 620px'
 
-export const HeroPanel = ({
-  config,
-  copy,
-  reviewAvatars,
-}: {
-  config: DashboardConfig
-  copy: DashboardCopy
-  reviewAvatars: readonly HeroReviewAvatar[]
-}) => {
+export const HeroPanel = ({ config, copy, reviewAvatars }: HeroPanelProps) => {
   return (
     <article className="shadow-panel bg-midnight relative min-h-[280px] overflow-hidden rounded-4xl p-5 text-white sm:min-h-[340px] sm:p-7 lg:min-h-0">
       <VisualImage

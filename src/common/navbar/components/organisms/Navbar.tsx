@@ -20,7 +20,7 @@ export const Navbar = ({
   serviceAreaLabel,
 }: NavbarProps) => {
   return (
-    <nav className="border-cornflower/30 shadow-nav fixed top-6 right-5 left-5 z-50 rounded-3xl border bg-white/78 px-3 py-3 backdrop-blur-2xl sm:right-8 sm:left-8 md:top-7 lg:top-8 lg:px-4">
+    <nav className="border-river/40 shadow-nav bg-shale/90 fixed top-6 right-5 left-5 z-50 rounded-3xl border px-3 py-3 backdrop-blur-2xl sm:right-8 sm:left-8 md:top-7 lg:top-8 lg:px-4">
       <div className="flex items-center gap-3">
         <NavbarBrand href={brandHref} label={brandLabel} />
 
@@ -33,12 +33,12 @@ export const Navbar = ({
         <div className="ml-auto flex items-center gap-2">
           <NavbarThemeToggle ariaLabel={themeToggleAriaLabel} />
 
-          <div className="bg-frost hidden items-center gap-2 rounded-2xl px-2 py-1.5 md:flex">
+          <div className="bg-charleston hidden items-center gap-x-2 rounded-2xl px-2 py-1.5 md:flex">
             <AvatarStack avatars={serviceAreaAvatars} ariaLabel={serviceAreaAriaLabel} />
-            <span className="text-ink text-small md:text-small-md lg:text-small-lg hidden font-bold xl:block">
+            <span className="text-small md:text-small-md lg:text-small-lg text-porcelain hidden font-bold xl:block">
               {serviceAreaLabel}
             </span>
-            <ChevronDownIcon className="text-muted size-4" />
+            <ChevronDownIcon className="text-ash size-4 shrink-0" />
           </div>
 
           <NavbarMobileMenu items={items} menuAriaLabel={menuAriaLabel} />

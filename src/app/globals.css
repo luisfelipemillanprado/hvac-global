@@ -17,23 +17,67 @@
   --breakpoint-4xl: 104rem; /* 1664px */
   --breakpoint-5xl: 118.75rem; /* 1900px */
 
-  /* Colors — dashboard OKLCH palette */
-  --color-white: oklch(100% 0 0);
-  --color-shell: oklch(0.9831 0.008 278.64);
-  --color-violet: oklch(0.5234 0.2514 287.89);
-  --color-cornflower: oklch(0.625 0.201 266.34);
-  --color-steel: oklch(0.5561 0.0894 271.11);
-  --color-frost: oklch(0.9588 0.0138 272.69);
-  --color-ink: oklch(0.214 0.0759 284.65);
-  --color-muted: oklch(0.6963 0.0335 283.52);
-  --color-dim: oklch(0.6511 0.0401 281.88);
-  --color-lilac: oklch(0.934 0.0175 282.53);
-  --color-lilac-light: oklch(0.9591 0.0215 294.6);
-  --color-midnight: oklch(0.2342 0.024 264.05);
-  --color-rose: oklch(0.668 0.218 8.5);
-  --color-amber: oklch(0.864 0.174 91.3);
-  --color-forest: oklch(0.628 0.177 132.2);
-  --color-mint: oklch(0.961 0.052 123.5);
+  /* Core tokens — mapped for existing components */
+  --color-white: oklch(0.953 0.0059 238.58); /* #ecf0f3 · porcelain */
+  --color-shell: oklch(0.2312 0.0152 289.94); /* #1d1c24 · raven */
+  --color-violet: oklch(0.5886 0.2076 255.94); /* #0976f4 · cobalt */
+  --color-cornflower: oklch(0.6744 0.1734 250.09); /* #3199fc · capri */
+  --color-steel: oklch(0.6094 0.0489 274.08); /* #7a81a1 · slate */
+  --color-frost: oklch(0.2969 0.0267 286.68); /* #2c2b3a · shale */
+  --color-ink: oklch(0.953 0.0059 238.58); /* #ecf0f3 · porcelain */
+  --color-muted: oklch(0.693 0.0188 295.61); /* #9d9aa7 · ash */
+  --color-dim: oklch(0.6256 0.0133 279.84); /* #868790 · nickel */
+  --color-lilac: oklch(0.3369 0.0311 283.54); /* #353547 · charleston */
+  --color-lilac-light: oklch(0.3841 0.0135 296.36); /* #44424a · charcoal */
+  --color-midnight: oklch(0.1321 0.0138 283.26); /* #07070d · void */
+  --color-rose: oklch(0.5909 0.1722 14.34); /* #cf465d · coral */
+  --color-amber: oklch(0.6266 0.0522 52.67); /* #a2806b · copper */
+  --color-forest: oklch(0.6171 0.1147 151.3); /* #499961 · emerald */
+  --color-mint: oklch(0.4781 0.0208 192.06); /* #506160 · pine */
+
+  /* Extended palette */
+  --color-porcelain: oklch(0.953 0.0059 238.58); /* #ecf0f3 */
+  --color-cobalt: oklch(0.5886 0.2076 255.94); /* #0976f4 */
+  --color-gunmetal: oklch(0.5453 0.0297 274.88); /* #6b6f82 */
+  --color-slate: oklch(0.6094 0.0489 274.08); /* #7a81a1 */
+  --color-cerulean: oklch(0.7171 0.0869 242.54); /* #73aad6 */
+  --color-ash: oklch(0.693 0.0188 295.61); /* #9d9aa7 */
+  --color-charleston: oklch(0.3369 0.0311 283.54); /* #353547 */
+  --color-river: oklch(0.3853 0.0356 277.12); /* #3f4257 */
+  --color-coral: oklch(0.5909 0.1722 14.34); /* #cf465d */
+  --color-mist: oklch(0.786 0.0323 251.68); /* #abbbce */
+  --color-gravel: oklch(0.4695 0.0092 319.05); /* #5d595e */
+  --color-marine: oklch(0.3723 0.1085 255); /* #123f78 */
+  --color-void: oklch(0.1321 0.0138 283.26); /* #07070d */
+  --color-sapphire: oklch(0.5155 0.1432 253.54); /* #2267b7 */
+  --color-shale: oklch(0.2969 0.0267 286.68); /* #2c2b3a */
+  --color-gunmetal-blue: oklch(0.3196 0.0176 240.64); /* #2b343b */
+  --color-charcoal: oklch(0.3841 0.0135 296.36); /* #44424a */
+  --color-copper: oklch(0.6266 0.0522 52.67); /* #a2806b */
+  --color-eclipse: oklch(0.2346 0.0303 282.69); /* #1c1c2c */
+  --color-lilac-gray: oklch(0.8138 0.013 305.28); /* #c4c0c9 */
+  --color-pine: oklch(0.4781 0.0208 192.06); /* #506160 */
+  --color-sage: oklch(0.7678 0.0139 101.32); /* #b5b4aa */
+  --color-abyss: oklch(0.1951 0.0425 263.15); /* #0b1428 */
+  --color-plum: oklch(0.315 0.0202 305.14); /* #342f3a */
+  --color-capri: oklch(0.6744 0.1734 250.09); /* #3199fc */
+  --color-graphite: oklch(0.268 0.0293 283.15); /* #242434 */
+  --color-emerald: oklch(0.6171 0.1147 151.3); /* #499961 */
+  --color-deepsea: oklch(0.2891 0.0223 250.24); /* #232c36 */
+  --color-nickel: oklch(0.6256 0.0133 279.84); /* #868790 */
+  --color-lead: oklch(0.3813 0.0169 240.48); /* #3b444b */
+  --color-inkwell: oklch(0.213 0.0301 270.96); /* #141827 */
+  --color-indigo: oklch(0.2693 0.0456 281.7); /* #23233c */
+  --color-denim: oklch(0.4434 0.1647 258.36); /* #0e4cac */
+  --color-raven: oklch(0.2312 0.0152 289.94); /* #1d1c24 */
+  --color-crow: oklch(0.2002 0.0138 290.71); /* #16151c */
+  --color-aubergine: oklch(0.1749 0.0353 303.89); /* #140c1d */
+  --color-denim-light: oklch(0.4398 0.0598 253.12); /* #3b5473 */
+  --color-storm: oklch(0.3929 0.0709 265.32); /* #34446c */
+  --color-mulberry: oklch(0.2436 0.0314 306.33); /* #241c2c */
+  --color-onyx: oklch(0.2638 0.0147 284.33); /* #24242c */
+  --color-grape: oklch(0.2101 0.0341 304.5); /* #1c1425 */
+  --color-gold: oklch(0.84 0.17 92); /* #f0c020 */
 
   /* Overlay — horizontal gradient on photos */
   --background-image-overlay: linear-gradient(
@@ -52,25 +96,36 @@
   );
 
   /* Typography — body: mobile · md · lg */
-  --text-body: clamp(0.95625rem, 3.5vw, 0.9875rem);
-  --text-body-md: clamp(1.0125rem, 1.8vw, 1.05rem);
-  --text-body-lg: 1.05rem;
+  --text-body: clamp(0.95625rem, 3.5vw, 0.9875rem); /* 15.3px · 3.5vw · 15.8px */
+  --text-body-md: clamp(1.0125rem, 1.8vw, 1.05rem); /* 16.2px · 1.8vw · 16.8px */
+  --text-body-lg: 1.05rem; /* 16.8px */
 
   /* Typography — small: mobile · md · lg */
-  --text-small: clamp(0.75rem, 3.2vw, 0.775rem);
-  --text-small-md: clamp(0.8rem, 1.7vw, 0.8125rem);
-  --text-small-lg: 0.8125rem;
+  --text-small: clamp(0.89375rem, 3.5vw, 0.925rem); /* 14.3px · 3.2vw · 14.8px */
+  --text-small-md: clamp(0.95rem, 1.8vw, 0.9875rem); /* 15.2px · 1.8vw · 15.8px */
+  --text-small-lg: 0.9875rem; /* 15.8px */
 
-  /* Typography — titles (fluid) */
-  --text-main-title: clamp(2rem, 8vw, 3.75rem);
-  --text-secondary-title: clamp(1.1125rem, 3.5vw, 1.14375rem);
-  --text-tertiary-title: clamp(1rem, 4.2vw, 1.125rem);
+  /* Typography — main title: mobile · md · lg */
+  --text-main-title: clamp(2.01875rem, 3.5vw, 2.05rem); /* 32.3px · 3.5vw · 32.8px */
+  --text-main-title-md: clamp(2.075rem, 1.8vw, 2.1125rem); /* 33.2px · 1.8vw · 33.8px */
+  --text-main-title-lg: 2.1125rem; /* 33.8px */
 
-  /* Typography — line heights */
-  --leading-main: 0.95;
-  --leading-title: 1.25;
-  --leading-body: 1.625;
-  --leading-small: 1.25;
+  /* Typography — secondary title: mobile · md · lg */
+  --text-secondary-title: clamp(1.08125rem, 3.5vw, 1.1125rem); /* 17.3px · 3.5vw · 17.8px */
+  --text-secondary-title-md: clamp(1.1375rem, 1.8vw, 1.175rem); /* 18.2px · 1.8vw · 18.8px */
+  --text-secondary-title-lg: 1.175rem; /* 18.8px */
+
+  /* Typography — tertiary title: mobile · md · lg */
+  --text-tertiary-title: clamp(1.01875rem, 3.5vw, 1.05rem); /* 16.3px · 3.5vw · 16.8px */
+  --text-tertiary-title-md: clamp(1.075rem, 1.8vw, 1.1125rem); /* 17.2px · 1.8vw · 17.8px */
+  --text-tertiary-title-lg: 1.1125rem; /* 17.8px */
+
+  /* Typography — line heights: paired with text scales (unitless × font-size) */
+  --leading-main-title: 1.2; /* ~38.8px at 32.3px · ~40.6px at 33.8px */
+  --leading-secondary-title: 1.25; /* ~21.6px at 17.3px · ~23.5px at 18.8px */
+  --leading-tertiary-title: 1.2; /* ~19.6px at 16.3px · ~21.4px at 17.8px */
+  --leading-body: 1.625; /* ~24.9px at 15.3px · ~27.3px at 16.8px */
+  --leading-small: 1.15; /* ~16.4px at 14.3px · ~18.2px at 15.8px */
 
   /* Animate — animate-* utilities */
   --animate-slow-pulse: slowPulse 2.7s ease-out infinite;

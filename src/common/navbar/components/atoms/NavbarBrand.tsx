@@ -12,9 +12,7 @@ export const NavbarBrand = ({ href, label }: NavbarBrandProps) => {
       <span className="bg-violet shadow-control inline-flex size-10 shrink-0 items-center justify-center rounded-2xl text-white">
         <WrenchScrewdriverIcon className="size-5.5" />
       </span>
-      <span className="">
-        <DashboardTitle text={label} variant="brand" />
-      </span>
+      <DashboardTitle text={label} variant="brand" />
     </Link>
   )
 }

@@ -21,10 +21,18 @@ export const DashboardLayout = () => {
   return (
     <div className="grid h-full items-stretch gap-4 lg:grid-cols-[180px_minmax(0,1fr)_290px] lg:gap-5 lg:pb-2">
       <LeftRail
-        config={config}
-        copy={copy}
-        serviceHighlights={serviceHighlights}
-        commonServiceNeeds={commonServiceNeeds}
+        commonServiceNeeds={{
+          href: config.commonServiceNeedHref,
+          items: commonServiceNeeds,
+          title: copy.commonServiceNeedsTitle,
+        }}
+        serviceHighlights={{
+          badgeAriaLabel: copy.serviceHighlightsBadgeAriaLabel,
+          eyebrowLabel: copy.serviceHighlightsEyebrowLabel,
+          items: serviceHighlights,
+          playAriaLabel: copy.serviceHighlightsPlayAriaLabel,
+          title: copy.serviceHighlightsTitle,
+        }}
       />
 
       <section className="order-1 grid min-w-0 gap-5 lg:order-0 lg:grid-rows-[minmax(0,1fr)_auto]">
@@ -38,9 +46,11 @@ export const DashboardLayout = () => {
       </section>
 
       <RightRail
-        copy={copy}
-        featuredService={featuredService}
-        featuredServicePreviews={featuredServicePreviews}
+        featuredService={{
+          ctaLabel: copy.freeQuoteCta,
+          previews: featuredServicePreviews,
+          service: featuredService,
+        }}
         location={location}
       />
     </div>

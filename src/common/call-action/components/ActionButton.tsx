@@ -9,7 +9,7 @@ export const ActionButton = ({ ariaLabel, text }: ActionButtonProps) => {
     <button
       type="button"
       aria-label={ariaLabel ?? (text ? `${text} button` : undefined)}
-      className="text-body md:text-body-md lg:text-body-lg shadow-cta bg-cornflower grid h-10 w-full min-w-0 grid-flow-col items-center justify-center gap-2 rounded-2xl px-3 font-medium text-white"
+      className="text-body md:text-body-md lg:text-body-lg shadow-control bg-violet grid h-10 w-full min-w-0 grid-flow-col items-center justify-center gap-x-2 rounded-full px-4 font-medium text-white"
     >
       <ClipboardDocumentListIcon className="size-5.5" />
       {text}

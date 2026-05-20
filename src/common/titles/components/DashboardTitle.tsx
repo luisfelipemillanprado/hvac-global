@@ -39,15 +39,15 @@ export const DashboardTitle = ({ text, variant = 'section', id }: DashboardTitle
 function getTitleClasses(variant: DashboardTitleProps['variant']) {
   switch (variant) {
     case 'hero':
-      return 'text-main-title leading-main text-white font-black tracking-[-0.07em]'
+      return 'text-main-title md:text-main-title-md lg:text-main-title-lg leading-main-title text-white font-black'
     case 'card':
-      return 'text-tertiary-title leading-title text-white font-bold'
+      return 'text-tertiary-title md:text-tertiary-title-md lg:text-tertiary-title-lg leading-tertiary-title text-white font-bold'
     case 'panel':
-      return 'text-secondary-title leading-title text-ink font-black tracking-[-0.04em]'
+      return 'text-secondary-title md:text-secondary-title-md lg:text-secondary-title-lg leading-secondary-title text-ink font-black'
     case 'brand':
       return 'text-body md:text-body-md lg:text-body-lg leading-body text-ink font-semibold tracking-tight'
     case 'section':
     default:
-      return 'text-secondary-title leading-title text-ink font-bold tracking-[-0.03em]'
+      return 'text-secondary-title md:text-secondary-title-md lg:text-secondary-title-lg leading-secondary-title text-ink font-bold'
   }
 }

@@ -19,7 +19,7 @@ export const NavbarThemeToggle = ({ ariaLabel }: { ariaLabel: string }) => {
       aria-label={ariaLabel}
       aria-pressed={isDark}
       onClick={() => setIsDark((current) => !current)}
-      className="bg-frost text-ink hover:text-violet inline-flex size-10 items-center justify-center rounded-2xl transition-colors"
+      className="bg-charleston text-porcelain hover:text-capri inline-flex size-10 items-center justify-center rounded-2xl transition-colors"
     >
       {isDark ? <MoonIcon className="size-5.5" /> : <SunIcon className="size-5.5" />}
     </button>

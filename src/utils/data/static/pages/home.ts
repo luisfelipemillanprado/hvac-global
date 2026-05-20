@@ -13,9 +13,10 @@ export const homeAssets = {
       popularServicesCta: 'All services',
       popularServicesTitle: 'Popular Services',
       serviceReviewersAriaLabel: 'Service reviewers',
-      serviceHighlightBadge: 'HVAC',
-      serviceHighlightsLocation: 'Houston',
-      serviceHighlightsTitle: 'Service Highlights',
+      serviceHighlightsBadgeAriaLabel: 'Hot service highlights',
+      serviceHighlightsEyebrowLabel: 'Most Requested',
+      serviceHighlightsPlayAriaLabel: 'Play service highlight video',
+      serviceHighlightsTitle: 'Service Highlights.',
     },
     navbar: {
       brandHref: '#',
@@ -77,6 +78,11 @@ export const homeAssets = {
         title: 'Indoor Air Quality',
         subtitle: 'Cleaner home comfort',
         image: '/images/gallery/gallery4.webp',
+      },
+      {
+        title: 'Seasonal Tune-Up',
+        subtitle: 'Prevent costly breakdowns',
+        image: '/images/gallery/gallery5.webp',
       },
     ],
     commonServiceNeeds: [
@@ -154,7 +160,7 @@ export const homeAssets = {
       },
     ],
     featuredService: {
-      title: 'Same-Day HVAC Service',
+      title: 'Reliable Fast Service.',
       tags: [
         'Free Estimate.',
         'Full Warranty.',
@@ -164,9 +170,10 @@ export const homeAssets = {
       ],
       rating: '5.0',
       ratingLabel: 'Rating',
-      eyebrowLabel: 'Featured service',
+      eyebrowLabel: 'Always Ready',
       href: '#',
-      saveAriaLabel: 'Save Same-Day HVAC Service',
+      saveIcon: 'bolt',
+      saveAriaLabel: 'Reliable Fast Service.',
     },
     featuredServicePreviews: [
       { label: 'A/C', image: '/images/reviews/review1.webp', imageAlt: 'Air conditioning service preview' },

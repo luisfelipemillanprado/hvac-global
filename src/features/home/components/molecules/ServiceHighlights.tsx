@@ -1,30 +1,28 @@
+import { DashboardBadge } from '@/common/badge/components/DashboardBadge'
+import { DashboardLabel } from '@/common/label/components/DashboardLabel'
 import { DashboardTitle } from '@/common/titles/components/DashboardTitle'
 import { ServiceHighlightCard } from '@/features/home/components/atoms/ServiceHighlightCard'
-import type { ServiceHighlight } from '@/features/home/types'
+import type { ServiceHighlightsProps } from '@/features/home/types'
 
 export const ServiceHighlights = ({
-  badge,
+  badgeAriaLabel,
+  eyebrowLabel,
   items,
-  location,
+  playAriaLabel,
   title,
-}: {
-  badge: string
-  items: readonly ServiceHighlight[]
-  location: string
-  title: string
-}) => {
+}: ServiceHighlightsProps) => {
   return (
-    <section className="shadow-panel border-cornflower/30 grid h-full grid-rows-[auto_minmax(0,1fr)] rounded-4xl border bg-white p-3">
-      <div className="mb-3 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
-        <DashboardTitle text={title} variant="section" />
-        <span className="text-small md:text-small-md lg:text-small-lg text-dim font-bold">
-          {location}
-        </span>
+    <section className="bg-shale grid h-full grid-rows-[auto_minmax(0,1fr)] gap-y-7 rounded-4xl p-5">
+      <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-x-4">
+        <div className="grid min-w-0 grid-cols-1 gap-y-7">
+          <DashboardLabel text={eyebrowLabel} />
+          <DashboardTitle text={title} variant="panel" />
+        </div>
+        <DashboardBadge icon="fire" ariaLabel={badgeAriaLabel} />
       </div>
-
-      <div className="grid h-full gap-3 sm:grid-cols-3 lg:grid-cols-1 lg:grid-rows-3">
+      <div className="grid h-full grid-cols-2 gap-3 lg:grid-cols-1 lg:grid-rows-4">
         {items.map((item) => (
-          <ServiceHighlightCard key={item.title} badge={badge} item={item} />
+          <ServiceHighlightCard key={item.title} item={item} playAriaLabel={playAriaLabel} />
         ))}
       </div>
     </section>

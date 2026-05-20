@@ -1,16 +1,8 @@
 import { DashboardTitle } from '@/common/titles/components/DashboardTitle'
 import { CommonServiceNeedItem } from '@/features/home/components/atoms/CommonServiceNeedItem'
-import type { CommonServiceNeed } from '@/features/home/types'
+import type { CommonServiceNeedsProps } from '@/features/home/types'
 
-export const CommonServiceNeeds = ({
-  href,
-  items,
-  title,
-}: {
-  href: string
-  items: readonly CommonServiceNeed[]
-  title: string
-}) => {
+export const CommonServiceNeeds = ({ href, items, title }: CommonServiceNeedsProps) => {
   return (
     <section className="shadow-panel border-cornflower/30 grid gap-3 rounded-4xl border bg-white p-3">
       <DashboardTitle text={title} variant="section" />
