@@ -12,12 +12,13 @@ export interface NavbarItem {
   label: string
   href: string
   icon: NavbarIconName
-  active?: boolean
 }
 
 export interface NavbarBrandProps {
   href: string
   label: string
+  logo: string
+  logoAlt: string
 }
 
 export interface NavbarLinkProps {
@@ -34,6 +35,8 @@ export interface NavbarMobileMenuProps {
 export interface NavbarProps {
   brandHref: string
   brandLabel: string
+  brandLogo: string
+  brandLogoAlt: string
   items: readonly NavbarItem[]
   menuAriaLabel: string
   themeToggleAriaLabel: string

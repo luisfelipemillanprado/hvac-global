@@ -1,0 +1,28 @@
+---
+description: Require explicit user approval before any file edits in this repo
+alwaysApply: true
+---
+
+# User approval before edits · Autorización antes de editar
+
+| | |
+| --- | --- |
+| **EN** | Before **any** modification in this repo (code, styles, data, rules, assets, config, refactors), the AI **must** describe what will change (files + intent) and **wait for explicit user approval**. Do not use write/edit/delete tools, terminal commands that mutate files, or batch refactors until the user confirms (e.g. "sí", "adelante", "aplica", "ok"). Questions, read-only exploration, and diffs proposed in chat without applying them are allowed without approval. |
+| **ES** | Antes de **cualquier** cambio en este repo (código, estilos, datos, reglas, assets, config, refactors), la IA **debe** indicar qué va a cambiar (archivos + intención) y **esperar autorización explícita** del usuario. No usar herramientas de escritura/edición/borrado ni comandos que muten archivos hasta que el usuario confirme (p. ej. "sí", "adelante", "aplica", "ok"). Preguntas, exploración en solo lectura y diffs propuestos en el chat sin aplicarlos no requieren aprobación. |
+
+## When approval is required · Cuándo hace falta aprobación
+
+- Creating, editing, or deleting source files
+- Running codemods, `sed`, or scripts that change the tree
+- Updating `globals.css`, `homeAssets`, images, or `.cursor/rules`
+
+## When approval is not required · Cuándo no hace falta
+
+- Reading files, searching the codebase, explaining behavior
+- `git status` / `git diff` (read-only)
+- Proposing a plan or paste-ready snippet **without** applying it
+
+## After approval · Tras autorizar
+
+- List the files touched so the user can review in Source Control
+- Keep scope minimal; only what was approved

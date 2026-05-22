@@ -7,13 +7,14 @@ import clsx from 'clsx'
  * @param {DashboardTextProps} props - Component properties.
  * @returns A rendered dashboard text paragraph.
  */
-export const DashboardText = ({ text, variant = 'onDark', truncate }: DashboardTextProps) => {
+export const DashboardText = ({ text, variant = 'onDark', truncate, bold = false }: DashboardTextProps) => {
   return (
     <p
       className={clsx(
-        'text-body md:text-body-md lg:text-body-lg leading-body font-normal',
-        variant === 'onDark' ? 'text-white/80' : 'text-ink',
-        truncate && 'max-w-full min-w-0 truncate'
+        'text-body md:text-body-md lg:text-body-lg leading-body',
+        variant === 'onDark' ? 'text-white/80' : 'text-white',
+        truncate && 'max-w-full min-w-0 truncate',
+        bold ? 'font-bold' : 'font-normal'
       )}
     >
       {text}

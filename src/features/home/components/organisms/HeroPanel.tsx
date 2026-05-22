@@ -5,38 +5,25 @@ import { VisualImage } from '@/common/visual/components/VisualImage'
 import type { HeroPanelProps } from '@/features/home/types'
 import { StarIcon } from '@heroicons/react/24/solid'
 
-const HERO_IMAGE_SIZES = '(max-width: 1024px) 100vw, 620px'
-
 export const HeroPanel = ({ config, copy, reviewAvatars }: HeroPanelProps) => {
   return (
-    <article className="shadow-panel bg-midnight relative min-h-[280px] overflow-hidden rounded-4xl p-5 text-white sm:min-h-[340px] sm:p-7 lg:min-h-0">
-      <VisualImage
-        image={config.heroImage}
-        alt={copy.heroImageAlt}
-        priority={config.heroImagePriority}
-        sizes={HERO_IMAGE_SIZES}
-        overlayClassName="bg-overlay"
-      />
-
-      <div className="relative z-10 grid h-full content-end">
-        <div className="max-w-sm">
-          <div className="grid gap-3">
+    <article className="shadow-panel relative grid min-h-70 grid-cols-1 overflow-hidden rounded-4xl p-5 sm:min-h-85 sm:p-7 lg:min-h-0">
+      <VisualImage image={config.heroImage} alt={copy.heroImageAlt} priority={config.heroImagePriority} />
+      <div className="bg-overlay absolute inset-0" />
+      <div className="relative z-10 col-start-1 row-start-1 grid h-full min-h-0">
+        <div className="grid max-w-2xs grid-cols-1 gap-5">
+          <div className="grid grid-cols-1 gap-3">
             <DashboardTitle text={copy.heroTitle} variant="hero" />
             <DashboardText text={copy.heroDescription} variant="onDark" />
           </div>
-          <div className="shadow-panel mt-5 grid w-fit grid-cols-[auto_auto_auto] items-center gap-3 rounded-2xl bg-white/8 px-4 py-3 text-white backdrop-blur-md">
+          <div className="shadow-panel flex w-fit items-center gap-x-2.5 rounded-3xl bg-white/20 p-3 backdrop-blur-md">
             <AvatarStack avatars={reviewAvatars} ariaLabel={copy.heroReviewersAriaLabel} />
-            <span
-              className="text-amber grid grid-flow-col items-center gap-1"
-              aria-label={copy.heroRatingAriaLabel}
-            >
+            <div className="grid grid-flow-col items-center gap-1" aria-label={copy.heroRatingAriaLabel}>
               {Array.from({ length: 5 }).map((_, index) => (
-                <StarIcon key={index} className="size-4" />
+                <StarIcon key={index} className="fill-gold size-4.5" />
               ))}
-            </span>
-            <span className="text-small md:text-small-md lg:text-small-lg font-black">
-              {copy.heroRatingLabel}
-            </span>
+            </div>
+            <DashboardText text={copy.heroRatingLabel} variant="onDark" bold={true} />
           </div>
         </div>
       </div>

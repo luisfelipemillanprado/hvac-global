@@ -8,7 +8,7 @@ export const FeaturedServiceRating = ({ rating, ariaLabel }: FeaturedServiceRati
   return (
     <div
       aria-label={ariaLabel}
-      className="bg-void text-porcelain grid h-10 w-fit grid-flow-col items-center gap-x-2 rounded-full px-4"
+      className="bg-navy-black grid h-10 w-fit grid-flow-col items-center gap-x-2 rounded-full px-4 text-white"
     >
       <StarIcon className="text-gold size-5.5 shrink-0" aria-hidden />
       <span className="text-small md:text-small-md lg:text-small-lg leading-small font-bold">{rating}</span>

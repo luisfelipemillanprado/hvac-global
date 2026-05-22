@@ -32,7 +32,7 @@ export const DashboardBadge = ({ icon, ariaLabel }: DashboardBadgeProps) => {
   return (
     <span
       aria-label={ariaLabel}
-      className="border-river/40 bg-charleston inline-flex size-10 items-center justify-center rounded-2xl border"
+      className="border-steel-blue/40 bg-charleston inline-flex size-10 items-center justify-center rounded-2xl border"
     >
       {renderBadgeIcon(icon)}
     </span>

@@ -12,6 +12,8 @@ import { ChevronDownIcon } from '@heroicons/react/24/solid'
 export const Navbar = ({
   brandHref,
   brandLabel,
+  brandLogo,
+  brandLogoAlt,
   items,
   menuAriaLabel,
   themeToggleAriaLabel,
@@ -20,9 +22,9 @@ export const Navbar = ({
   serviceAreaLabel,
 }: NavbarProps) => {
   return (
-    <nav className="border-river/40 shadow-nav bg-shale/90 fixed top-6 right-5 left-5 z-50 rounded-3xl border px-3 py-3 backdrop-blur-2xl sm:right-8 sm:left-8 md:top-7 lg:top-8 lg:px-4">
-      <div className="flex items-center gap-3">
-        <NavbarBrand href={brandHref} label={brandLabel} />
+    <nav className="shadow-nav bg-graphite fixed top-6 right-5 left-5 z-50 rounded-3xl px-3 py-3 backdrop-blur-xl sm:right-8 sm:left-8 md:top-7 lg:top-8 lg:px-4">
+      <div className="flex items-center justify-between">
+        <NavbarBrand href={brandHref} label={brandLabel} logo={brandLogo} logoAlt={brandLogoAlt} />
 
         <div className="hidden flex-1 items-center justify-center gap-1 lg:flex">
           {items.map((item) => (
@@ -30,15 +32,15 @@ export const Navbar = ({
           ))}
         </div>
 
-        <div className="ml-auto flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <NavbarThemeToggle ariaLabel={themeToggleAriaLabel} />
 
-          <div className="bg-charleston hidden items-center gap-x-2 rounded-2xl px-2 py-1.5 md:flex">
+          <div className="bg-ink-black hidden items-center gap-x-2 rounded-2xl px-2 py-1.5 md:flex">
             <AvatarStack avatars={serviceAreaAvatars} ariaLabel={serviceAreaAriaLabel} />
-            <span className="text-small md:text-small-md lg:text-small-lg text-porcelain hidden font-bold xl:block">
+            <span className="text-small md:text-small-md lg:text-small-lg hidden font-bold text-white/80 xl:block">
               {serviceAreaLabel}
             </span>
-            <ChevronDownIcon className="text-ash size-4 shrink-0" />
+            <ChevronDownIcon className="text-taupe size-4 shrink-0" />
           </div>
 
           <NavbarMobileMenu items={items} menuAriaLabel={menuAriaLabel} />

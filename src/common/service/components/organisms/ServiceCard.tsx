@@ -23,7 +23,7 @@ export const ServiceCard = ({
   reviewersAriaLabel,
 }: ServiceCardProps) => {
   return (
-    <article className="shadow-panel border-river/40 relative flex h-full min-h-80 overflow-hidden rounded-4xl border-3">
+    <article className="shadow-panel border-steel-blue/40 relative flex h-full min-h-80 overflow-hidden rounded-4xl border-3">
       <Image
         src={image}
         alt={imageAlt}
@@ -33,7 +33,7 @@ export const ServiceCard = ({
       />
       <div className="bg-overlay-bottom absolute inset-0" />
       <ServiceCardMark mark={mark} />
-      <div className="relative z-10 mt-auto grid w-full grid-cols-1 gap-y-4 px-4 py-5">
+      <div className="relative z-10 mt-auto grid w-full grid-cols-1 gap-y-4 p-4">
         <div className="grid gap-y-3">
           <DashboardTitle text={title} variant="card" />
           <DashboardText text={description} variant="onDark" />

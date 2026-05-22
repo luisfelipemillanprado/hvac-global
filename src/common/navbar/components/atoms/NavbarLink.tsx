@@ -1,9 +1,10 @@
 import type { NavbarIconName, NavbarLinkProps } from '@/common/navbar/types'
+import { DashboardText } from '@/common/text/components/DashboardText'
 import {
   DocumentTextIcon,
+  EnvelopeIcon,
   GlobeAltIcon,
   HomeIcon,
-  PhoneIcon,
   QuestionMarkCircleIcon,
   StarIcon,
   TagIcon,
@@ -16,23 +17,59 @@ import Link from 'next/link'
 const renderNavbarIcon = (icon: NavbarIconName, mobile: boolean) => {
   switch (icon) {
     case 'blog':
-      return <DocumentTextIcon className={mobile ? 'size-5.5' : 'size-5.5 lg:hidden xl:block'} />
+      return (
+        <DocumentTextIcon
+          className={mobile ? 'fill-ink-black size-5.5' : 'size-5.5 fill-white lg:hidden xl:block'}
+        />
+      )
     case 'book':
-      return <StarIcon className={mobile ? 'size-5.5' : 'size-5.5 lg:hidden xl:block'} />
+      return (
+        <StarIcon
+          className={mobile ? 'fill-ink-black size-5.5' : 'size-5.5 fill-white lg:hidden xl:block'}
+        />
+      )
     case 'contact':
-      return <PhoneIcon className={mobile ? 'size-5.5' : 'size-5.5 lg:hidden xl:block'} />
+      return (
+        <EnvelopeIcon
+          className={mobile ? 'fill-ink-black size-5.5' : 'size-5.5 fill-white lg:hidden xl:block'}
+        />
+      )
     case 'home':
-      return <HomeIcon className={mobile ? 'size-5.5' : 'size-5.5 lg:hidden xl:block'} />
+      return (
+        <HomeIcon
+          className={mobile ? 'fill-ink-black size-5.5' : 'size-5.5 fill-white lg:hidden xl:block'}
+        />
+      )
     case 'translate':
-      return <GlobeAltIcon className={mobile ? 'size-5.5' : 'size-5.5 lg:hidden xl:block'} />
+      return (
+        <GlobeAltIcon
+          className={mobile ? 'fill-ink-black size-5.5' : 'size-5.5 fill-white lg:hidden xl:block'}
+        />
+      )
     case 'offers':
-      return <TagIcon className={mobile ? 'size-5.5' : 'size-5.5 lg:hidden xl:block'} />
+      return (
+        <TagIcon
+          className={mobile ? 'fill-ink-black size-5.5' : 'size-5.5 fill-white lg:hidden xl:block'}
+        />
+      )
     case 'repairs':
-      return <WrenchIcon className={mobile ? 'size-5.5' : 'size-5.5 lg:hidden xl:block'} />
+      return (
+        <WrenchIcon
+          className={mobile ? 'fill-ink-black size-5.5' : 'size-5.5 fill-white lg:hidden xl:block'}
+        />
+      )
     case 'services':
-      return <WrenchScrewdriverIcon className={mobile ? 'size-5.5' : 'size-5.5 lg:hidden xl:block'} />
+      return (
+        <WrenchScrewdriverIcon
+          className={mobile ? 'fill-ink-black size-5.5' : 'size-5.5 fill-white lg:hidden xl:block'}
+        />
+      )
     default:
-      return <QuestionMarkCircleIcon className={mobile ? 'size-5.5' : 'size-5.5 lg:hidden xl:block'} />
+      return (
+        <QuestionMarkCircleIcon
+          className={mobile ? 'fill-ink-black size-5.5' : 'size-5.5 fill-white lg:hidden xl:block'}
+        />
+      )
   }
 }
 
@@ -45,26 +82,18 @@ export const NavbarLink = ({ item, mobile = false, onClick }: NavbarLinkProps) =
       href={item.href}
       onClick={onClick}
       className={clsx(
-        'text-body md:text-body-md lg:text-body-lg flex items-center gap-2 font-medium transition-colors',
+        'group text-body md:text-body-md lg:text-body-lg flex items-center gap-2 font-medium transition-colors',
         mobile
-          ? 'border-river/40 min-h-22 flex-col justify-center rounded-3xl border px-3 py-4 text-center'
-          : 'rounded-2xl px-4 py-2.5',
-        item.active && 'bg-violet shadow-control text-white',
-        !item.active &&
-          (mobile
-            ? 'text-ash shadow-nav bg-charleston hover:bg-river hover:text-porcelain'
-            : 'text-ash hover:bg-charleston hover:text-porcelain')
+          ? 'shadow-nav bg-pewter/40 min-h-22 flex-col justify-center rounded-3xl p-4 text-center backdrop-blur-md'
+          : 'hover:bg-pewter/40 rounded-2xl px-4 py-2.5 backdrop-blur-md'
       )}
     >
       <span
-        className={clsx(
-          mobile && 'inline-flex size-10 items-center justify-center rounded-2xl',
-          mobile && (item.active ? 'bg-white/20 text-white' : 'bg-river text-capri')
-        )}
+        className={clsx(mobile && 'bg-silver inline-flex size-10 items-center justify-center rounded-2xl')}
       >
         {renderNavbarIcon(item.icon, mobile)}
       </span>
-      <span>{item.label}</span>
+      <DashboardText text={item.label} variant="default" />
     </Link>
   )
 }

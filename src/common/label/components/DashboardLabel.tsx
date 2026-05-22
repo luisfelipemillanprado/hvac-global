@@ -10,7 +10,7 @@ export const DashboardLabel = ({ text, id }: DashboardLabelProps) => {
   return (
     <span
       id={id}
-      className="text-small md:text-small-md lg:text-small-lg leading-small bg-forest inline-flex w-fit items-center rounded-full px-3 py-2 font-medium text-white"
+      className="text-small md:text-small-md lg:text-small-lg leading-small bg-lime inline-flex w-fit items-center rounded-full px-3 py-2 font-medium text-white"
     >
       {text}
     </span>

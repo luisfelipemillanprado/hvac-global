@@ -41,13 +41,13 @@ function getTitleClasses(variant: DashboardTitleProps['variant']) {
     case 'hero':
       return 'text-main-title md:text-main-title-md lg:text-main-title-lg leading-main-title text-white font-black'
     case 'card':
-      return 'text-tertiary-title md:text-tertiary-title-md lg:text-tertiary-title-lg leading-tertiary-title text-white font-bold'
+      return 'text-tertiary-title md:text-tertiary-title-md lg:text-tertiary-title-lg leading-tertiary-title text-white truncate font-bold'
     case 'panel':
-      return 'text-secondary-title md:text-secondary-title-md lg:text-secondary-title-lg leading-secondary-title text-ink font-black'
+      return 'text-secondary-title md:text-secondary-title-md lg:text-secondary-title-lg leading-secondary-title text-ink-black font-black'
     case 'brand':
-      return 'text-body md:text-body-md lg:text-body-lg leading-body text-ink font-semibold tracking-tight'
+      return 'text-body md:text-body-md lg:text-body-lg leading-body text-ink-black font-semibold tracking-tight'
     case 'section':
     default:
-      return 'text-secondary-title md:text-secondary-title-md lg:text-secondary-title-lg leading-secondary-title text-ink font-bold'
+      return 'text-secondary-title md:text-secondary-title-md lg:text-secondary-title-lg leading-secondary-title text-ink-black font-bold'
   }
 }

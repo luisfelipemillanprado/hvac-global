@@ -10,7 +10,7 @@ export const FeaturedServiceTags = ({ tags }: FeaturedServiceTagsProps) => {
       {tags.map((tag) => (
         <div
           key={tag}
-          className="border-river/40 bg-charleston flex h-10 w-full min-w-0 items-center rounded-full border px-4"
+          className="border-steel-blue/40 bg-charleston flex h-10 w-full min-w-0 items-center rounded-full border px-4"
         >
           <DashboardText text={tag} variant="default" truncate />
         </div>

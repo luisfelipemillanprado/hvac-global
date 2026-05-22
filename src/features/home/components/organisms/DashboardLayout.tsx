@@ -32,6 +32,8 @@ export const DashboardLayout = () => {
           items: serviceHighlights,
           playAriaLabel: copy.serviceHighlightsPlayAriaLabel,
           title: copy.serviceHighlightsTitle,
+          viewMoreAriaLabel: copy.serviceHighlightsViewMoreAriaLabel,
+          viewMoreLabel: copy.serviceHighlightsViewMoreLabel,
         }}
       />
 

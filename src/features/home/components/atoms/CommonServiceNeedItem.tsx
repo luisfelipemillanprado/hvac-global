@@ -8,9 +8,9 @@ export const CommonServiceNeedItem = ({ href, item }: CommonServiceNeedItemCompo
   return (
     <a
       href={href}
-      className="hover:bg-lilac grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 rounded-2xl p-1.5 transition"
+      className="hover:bg-blue-slate grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 rounded-2xl p-1.5 transition"
     >
-      <span className="bg-midnight relative size-11 shrink-0 overflow-hidden rounded-xl">
+      <span className="bg-jet-black relative size-11 shrink-0 overflow-hidden rounded-xl">
         <Image
           src={item.image}
           alt={item.title}
@@ -19,10 +19,10 @@ export const CommonServiceNeedItem = ({ href, item }: CommonServiceNeedItemCompo
           className="object-cover"
         />
       </span>
-      <span className="text-body md:text-body-md lg:text-body-lg text-ink min-w-0 font-bold">
+      <span className="text-body md:text-body-md lg:text-body-lg text-ink-black min-w-0 font-bold">
         {item.title}
       </span>
-      <span className="bg-frost text-violet grid size-7 shrink-0 place-items-center rounded-full">
+      <span className="bg-ink-navy text-pewter grid size-7 shrink-0 place-items-center rounded-full">
         <PlayIcon className="size-3.5" />
       </span>
     </a>

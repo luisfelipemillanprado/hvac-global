@@ -38,15 +38,19 @@ export const NavbarMobileMenu = ({ items, menuAriaLabel }: NavbarMobileMenuProps
         aria-label={menuAriaLabel}
         aria-expanded={isOpen}
         onClick={() => setIsOpen((current) => !current)}
-        className="bg-violet shadow-control inline-flex size-10 shrink-0 items-center justify-center rounded-2xl text-white lg:hidden"
+        className="bg-silver shadow-nav inline-flex size-10 shrink-0 items-center justify-center rounded-2xl lg:hidden"
       >
-        {isOpen ? <XMarkIcon className="size-5.5" /> : <Bars3Icon className="size-5.5" />}
+        {isOpen ? (
+          <XMarkIcon className="fill-ink-black size-5.5" />
+        ) : (
+          <Bars3Icon className="fill-ink-black size-5.5" />
+        )}
       </button>
 
       <div
         ref={panelRef}
         className={clsx(
-          'border-river/40 bg-graphite shadow-flyout absolute inset-x-0 top-full z-50 mt-3 rounded-3xl border p-3 transition duration-300 lg:hidden',
+          'bg-graphite shadow-flyout absolute inset-x-0 top-full z-50 mt-3 rounded-4xl px-3 py-4 transition duration-300 lg:hidden',
           isOpen
             ? 'pointer-events-auto translate-y-0 opacity-100'
             : 'pointer-events-none -translate-y-2 opacity-0'

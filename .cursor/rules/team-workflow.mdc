@@ -98,10 +98,10 @@ All tokens live in `src/app/globals.css` (`@theme` + `@utility`). New values go 
 
 |        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **EN** | Name `--color-*` after the **color** (`white`, `violet`, `rose`, `midnight`), not UI roles (`primary`, `badge`, `accent`). If a name collides with Tailwind auto-utilities (e.g. `shadow-rose` vs pink badge), pick another **color name** or a clear variant — do not reuse a color token name for unrelated semantics. Use `bg-white`, `text-ink`, `bg-violet`, etc. — all must map to `@theme` tokens. **Forbidden in components:** `#hex`, `rgb`/`rgba`, `bg-[#…]`, raw Tailwind palette (`bg-gray-500`) unless added to `@theme` first. |
-| **ES** | Nombrar `--color-*` por el **color** (`white`, `violet`, `rose`, `midnight`), no por rol de UI (`primary`, `badge`, `accent`). Si choca con utilidades auto de Tailwind, otro nombre de color o variante clara. Usar `bg-white`, `text-ink`, etc. desde `@theme`. **Prohibido en componentes:** `#hex`, `rgb`/`rgba`, `bg-[#…]`, paleta Tailwind suelta sin token.                                                                                                                                                                           |
+| **EN** | Name `--color-*` after the **color** (`white`, `violet`, `rose`, `jet-black`), not UI roles (`primary`, `badge`, `accent`). If a name collides with Tailwind auto-utilities (e.g. `shadow-rose` vs pink badge), pick another **color name** or a clear variant — do not reuse a color token name for unrelated semantics. Use `bg-white`, `text-ink`, `bg-violet`, etc. — all must map to `@theme` tokens. **Forbidden in components:** `#hex`, `rgb`/`rgba`, `bg-[#…]`, raw Tailwind palette (`bg-gray-500`) unless added to `@theme` first. |
+| **ES** | Nombrar `--color-*` por el **color** (`white`, `violet`, `rose`, `jet-black`), no por rol de UI (`primary`, `badge`, `accent`). Si choca con utilidades auto de Tailwind, otro nombre de color o variante clara. Usar `bg-white`, `text-ink`, etc. desde `@theme`. **Prohibido en componentes:** `#hex`, `rgb`/`rgba`, `bg-[#…]`, paleta Tailwind suelta sin token.                                                                                                                                                                           |
 
-**Palette · Paleta:** `white`, `shell`, `violet`, `cornflower`, `steel`, `frost`, `ink`, `muted`, `dim`, `lilac`, `lilac-light`, `midnight`, `rose`, `amber`, `forest`, `mint`.
+**Palette · Paleta:** `white`, `ink-black`, `violet`, `cornflower`, `steel`, `frost`, `ink`, `muted`, `dim`, `lilac`, `lilac-light`, `jet-black`, `rose`, `amber`, `forest`, `mint`.
 
 ### 6.2 Shadows · Sombras
 
@@ -129,8 +129,8 @@ All tokens live in `src/app/globals.css` (`@theme` + `@utility`). New values go 
 
 |        |                                                                                                                                                                       |
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **EN** | Single token: `bg-overlay` (`--background-image-overlay`), built from `--color-midnight`. Use on photos via `VisualImage` `overlayClassName` or a `bg-overlay` layer. |
-| **ES** | Un solo token: `bg-overlay`, derivado de `--color-midnight`. En fotos vía `VisualImage` o capa `bg-overlay`.                                                          |
+| **EN** | Single token: `bg-overlay` (`--background-image-overlay`), built from `--color-jet-black`. Use on photos via `VisualImage` `overlayClassName` or a `bg-overlay` layer. |
+| **ES** | Un solo token: `bg-overlay`, derivado de `--color-jet-black`. En fotos vía `VisualImage` o capa `bg-overlay`.                                                          |
 
 ---
 

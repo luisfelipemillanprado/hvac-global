@@ -39,6 +39,8 @@ type DashboardCopy = {
   serviceHighlightsEyebrowLabel: string
   serviceHighlightsPlayAriaLabel: string
   serviceHighlightsTitle: string
+  serviceHighlightsViewMoreAriaLabel: string
+  serviceHighlightsViewMoreLabel: string
 }
 
 type HeroPanelReviewAvatar = {
@@ -159,4 +161,6 @@ export interface ServiceHighlightsProps {
   items: readonly ServiceHighlightItem[]
   playAriaLabel: string
   title: string
+  viewMoreAriaLabel: string
+  viewMoreLabel: string
 }

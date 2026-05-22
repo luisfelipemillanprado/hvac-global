@@ -6,7 +6,7 @@ import Link from 'next/link'
  */
 export const PopularServicesCta = ({ href, text }: PopularServicesCtaProps) => {
   return (
-    <Link href={href} className="text-body md:text-body-md lg:text-body-lg text-violet font-medium">
+    <Link href={href} className="text-body md:text-body-md lg:text-body-lg text-pewter font-medium">
       {text}
     </Link>
   )
