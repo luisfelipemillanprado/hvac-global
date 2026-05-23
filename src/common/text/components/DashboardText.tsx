@@ -1,23 +1,25 @@
 import type { DashboardTextProps } from '@/common/text/types'
-import clsx from 'clsx'
 
 /**
- * @description Renders reusable body text for the HVAC dashboard.
- * @component
- * @param {DashboardTextProps} props - Component properties.
- * @returns A rendered dashboard text paragraph.
+ * @description Renders dashboard body text (default · onDark) with token typography.
  */
-export const DashboardText = ({ text, variant = 'onDark', truncate, bold = false }: DashboardTextProps) => {
-  return (
-    <p
-      className={clsx(
-        'text-body md:text-body-md lg:text-body-lg leading-body',
-        variant === 'onDark' ? 'text-white/80' : 'text-white',
-        truncate && 'max-w-full min-w-0 truncate',
-        bold ? 'font-bold' : 'font-normal'
-      )}
-    >
-      {text}
-    </p>
-  )
+export const DashboardText = ({ text, variant, truncate, bold, as: Tag = 'p' }: DashboardTextProps) => {
+  switch (variant) {
+    case 'default':
+      return (
+        <Tag
+          className={`text-body md:text-body-md lg:text-body-lg leading-body text-white ${bold ? 'font-bold' : 'font-normal'} ${truncate ? 'max-w-full min-w-0 truncate' : ''}`}
+        >
+          {text}
+        </Tag>
+      )
+    case 'onDark':
+      return (
+        <Tag
+          className={`text-body md:text-body-md lg:text-body-lg leading-body text-white/80 ${bold ? 'font-bold' : 'font-normal'} ${truncate ? 'max-w-full min-w-0 truncate' : ''}`}
+        >
+          {text}
+        </Tag>
+      )
+  }
 }

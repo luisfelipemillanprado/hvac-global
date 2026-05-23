@@ -56,7 +56,8 @@ type CommonServiceNeedItem = {
 
 type ServiceHighlightItem = {
   title: string
-  subtitle: string
+  location: string
+  tag: string
   image: string
 }
 

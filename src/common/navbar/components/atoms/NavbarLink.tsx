@@ -93,7 +93,7 @@ export const NavbarLink = ({ item, mobile = false, onClick }: NavbarLinkProps) =
       >
         {renderNavbarIcon(item.icon, mobile)}
       </span>
-      <DashboardText text={item.label} variant="default" />
+      <DashboardText text={item.label} variant="default" as="span" />
     </Link>
   )
 }

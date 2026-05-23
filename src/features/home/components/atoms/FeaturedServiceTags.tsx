@@ -1,5 +1,5 @@
-import type { FeaturedServiceTagsProps } from '@/features/home/types'
 import { DashboardText } from '@/common/text/components/DashboardText'
+import type { FeaturedServiceTagsProps } from '@/features/home/types'
 
 /**
  * @description Category tags grid for the featured service card.

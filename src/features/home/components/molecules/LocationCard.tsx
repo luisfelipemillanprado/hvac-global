@@ -17,11 +17,11 @@ export const LocationCard = ({
   viewMapLabel,
 }: LocationCardProps) => {
   return (
-    <section className="shadow-panel border-sky/30 grid h-full grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden rounded-4xl border bg-white p-3">
+    <section className="shadow-panel bg-graphite grid h-full grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden rounded-4xl p-5">
       <div className="mb-3 grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3 px-1">
         <div>
           <DashboardLabel text={label} />
-          <DashboardTitle text={title} variant="panel" />
+          <DashboardTitle text={title} variant="h2" />
         </div>
         <span className="text-small md:text-small-md lg:text-small-lg bg-blue-slate text-pewter grid grid-cols-[auto_auto] items-center gap-1 rounded-full px-3 py-1 font-black">
           <MapPinIcon className="size-3.5" />

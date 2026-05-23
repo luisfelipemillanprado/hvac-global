@@ -91,7 +91,7 @@
   /* CTA — quote pill; linear top-right → bottom-left (ActionButton) */
   --background-image-cta-quote: linear-gradient(
     to bottom left,
-    var(--color-graphite) 0%,
+    var(--color-platinum) 0%,
     var(--color-smoke) 32%,
     var(--color-pewter) 55%,
     var(--color-silver) 90%,

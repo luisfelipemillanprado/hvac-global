@@ -4,6 +4,7 @@ import { NavbarLink } from '@/common/navbar/components/atoms/NavbarLink'
 import { NavbarMobileMenu } from '@/common/navbar/components/molecules/NavbarMobileMenu'
 import { NavbarThemeToggle } from '@/common/navbar/components/molecules/NavbarThemeToggle'
 import type { NavbarProps } from '@/common/navbar/types'
+import { DashboardSmallText } from '@/common/text/components/DashboardSmallText'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
 
 /**
@@ -22,7 +23,7 @@ export const Navbar = ({
   serviceAreaLabel,
 }: NavbarProps) => {
   return (
-    <nav className="shadow-nav bg-graphite fixed top-6 right-5 left-5 z-50 rounded-3xl px-3 py-3 backdrop-blur-xl sm:right-8 sm:left-8 md:top-7 lg:top-8 lg:px-4">
+    <nav className="shadow-nav border-navy-gray/40 bg-graphite fixed top-6 right-5 left-5 z-50 rounded-3xl border-2 px-3 py-3 backdrop-blur-xl sm:right-8 sm:left-8 md:top-7 lg:top-8 lg:px-4">
       <div className="flex items-center justify-between">
         <NavbarBrand href={brandHref} label={brandLabel} logo={brandLogo} logoAlt={brandLogoAlt} />
 
@@ -37,8 +38,8 @@ export const Navbar = ({
 
           <div className="bg-ink-black hidden items-center gap-x-2 rounded-2xl px-2 py-1.5 md:flex">
             <AvatarStack avatars={serviceAreaAvatars} ariaLabel={serviceAreaAriaLabel} />
-            <span className="text-small md:text-small-md lg:text-small-lg hidden font-bold text-white/80 xl:block">
-              {serviceAreaLabel}
+            <span className="hidden xl:block">
+              <DashboardSmallText text={serviceAreaLabel} variant="onDark" bold />
             </span>
             <ChevronDownIcon className="text-taupe size-4 shrink-0" />
           </div>

@@ -1,7 +1,7 @@
-export type DashboardTitleVariant = 'hero' | 'section' | 'card' | 'panel' | 'brand'
+export type DashboardTitleVariant = 'h1' | 'h2' | 'h3'
 
 export interface DashboardTitleProps {
   text: string
-  variant?: DashboardTitleVariant
+  variant: DashboardTitleVariant
   id?: string
 }

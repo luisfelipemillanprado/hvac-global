@@ -70,22 +70,38 @@ export const homeAssets = {
     serviceHighlights: [
       {
         title: 'Emergency A/C Repair',
-        subtitle: 'Same-day service',
+        location: 'Houston, Texas',
+        tag: 'Same-day service',
         image: '/images/services/service1.webp',
       },
       {
         title: 'System Installation',
-        subtitle: 'High-efficiency units',
+        location: 'Katy, Texas',
+        tag: 'High-efficiency units',
         image: '/images/services/service2.webp',
       },
       {
         title: 'Indoor Air Quality',
-        subtitle: 'Cleaner home comfort',
+        location: 'Sugar Land, Texas',
+        tag: 'Duct cleaning',
         image: '/images/services/service3.webp',
       },
       {
         title: 'Seasonal Tune-Up',
-        subtitle: 'Prevent costly breakdowns',
+        location: 'Pearland, Texas',
+        tag: 'Prevent breakdowns',
+        image: '/images/services/service4.webp',
+      },
+      {
+        title: 'Syste Installation',
+        location: 'Katy, Texas',
+        tag: 'High-efficiency units',
+        image: '/images/services/service2.webp',
+      },
+      {
+        title: 'Seasona Tune-Up',
+        location: 'Pearland, Texas',
+        tag: 'Prevent breakdowns',
         image: '/images/services/service4.webp',
       },
     ],

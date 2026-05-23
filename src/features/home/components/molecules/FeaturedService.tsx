@@ -10,11 +10,11 @@ import type { FeaturedServiceProps } from '@/features/home/types'
 export const FeaturedService = ({ ctaLabel, previews, service }: FeaturedServiceProps) => {
   return (
     <section className="grid gap-4">
-      <article className="bg-blue-gray-dark grid grid-rows-[auto_auto_auto] gap-y-7 rounded-4xl p-5">
+      <article className="bg-graphite grid grid-rows-[auto_auto_auto] gap-y-7 rounded-4xl p-5">
         <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-x-4">
           <div className="grid min-w-0 grid-cols-1 gap-y-7">
             <DashboardLabel text={service.eyebrowLabel} />
-            <DashboardTitle text={service.title} variant="panel" />
+            <DashboardTitle text={service.title} variant="h2" />
           </div>
           <DashboardBadge icon={service.saveIcon} ariaLabel={service.saveAriaLabel} />
         </div>

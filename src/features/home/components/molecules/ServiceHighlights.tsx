@@ -1,5 +1,5 @@
-import { ActionButton } from '@/common/call-action/components/ActionButton'
 import { DashboardBadge } from '@/common/badge/components/DashboardBadge'
+import { ActionButton } from '@/common/call-action/components/ActionButton'
 import { DashboardLabel } from '@/common/label/components/DashboardLabel'
 import { DashboardTitle } from '@/common/titles/components/DashboardTitle'
 import { ServiceHighlightCard } from '@/features/home/components/atoms/ServiceHighlightCard'
@@ -15,11 +15,11 @@ export const ServiceHighlights = ({
   viewMoreLabel,
 }: ServiceHighlightsProps) => {
   return (
-    <section className="bg-blue-gray-dark grid h-full grid-rows-[auto_minmax(0,1fr)_auto] gap-y-7 rounded-4xl p-5">
+    <section className="bg-graphite grid h-full grid-rows-[auto_minmax(0,1fr)_auto] gap-y-7 rounded-4xl p-5">
       <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-x-4">
         <div className="grid min-w-0 grid-cols-1 gap-y-7">
           <DashboardLabel text={eyebrowLabel} />
-          <DashboardTitle text={title} variant="panel" />
+          <DashboardTitle text={title} variant="h2" />
         </div>
         <DashboardBadge icon="fire" ariaLabel={badgeAriaLabel} />
       </div>

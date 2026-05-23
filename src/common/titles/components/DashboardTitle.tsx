@@ -1,53 +1,36 @@
 import type { DashboardTitleProps } from '@/common/titles/types'
 
 /**
- * @description Renders reusable title styles for the HVAC dashboard.
- * @component
- * @param {DashboardTitleProps} props - Component properties.
- * @returns A rendered dashboard title.
+ * @description Renders dashboard headings (h1–h3) with token typography.
  */
-export const DashboardTitle = ({ text, variant = 'section', id }: DashboardTitleProps) => {
-  const classes = getTitleClasses(variant)
-
-  if (variant === 'hero') {
-    return (
-      <h1 id={id} className={classes}>
-        {text}
-      </h1>
-    )
-  }
-
-  if (variant === 'section' || variant === 'panel') {
-    return (
-      <h2 id={id} className={classes}>
-        {text}
-      </h2>
-    )
-  }
-
-  if (variant === 'card') {
-    return (
-      <h3 id={id} className={classes}>
-        {text}
-      </h3>
-    )
-  }
-
-  return <p className={classes}>{text}</p>
-}
-
-function getTitleClasses(variant: DashboardTitleProps['variant']) {
+export const DashboardTitle = ({ text, variant, id }: DashboardTitleProps) => {
   switch (variant) {
-    case 'hero':
-      return 'text-main-title md:text-main-title-md lg:text-main-title-lg leading-main-title text-white font-black'
-    case 'card':
-      return 'text-tertiary-title md:text-tertiary-title-md lg:text-tertiary-title-lg leading-tertiary-title text-white truncate font-bold'
-    case 'panel':
-      return 'text-secondary-title md:text-secondary-title-md lg:text-secondary-title-lg leading-secondary-title text-ink-black font-black'
-    case 'brand':
-      return 'text-body md:text-body-md lg:text-body-lg leading-body text-ink-black font-semibold tracking-tight'
-    case 'section':
+    case 'h1':
+      return (
+        <h1
+          id={id}
+          className="text-main-title md:text-main-title-md lg:text-main-title-lg leading-main-title font-black text-white"
+        >
+          {text}
+        </h1>
+      )
+    case 'h3':
+      return (
+        <h3
+          id={id}
+          className="text-tertiary-title md:text-tertiary-title-md lg:text-tertiary-title-lg leading-tertiary-title truncate font-bold text-white"
+        >
+          {text}
+        </h3>
+      )
     default:
-      return 'text-secondary-title md:text-secondary-title-md lg:text-secondary-title-lg leading-secondary-title text-ink-black font-bold'
+      return (
+        <h2
+          id={id}
+          className="text-secondary-title md:text-secondary-title-md lg:text-secondary-title-lg leading-secondary-title font-black text-white"
+        >
+          {text}
+        </h2>
+      )
   }
 }
