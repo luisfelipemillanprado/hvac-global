@@ -11,8 +11,8 @@ import Image from 'next/image'
 export const ServiceCard = ({ title, description, ctaLabel, image, imageAlt, mark }: ServiceCardProps) => {
   return (
     <article className="shadow-panel grid h-full min-h-80 grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-4xl">
-      <div className="bg-graphite relative min-h-0 px-1 pt-1 pb-0">
-        <div className="relative h-full overflow-hidden rounded-4xl">
+      <div className="bg-graphite relative min-h-0">
+        <div className="relative h-full overflow-hidden rounded-t-4xl rounded-b-3xl">
           <Image
             src={image}
             alt={imageAlt}
