@@ -3,7 +3,7 @@ import { DashboardTitle } from '@/common/titles/components/DashboardTitle'
 import { PopularServicesCta } from '@/features/home/components/atoms/PopularServicesCta'
 import type { PopularServicesProps } from '@/features/home/types'
 
-export const PopularServices = ({ config, copy, reviewAvatars, services }: PopularServicesProps) => {
+export const PopularServices = ({ config, copy, services }: PopularServicesProps) => {
   return (
     <section aria-labelledby={config.popularServicesTitleId} className="grid gap-3">
       <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
@@ -12,13 +12,7 @@ export const PopularServices = ({ config, copy, reviewAvatars, services }: Popul
       </div>
       <div className="grid h-full gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {services.map((service) => (
-          <ServiceCard
-            key={service.title}
-            {...service}
-            ctaLabel={copy.freeQuoteCta}
-            reviewAvatars={reviewAvatars}
-            reviewersAriaLabel={copy.serviceReviewersAriaLabel}
-          />
+          <ServiceCard key={service.title} {...service} ctaLabel={copy.freeQuoteCta} />
         ))}
       </div>
     </section>

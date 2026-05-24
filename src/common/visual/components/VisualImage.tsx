@@ -7,18 +7,15 @@ import Image from 'next/image'
  * @param {VisualImageProps} props - Component properties.
  * @returns A rendered hero visual image.
  */
-export const VisualImage = ({ image, alt, priority = false, overlayClassName }: VisualImageProps) => {
+export const VisualImage = ({ image, alt, priority = false }: VisualImageProps) => {
   return (
-    <>
-      <Image
-        src={image}
-        alt={alt}
-        fill
-        priority={priority}
-        sizes={'(max-width: 1024px) 100vw, 620px'}
-        className="object-cover"
-      />
-      {overlayClassName && <div className={`absolute inset-0 ${overlayClassName}`} />}
-    </>
+    <Image
+      src={image}
+      alt={alt}
+      fill
+      priority={priority}
+      sizes={'(max-width: 1024px) 100vw, 620px'}
+      className="object-cover"
+    />
   )
 }

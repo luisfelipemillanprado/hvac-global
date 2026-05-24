@@ -13,7 +13,6 @@ const {
   heroReviewAvatars,
   location,
   popularServices,
-  serviceReviewAvatars,
   serviceHighlights,
 } = homeAssets.dashboard
 
@@ -27,24 +26,17 @@ export const DashboardLayout = () => {
           title: copy.commonServiceNeedsTitle,
         }}
         serviceHighlights={{
-          badgeAriaLabel: copy.serviceHighlightsBadgeAriaLabel,
           eyebrowLabel: copy.serviceHighlightsEyebrowLabel,
           items: serviceHighlights,
           playAriaLabel: copy.serviceHighlightsPlayAriaLabel,
           title: copy.serviceHighlightsTitle,
-          viewMoreAriaLabel: copy.serviceHighlightsViewMoreAriaLabel,
           viewMoreLabel: copy.serviceHighlightsViewMoreLabel,
         }}
       />
 
       <section className="order-1 grid min-w-0 gap-5 lg:order-0 lg:grid-rows-[minmax(0,1fr)_auto]">
         <HeroPanel config={config} copy={copy} reviewAvatars={heroReviewAvatars} />
-        <PopularServices
-          config={config}
-          copy={copy}
-          reviewAvatars={serviceReviewAvatars}
-          services={popularServices}
-        />
+        <PopularServices config={config} copy={copy} services={popularServices} />
       </section>
 
       <RightRail

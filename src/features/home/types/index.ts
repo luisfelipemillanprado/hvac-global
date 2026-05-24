@@ -1,5 +1,3 @@
-type FeaturedServiceBadgeIcon = 'bolt' | 'fire' | 'star' | 'share' | 'bell'
-
 type LocationCardMapLoading = 'eager' | 'lazy'
 
 type LocationCardMapReferrerPolicy =
@@ -34,12 +32,9 @@ type DashboardCopy = {
   freeQuoteCta: string
   popularServicesCta: string
   popularServicesTitle: string
-  serviceReviewersAriaLabel: string
-  serviceHighlightsBadgeAriaLabel: string
   serviceHighlightsEyebrowLabel: string
   serviceHighlightsPlayAriaLabel: string
   serviceHighlightsTitle: string
-  serviceHighlightsViewMoreAriaLabel: string
   serviceHighlightsViewMoreLabel: string
 }
 
@@ -88,8 +83,6 @@ export interface FeaturedServiceProps {
     ratingLabel: string
     eyebrowLabel: string
     href: string
-    saveIcon: FeaturedServiceBadgeIcon
-    saveAriaLabel: string
   }
 }
 
@@ -135,7 +128,6 @@ export interface PopularServicesCtaProps {
 export interface PopularServicesProps {
   config: DashboardConfig
   copy: DashboardCopy
-  reviewAvatars: readonly HeroPanelReviewAvatar[]
   services: readonly {
     title: string
     description: string
@@ -157,11 +149,9 @@ export interface ServiceHighlightCardProps {
 }
 
 export interface ServiceHighlightsProps {
-  badgeAriaLabel: string
   eyebrowLabel: string
   items: readonly ServiceHighlightItem[]
   playAriaLabel: string
   title: string
-  viewMoreAriaLabel: string
   viewMoreLabel: string
 }

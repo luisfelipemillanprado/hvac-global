@@ -81,7 +81,7 @@ alwaysApply: true
 | Component      | EN                                                    | ES                                                |
 | -------------- | ----------------------------------------------------- | ------------------------------------------------- |
 | `ActionLink`   | Link actions with `href` — variants `text`, `booking` | Acciones con `href` — variantes `text`, `booking` |
-| `ActionButton` | Native button (no link) — `icon` + `ariaLabel`        | Botón nativo (sin link) — `icon` + `ariaLabel`    |
+| `ActionButton` | Native button (no link) — visible `text`              | Botón nativo (sin link) — `text` visible          |
 
 |        |                                                                                                                                                                                                                     |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -129,8 +129,8 @@ All tokens live in `src/app/globals.css` (`@theme` + `@utility`). New values go 
 
 |        |                                                                                                                                                                       |
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **EN** | Single token: `bg-overlay` (`--background-image-overlay`), built from `--color-jet-black`. Use on photos via `VisualImage` `overlayClassName` or a `bg-overlay` layer. |
-| **ES** | Un solo token: `bg-overlay`, derivado de `--color-jet-black`. En fotos vía `VisualImage` o capa `bg-overlay`.                                                          |
+| **EN** | Single token: `bg-overlay` (`--background-image-overlay`), built from `--color-jet-black`. Use on photos via a `bg-overlay` layer. |
+| **ES** | Un solo token: `bg-overlay`, derivado de `--color-jet-black`. En fotos con capa `bg-overlay`.                                      |
 
 ---
 

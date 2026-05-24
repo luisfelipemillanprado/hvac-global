@@ -9,15 +9,12 @@ export const homeAssets = {
       heroRatingLabel: '5.0',
       heroReviewersAriaLabel: 'Google reviewers',
       heroTitle: 'Reliable HVAC Services in Houston',
-      freeQuoteCta: 'Free Quote',
+      freeQuoteCta: 'Get Free Quote',
       popularServicesCta: 'All services',
       popularServicesTitle: 'Popular Services',
-      serviceReviewersAriaLabel: 'Service reviewers',
-      serviceHighlightsBadgeAriaLabel: 'Hot service highlights',
       serviceHighlightsEyebrowLabel: 'Most Requested',
       serviceHighlightsPlayAriaLabel: 'Play service highlight video',
       serviceHighlightsTitle: 'Service Highlights.',
-      serviceHighlightsViewMoreAriaLabel: 'View more service highlights',
       serviceHighlightsViewMoreLabel: 'View more service highlights',
     },
     navbar: {
@@ -117,17 +114,10 @@ export const homeAssets = {
       { id: 'google-review-3', image: '/images/reviews/review3.webp', imageAlt: 'Google reviewer' },
       { id: 'google-review-4', image: '/images/reviews/review4.webp', imageAlt: 'Google reviewer' },
     ],
-    serviceReviewAvatars: [
-      { id: 'service-review-1', image: '/images/reviews/review1.webp', imageAlt: 'Service reviewer' },
-      { id: 'service-review-2', image: '/images/reviews/review2.webp', imageAlt: 'Service reviewer' },
-      { id: 'service-review-3', image: '/images/reviews/review3.webp', imageAlt: 'Service reviewer' },
-      { id: 'service-review-4', image: '/images/reviews/review4.webp', imageAlt: 'Service reviewer' },
-    ],
     popularServices: [
       {
         title: 'A/C System Repair.',
         description: 'Fast, reliable AC repairs restoring your comfort from extreme heat.',
-        ctaLabel: 'Free Quote',
         href: '#',
         image: '/images/services/service1.webp',
         imageAlt: 'Technician repairing an air conditioning system',
@@ -136,7 +126,6 @@ export const homeAssets = {
       {
         title: 'HVAC Maintenance.',
         description: 'Seasonal tune-ups optimizing energy efficiency and lowering electric bills.',
-        ctaLabel: 'Free Quote',
         href: '#',
         image: '/images/services/service2.webp',
         imageAlt: 'HVAC maintenance service in a Houston home',
@@ -145,7 +134,6 @@ export const homeAssets = {
       {
         title: 'Heating Repair.',
         description: 'Emergency furnace fixes protecting your family during sudden freezes.',
-        ctaLabel: 'Free Quote',
         href: '#',
         image: '/images/services/service3.webp',
         imageAlt: 'Heating repair service for a residential system',
@@ -154,7 +142,6 @@ export const homeAssets = {
       {
         title: 'System Installation.',
         description: 'Modern SEER2 air conditioning systems sized for intense local summers.',
-        ctaLabel: 'Free Quote',
         href: '#',
         image: '/images/services/service4.webp',
         imageAlt: 'New HVAC system installation service',
@@ -163,7 +150,6 @@ export const homeAssets = {
       {
         title: 'Indoor Air Quality.',
         description: 'Advanced filtration systems fighting mold and heavy indoor humidity.',
-        ctaLabel: 'Free Quote',
         href: '#',
         image: '/images/services/service5.webp',
         imageAlt: 'Indoor air quality and filtration service',
@@ -172,7 +158,6 @@ export const homeAssets = {
       {
         title: 'Emergency Service.',
         description: 'Urgent dispatch for midnight system failures with straightforward pricing.',
-        ctaLabel: 'Free Quote',
         href: '#',
         image: '/images/services/service6.webp',
         imageAlt: 'Emergency HVAC service visit',
@@ -192,8 +177,6 @@ export const homeAssets = {
       ratingLabel: 'Rating',
       eyebrowLabel: 'Always Ready',
       href: '#',
-      saveIcon: 'bolt',
-      saveAriaLabel: 'Reliable Fast Service.',
     },
     featuredServicePreviews: [
       { label: 'A/C', image: '/images/reviews/review1.webp', imageAlt: 'Air conditioning service preview' },

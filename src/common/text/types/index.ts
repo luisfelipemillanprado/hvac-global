@@ -1,4 +1,4 @@
-export type DashboardTextVariant = 'default' | 'onDark'
+export type DashboardTextVariant = 'default' | 'onDark' | 'onLight'
 
 export interface DashboardTextProps {
   text: string

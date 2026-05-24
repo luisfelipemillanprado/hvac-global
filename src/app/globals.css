@@ -88,26 +88,15 @@
     oklch(from var(--color-jet-black) l c h / 0.18) 100%
   );
 
-  /* CTA — quote pill; linear top-right → bottom-left (ActionButton) */
-  --background-image-cta-quote: linear-gradient(
-    to bottom left,
-    var(--color-platinum) 0%,
-    var(--color-smoke) 32%,
-    var(--color-pewter) 55%,
-    var(--color-silver) 90%,
-    var(--color-platinum) 97%,
-    var(--color-platinum) 100%
-  );
-
-  /* Overlay — bottom-up on service cards: strong band at bottom, top unchanged (~18%) */
+  /* Overlay — bottom-up on service cards: band at bottom, lighter than before */
   --background-image-overlay-bottom: linear-gradient(
     to top,
-    oklch(from var(--color-jet-black) l c h / 0.98) 0%,
-    oklch(from var(--color-jet-black) l c h / 0.94) 22%,
-    oklch(from var(--color-jet-black) l c h / 0.8) 40%,
-    oklch(from var(--color-jet-black) l c h / 0.58) 55%,
-    oklch(from var(--color-jet-black) l c h / 0.32) 72%,
-    oklch(from var(--color-jet-black) l c h / 0.18) 100%
+    oklch(from var(--color-jet-black) l c h / 0.88) 0%,
+    oklch(from var(--color-jet-black) l c h / 0.8) 22%,
+    oklch(from var(--color-jet-black) l c h / 0.62) 40%,
+    oklch(from var(--color-jet-black) l c h / 0.44) 55%,
+    oklch(from var(--color-jet-black) l c h / 0.24) 72%,
+    oklch(from var(--color-jet-black) l c h / 0.12) 100%
   );
 
   /* Typography — body: mobile · md · lg */

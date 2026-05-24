@@ -1,4 +1,5 @@
 import type { DashboardLabelProps } from '@/common/label/types'
+import { DashboardSmallText } from '@/common/text/components/DashboardSmallText'
 
 /**
  * @description Renders reusable small labels for the HVAC dashboard.
@@ -6,13 +7,10 @@ import type { DashboardLabelProps } from '@/common/label/types'
  * @param {DashboardLabelProps} props - Component properties.
  * @returns A rendered dashboard label.
  */
-export const DashboardLabel = ({ text, id }: DashboardLabelProps) => {
+export const DashboardLabel = ({ text }: DashboardLabelProps) => {
   return (
-    <span
-      id={id}
-      className="text-small md:text-small-md lg:text-small-lg leading-small bg-pewter/40 inline-flex w-fit items-center rounded-full px-3 py-2 font-medium text-white"
-    >
-      {text}
+    <span className="bg-pewter/40 inline-flex w-fit items-center rounded-full px-3 py-2">
+      <DashboardSmallText text={text} variant="default" />
     </span>
   )
 }

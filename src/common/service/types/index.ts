@@ -10,10 +10,4 @@ export interface ServiceCardProps {
   image: string
   imageAlt: string
   mark: string
-  reviewAvatars: readonly {
-    id: string | number
-    image: string
-    imageAlt: string
-  }[]
-  reviewersAriaLabel: string
 }
