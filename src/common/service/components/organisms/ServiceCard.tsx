@@ -17,7 +17,7 @@ export const ServiceCard = ({
   imageAlt,
 }: ServiceCardProps) => {
   return (
-    <article className="shadow-panel grid h-full min-h-80 grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-4xl">
+    <article className="shadow-panel border-navy-gray grid h-full min-h-82 grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-4xl border-2">
       <div className="relative h-full">
         <Image
           src={image}

@@ -88,15 +88,15 @@
     oklch(from var(--color-jet-black) l c h / 0.18) 100%
   );
 
-  /* Overlay — bottom-up on service cards: band at bottom, lighter than before */
+  /* Overlay — bottom-up on service cards */
   --background-image-overlay-bottom: linear-gradient(
     to top,
-    oklch(from var(--color-jet-black) l c h / 0.88) 0%,
-    oklch(from var(--color-jet-black) l c h / 0.8) 22%,
-    oklch(from var(--color-jet-black) l c h / 0.62) 40%,
-    oklch(from var(--color-jet-black) l c h / 0.44) 55%,
-    oklch(from var(--color-jet-black) l c h / 0.24) 72%,
-    oklch(from var(--color-jet-black) l c h / 0.12) 100%
+    oklch(from var(--color-jet-black) l c h / 0.93) 0%,
+    oklch(from var(--color-jet-black) l c h / 0.85) 22%,
+    oklch(from var(--color-jet-black) l c h / 0.68) 40%,
+    oklch(from var(--color-jet-black) l c h / 0.49) 55%,
+    oklch(from var(--color-jet-black) l c h / 0.28) 72%,
+    oklch(from var(--color-jet-black) l c h / 0.15) 100%
   );
 
   /* Typography — body: mobile · md · lg */

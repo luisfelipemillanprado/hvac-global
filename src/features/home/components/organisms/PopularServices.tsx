@@ -10,7 +10,7 @@ export const PopularServices = ({ config, copy, services }: PopularServicesProps
         <DashboardTitle id={config.popularServicesTitleId} text={copy.popularServicesTitle} variant="h2" />
         <PopularServicesCta href={config.popularServicesCtaHref} text={copy.popularServicesCta} />
       </div>
-      <div className="grid h-full gap-y-4 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="grid h-full gap-y-7 sm:grid-cols-2 sm:gap-5 xl:grid-cols-3">
         {services.map((service) => (
           <ServiceCard
             key={service.title}
