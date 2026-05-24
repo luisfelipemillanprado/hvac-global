@@ -12,6 +12,7 @@ export const homeAssets = {
       freeQuoteCta: 'Get Free Quote',
       popularServicesCta: 'All services',
       popularServicesTitle: 'Popular Services',
+      serviceDetailsAriaLabel: 'View service details',
       serviceHighlightsEyebrowLabel: 'Most Requested',
       serviceHighlightsPlayAriaLabel: 'Play service highlight video',
       serviceHighlightsTitle: 'Service Highlights.',
@@ -121,7 +122,6 @@ export const homeAssets = {
         href: '#',
         image: '/images/services/service1.webp',
         imageAlt: 'Technician repairing an air conditioning system',
-        mark: 'AC',
       },
       {
         title: 'HVAC Maintenance.',
@@ -129,7 +129,6 @@ export const homeAssets = {
         href: '#',
         image: '/images/services/service2.webp',
         imageAlt: 'HVAC maintenance service in a Houston home',
-        mark: 'HM',
       },
       {
         title: 'Heating Repair.',
@@ -137,7 +136,6 @@ export const homeAssets = {
         href: '#',
         image: '/images/services/service3.webp',
         imageAlt: 'Heating repair service for a residential system',
-        mark: 'HR',
       },
       {
         title: 'System Installation.',
@@ -145,7 +143,6 @@ export const homeAssets = {
         href: '#',
         image: '/images/services/service4.webp',
         imageAlt: 'New HVAC system installation service',
-        mark: 'SI',
       },
       {
         title: 'Indoor Air Quality.',
@@ -153,7 +150,6 @@ export const homeAssets = {
         href: '#',
         image: '/images/services/service5.webp',
         imageAlt: 'Indoor air quality and filtration service',
-        mark: 'AQ',
       },
       {
         title: 'Emergency Service.',
@@ -161,7 +157,6 @@ export const homeAssets = {
         href: '#',
         image: '/images/services/service6.webp',
         imageAlt: 'Emergency HVAC service visit',
-        mark: 'ES',
       },
     ],
     featuredService: {

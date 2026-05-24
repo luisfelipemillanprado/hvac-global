@@ -2,15 +2,21 @@ import type { DashboardLabelProps } from '@/common/label/types'
 import { DashboardSmallText } from '@/common/text/components/DashboardSmallText'
 
 /**
- * @description Renders reusable small labels for the HVAC dashboard.
- * @component
- * @param {DashboardLabelProps} props - Component properties.
- * @returns A rendered dashboard label.
+ * @description Renders reusable small labels for the HVAC dashboard (onDark · onLight).
  */
-export const DashboardLabel = ({ text }: DashboardLabelProps) => {
-  return (
-    <span className="bg-pewter/40 inline-flex w-fit items-center rounded-full px-3 py-2">
-      <DashboardSmallText text={text} variant="default" />
-    </span>
-  )
+export const DashboardLabel = ({ text, variant = 'onDark' }: DashboardLabelProps) => {
+  switch (variant) {
+    case 'onDark':
+      return (
+        <span className="bg-pewter/40 inline-flex w-fit items-center rounded-full px-3 py-2">
+          <DashboardSmallText text={text} variant="default" />
+        </span>
+      )
+    case 'onLight':
+      return (
+        <span className="bg-pewter inline-flex w-fit items-center rounded-full px-3 py-2">
+          <DashboardSmallText text={text} variant="onDark" />
+        </span>
+      )
+  }
 }

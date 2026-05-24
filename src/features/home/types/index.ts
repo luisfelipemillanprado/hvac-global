@@ -32,6 +32,7 @@ type DashboardCopy = {
   freeQuoteCta: string
   popularServicesCta: string
   popularServicesTitle: string
+  serviceDetailsAriaLabel: string
   serviceHighlightsEyebrowLabel: string
   serviceHighlightsPlayAriaLabel: string
   serviceHighlightsTitle: string
@@ -134,7 +135,6 @@ export interface PopularServicesProps {
     href: string
     image: string
     imageAlt: string
-    mark: string
   }[]
 }
 

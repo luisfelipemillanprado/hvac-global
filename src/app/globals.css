@@ -128,7 +128,7 @@
   --leading-main-title: 1.2; /* ~38.8px at 32.3px · ~40.6px at 33.8px */
   --leading-secondary-title: 1.25; /* ~21.6px at 17.3px · ~23.5px at 18.8px */
   --leading-tertiary-title: 1.2; /* ~19.6px at 16.3px · ~21.4px at 17.8px */
-  --leading-body: 1.625; /* ~24.9px at 15.3px · ~27.3px at 16.8px */
+  --leading-body: 1.7; /* ~28.9px at 15.3px · ~31.9px at 16.8px */
   --leading-small: 1.15; /* ~16.4px at 14.3px · ~18.2px at 15.8px */
 
   /* Animate — animate-* utilities */
