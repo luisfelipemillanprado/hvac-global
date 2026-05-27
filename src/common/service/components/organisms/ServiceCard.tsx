@@ -1,8 +1,6 @@
-import { ActionButton } from '@/common/call-action/components/ActionButton'
-import { ServiceCardDetailsButton } from '@/common/service/components/atoms/ServiceCardDetailsButton'
 import type { ServiceCardProps } from '@/common/service/types'
-import { DashboardText } from '@/common/text/components/DashboardText'
 import { DashboardTitle } from '@/common/titles/components/DashboardTitle'
+import { PlusIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 
 /**
@@ -10,32 +8,41 @@ import Image from 'next/image'
  */
 export const ServiceCard = ({
   title,
-  description,
-  ctaLabel,
-  detailsAriaLabel,
+  saveAriaLabel,
   image,
   imageAlt,
 }: ServiceCardProps) => {
   return (
-    <article className="shadow-panel border-navy-gray grid h-full min-h-82 grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-4xl border-2">
-      <div className="relative h-full">
-        <Image
-          src={image}
-          alt={imageAlt}
-          fill
-          sizes="(max-width: 40rem) 100vw, (max-width: 80rem) 50vw, 16.25rem"
-          className="object-cover"
-        />
-        <div className="bg-overlay-bottom absolute inset-0" />
-        <ServiceCardDetailsButton ariaLabel={detailsAriaLabel} />
-        <div className="relative z-10 flex h-full flex-col justify-end gap-y-3.5 p-4">
-          <DashboardTitle text={title} variant="h3" />
-          <DashboardText text={description} variant="onDark" />
-        </div>
-      </div>
+    <article className="bg-jet-gray/70 shadow-panel relative aspect-square min-h-35.5 overflow-hidden rounded-4xl border border-white/5 backdrop-blur-xl">
+      <Image
+        src={image}
+        alt={imageAlt}
+        fill
+        sizes="(max-width: 64rem) 50vw, 10rem"
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-overlay-bottom" />
 
-      <div className="bg-graphite p-4 backdrop-blur-md">
-        <ActionButton text={ctaLabel} />
+      <div className="relative z-10 grid h-full grid-rows-[auto_minmax(0,1fr)_auto] p-2.5">
+        <div className="grid justify-end">
+          <button
+            type="button"
+            aria-label={saveAriaLabel}
+            className="from-periwinkle via-hot-pink to-sunset shadow-control grid size-8 items-center justify-center rounded-full bg-linear-to-r text-white"
+          >
+            <PlusIcon className="size-4.5" aria-hidden />
+          </button>
+        </div>
+
+        <div />
+
+        <div className="grid gap-2">
+          <div className="grid items-end">
+            <div className="min-w-0">
+              <DashboardTitle text={title} variant="h3" />
+            </div>
+          </div>
+        </div>
       </div>
     </article>
   )

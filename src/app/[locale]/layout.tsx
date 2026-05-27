@@ -1,7 +1,5 @@
 import { Providers } from '@/app/[locale]/providers'
-import { Navbar } from '@/common/navbar/components/organisms/Navbar'
 import { routing } from '@/i18n/routing'
-import { homeAssets } from '@/utils/data/static/pages/home'
 import clsx from 'clsx'
 import { hasLocale } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
@@ -91,7 +89,6 @@ export default async function RootLayout({
             themes: ['dark', 'light'],
           }}
         >
-          <Navbar {...homeAssets.dashboard.navbar} />
           {children}
         </Providers>
       </body>

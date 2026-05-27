@@ -1,52 +1,73 @@
-import { HeroPanel } from '@/features/home/components/organisms/HeroPanel'
-import { LeftRail } from '@/features/home/components/organisms/LeftRail'
-import { PopularServices } from '@/features/home/components/organisms/PopularServices'
-import { RightRail } from '@/features/home/components/organisms/RightRail'
+import { ServiceCarousel } from '@/common/carousel/components/organisms/ServiceCarousel'
+import { DashboardHeroOverlay } from '@/features/home/components/molecules/DashboardHeroOverlay'
+import { DashboardInsightsColumn } from '@/features/home/components/molecules/DashboardInsightsColumn'
+import { DashboardMetricsColumn } from '@/features/home/components/molecules/DashboardMetricsColumn'
+import { DashboardShellHeader } from '@/features/home/components/molecules/DashboardShellHeader'
 import { homeAssets } from '@/utils/data/static/pages/home'
 
 const {
-  commonServiceNeeds,
-  config,
+  comments,
+  companyProfile,
   copy,
-  featuredService,
-  featuredServicePreviews,
-  heroReviewAvatars,
-  location,
+  insightRange,
+  navbar,
+  performancePanels,
   popularServices,
-  serviceHighlights,
+  sitePower,
+  tabs,
 } = homeAssets.dashboard
 
 export const DashboardLayout = () => {
+  const [featuredService] = popularServices
+
+  if (!featuredService) return null
+
   return (
-    <div className="grid h-full items-stretch gap-4 lg:grid-cols-[180px_minmax(0,1fr)_290px] lg:gap-5 lg:pb-2">
-      <LeftRail
-        commonServiceNeeds={{
-          href: config.commonServiceNeedHref,
-          items: commonServiceNeeds,
-          title: copy.commonServiceNeedsTitle,
-        }}
-        serviceHighlights={{
-          eyebrowLabel: copy.serviceHighlightsEyebrowLabel,
-          items: serviceHighlights,
-          playAriaLabel: copy.serviceHighlightsPlayAriaLabel,
-          title: copy.serviceHighlightsTitle,
-          viewMoreLabel: copy.serviceHighlightsViewMoreLabel,
-        }}
+    <section className="bg-eerie shadow-flyout grid h-full min-h-0 gap-3 overflow-hidden rounded-4xl border border-white/5 p-5 backdrop-blur-2xl lg:grid-rows-[auto_minmax(0,1fr)]">
+      <DashboardShellHeader
+        ariaLabel={copy.popularServicesTitle}
+        href={navbar.brandHref}
+        label={navbar.brandLabel}
+        logo={navbar.brandLogo}
+        logoAlt={navbar.brandLogoAlt}
+        searchAriaLabel={copy.searchAriaLabel}
+        settingsAriaLabel={copy.settingsAriaLabel}
+        tabs={tabs}
       />
 
-      <section className="order-1 grid min-w-0 gap-5 lg:order-0 lg:grid-rows-[minmax(0,1fr)_auto]">
-        <HeroPanel config={config} copy={copy} reviewAvatars={heroReviewAvatars} />
-        <PopularServices config={config} copy={copy} services={popularServices} />
-      </section>
+      <div className="grid min-h-0 gap-3 overflow-hidden lg:grid-cols-[300px_minmax(0,1fr)_300px] xl:grid-cols-[340px_minmax(0,1fr)_340px]">
+        <div className="order-2 min-h-0 lg:order-0">
+          <DashboardMetricsColumn comments={comments} companyProfile={companyProfile} />
+        </div>
 
-      <RightRail
-        featuredService={{
-          ctaLabel: copy.freeQuoteCta,
-          previews: featuredServicePreviews,
-          service: featuredService,
-        }}
-        location={location}
-      />
-    </div>
+        <div className="relative order-1 min-h-0 lg:order-0">
+          <ServiceCarousel ariaLabel={copy.popularServicesTitle} slides={popularServices} />
+          <DashboardHeroOverlay
+            addressLabel={copy.serviceAddressLabel}
+            expandAriaLabel={copy.heroPanelExpandAriaLabel}
+            infoAriaLabel={copy.heroPanelInfoAriaLabel}
+            moreAriaLabel={copy.heroPanelMoreAriaLabel}
+            service={featuredService}
+            startDateLabel={copy.serviceStartDateLabel}
+            title={copy.heroPanelTitle}
+          />
+        </div>
+
+        <div className="order-3 min-h-0 lg:order-0">
+          <DashboardInsightsColumn
+            addressLabel={copy.serviceAddressLabel}
+            ctaLabel={copy.freeQuoteCta}
+            detailsAriaLabel={copy.serviceDetailsAriaLabel}
+            insightRange={insightRange}
+            panels={performancePanels}
+            saveAriaLabel={copy.serviceSaveAriaLabel}
+            services={popularServices}
+            servicesTitle={copy.servicesPanelTitle}
+            sitePower={sitePower}
+            startDateLabel={copy.serviceStartDateLabel}
+          />
+        </div>
+      </div>
+    </section>
   )
 }

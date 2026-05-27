@@ -9,7 +9,7 @@ export const ServiceCardDetailsButton = ({ ariaLabel }: ServiceCardDetailsButton
     <button
       type="button"
       aria-label={ariaLabel}
-      className="shadow-nav bg-pewter absolute top-3 right-3 z-10 inline-flex size-10 items-center justify-center rounded-2xl backdrop-blur-md"
+      className="border-white/10 bg-white/10 shadow-nav absolute top-3 right-3 z-10 inline-flex size-10 items-center justify-center rounded-2xl border backdrop-blur-md"
     >
       <PlusIcon className="size-5.5 text-white" aria-hidden />
     </button>

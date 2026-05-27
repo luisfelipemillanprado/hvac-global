@@ -52,9 +52,9 @@ alwaysApply: true
 
 | Level · Nivel | Path · Ruta                       | Role · Rol                                  | Examples · Ejemplos                                       |
 | ------------- | --------------------------------- | ------------------------------------------- | --------------------------------------------------------- |
-| Atom          | `common/*/components/atoms`       | Single responsibility · Una responsabilidad | `AvatarStack`, `ActionLink`, `ActionButton`, `NavbarLink` |
-| Molecule      | `features/*/components/molecules` | Combines atoms · Combina atoms              | `FeaturedService`, `LocationCard`                         |
-| Organism      | `features/*/components/organisms` | Layout sections · Secciones del layout      | `HeroPanel`, `DashboardLayout`                            |
+| Atom          | `common/*/components/atoms`       | Single responsibility · Una responsabilidad | `ActionButton`, `ServiceCardDetailsButton`, `NavbarBrand` |
+| Molecule      | `features/*/components/molecules` | Combines atoms · Combina atoms              | `DashboardShellHeader`, `DashboardMetricsColumn`          |
+| Organism      | `features/*/components/organisms` | Layout sections · Secciones del layout      | `DashboardLayout`, `HomeDashboard`                        |
 
 ---
 
@@ -80,12 +80,11 @@ alwaysApply: true
 
 | Component      | EN                                                    | ES                                                |
 | -------------- | ----------------------------------------------------- | ------------------------------------------------- |
-| `ActionLink`   | Link actions with `href` — variants `text`, `booking` | Acciones con `href` — variantes `text`, `booking` |
 | `ActionButton` | Native button (no link) — visible `text`              | Botón nativo (sin link) — `text` visible          |
 
 |        |                                                                                                                                                                                                                     |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **EN** | **Links** (`ActionLink`, `NavbarLink`, `<a>`) → `text-body md:text-body-md lg:text-body-lg`. **Labels / eyebrows / meta** → `text-small md:text-small-md lg:text-small-lg`. Do not mix link scale with label scale. |
+| **EN** | **Links** (`<a>`) → `text-body md:text-body-md lg:text-body-lg`. **Labels / eyebrows / meta** → `text-small md:text-small-md lg:text-small-lg`. Do not mix link scale with label scale. |
 | **ES** | **Enlaces** → `text-body md:text-body-md lg:text-body-lg`. **Labels / eyebrows / meta** → `text-small md:text-small-md lg:text-small-lg`. No mezclar escala de enlaces con la de labels.                            |
 
 ---
@@ -114,7 +113,6 @@ All tokens live in `src/app/globals.css` (`@theme` + `@utility`). New values go 
 | ------------------ | ---------------------------------------------- |
 | `shadow-nav`       | Navbar, light elevation on thumbnails/badges   |
 | `shadow-panel`     | Cards, hero block, section panels              |
-| `shadow-cta`       | Booking / primary CTA (`ActionLink` booking)   |
 | `shadow-flyout`    | Mobile menu dropdown panel                     |
 | `shadow-control`   | Violet nav icons, menu button, active nav link |
 
@@ -147,8 +145,8 @@ All tokens live in `src/app/globals.css` (`@theme` + `@utility`). New values go 
 
 |        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **EN** | **No invented structure.** Do not add wrapper `motion.div` / `span` **only** to attach `ref` or `className` when a native element (`button`, `input`, Next `Link`) can take `ref` and classes directly. Do **not** add `createPortal`, React `Context` providers, or split components (Provider / Trigger / Panel) unless the **current** DOM in this repo cannot achieve the result with normal composition. Before overlays / dropdowns / width alignment: identify the **positioned containing block** (`fixed`, `relative`, …). Prefer **`absolute` + `inset-x-0`** under the **same** positioned ancestor (e.g. dashboard `nav` + `NavbarMobileMenu`) instead of a second `fixed` layer with duplicated `calc(100% - …)` width. When adding behavior, **match existing files** in this repo (e.g. `NavbarLink.tsx`, `ActionLink.tsx`); do not paste patterns from unrelated codebases. |
-| **ES** | **Sin estructura inventada.** No añadir envoltorios **solo** para `ref` o `className` si el elemento nativo admite `ref` y clases. **No** `createPortal`, `Context` ni Provider/Trigger/Panel salvo necesidad real. Identificar el **bloque de posicionamiento** antes de overlays. Preferir **`absolute` + `inset-x-0`** bajo el mismo ancestro (`nav` + `NavbarMobileMenu`). Alinear con archivos existentes (`NavbarLink.tsx`, `ActionLink.tsx`).                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **EN** | **No invented structure.** Do not add wrapper `motion.div` / `span` **only** to attach `ref` or `className` when a native element (`button`, `input`, Next `Link`) can take `ref` and classes directly. Do **not** add `createPortal`, React `Context` providers, or split components (Provider / Trigger / Panel) unless the **current** DOM in this repo cannot achieve the result with normal composition. Before overlays / dropdowns / width alignment: identify the **positioned containing block** (`fixed`, `relative`, …). Match existing files in this repo; do not paste patterns from unrelated codebases. |
+| **ES** | **Sin estructura inventada.** No añadir envoltorios **solo** para `ref` o `className` si el elemento nativo admite `ref` y clases. **No** `createPortal`, `Context` ni Provider/Trigger/Panel salvo necesidad real. Identificar el **bloque de posicionamiento** antes de overlays. Alinear con archivos existentes; no pegar patrones de otros proyectos.                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ---
 
@@ -158,10 +156,10 @@ All tokens live in `src/app/globals.css` (`@theme` + `@utility`). New values go 
 | --------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | Copy · Texto                | `homeAssets` → props                                                          | Hardcode in JSX                                                                    |
 | Colors · Colores            | `@theme` tokens (`bg-white`, `text-ink`, `bg-violet`, …)                      | `#hex`, `rgb`, `bg-[#…]`, role names that clash with Tailwind (`accent` for pink)  |
-| Shadows · Sombras           | `shadow-nav`, `shadow-panel`, `shadow-cta`, `shadow-flyout`, `shadow-control` | `--shadow-*` in `@theme`, raw `box-shadow`, `shadow-{color}` expecting a composite |
+| Shadows · Sombras           | `shadow-nav`, `shadow-panel`, `shadow-flyout`, `shadow-control`              | `--shadow-*` in `@theme`, raw `box-shadow`, `shadow-{color}` expecting a composite |
 | Typography · Tipografía     | `text-body md:… lg:…` / `text-small md:…` / `DashboardTitle`                  | `text-[…]`, links on `text-small`                                                  |
 | Overlay · Overlay           | `bg-overlay`                                                                  | Inline gradients in JSX                                                            |
 | Structure · Estructura      | atoms / molecules / organisms                                                 | One overloaded component                                                           |
 | Styling · Estilo            | Tailwind in JSX                                                               | Classes in data files                                                              |
-| Actions                     | `ActionLink` / `ActionButton`                                                 | One component for both                                                             |
+| Actions                     | `ActionButton` / native `<a>` where needed                                    | One component for both                                                             |
 | DOM / layout · DOM / layout | `ref` on `button`/`Link`; `absolute` under same `nav`                         | Wrappers only for `ref`; duplicate `fixed` + `calc`; Portal/Context (§8)           |
