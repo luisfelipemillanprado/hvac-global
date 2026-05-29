@@ -40,7 +40,7 @@ export const ServiceCarousel = ({ ariaLabel, slides }: ServiceCarouselProps) => 
 
       <div className="bg-overlay-bottom absolute inset-0" />
 
-      <div className="absolute bottom-5 left-1/2 z-10 grid -translate-x-1/2 justify-center">
+      <div className="absolute bottom-4 left-1/2 z-10 grid -translate-x-1/2 justify-center">
         <div className="bg-night/45 grid grid-flow-col gap-2 rounded-full border border-white/10 p-1.5 backdrop-blur-xl">
           {slides.map((slide, index) => (
             <button

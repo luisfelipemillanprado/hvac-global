@@ -225,3 +225,12 @@
 @utility shadow-control {
   @apply shadow-hot-pink/25 shadow-lg;
 }
+
+/* Glow — hero quick-status icons */
+@utility glow-periwinkle {
+  filter: drop-shadow(0 0 6px var(--color-periwinkle));
+}
+
+@utility glow-sunset {
+  filter: drop-shadow(0 0 6px var(--color-sunset));
+}
