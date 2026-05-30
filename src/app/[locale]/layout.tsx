@@ -1,11 +1,15 @@
 import { Providers } from '@/app/[locale]/providers'
+import { DashboardShellHeader } from '@/common/navbar/components/organisms/DashboardShellHeader'
 import { routing } from '@/i18n/routing'
+import { homeAssets } from '@/utils/data/static/pages/home'
 import clsx from 'clsx'
 import { hasLocale } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import { Poppins, Reenie_Beanie } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import '../globals.css'
+
+const { copy, navbar } = homeAssets.dashboard
 
 /**
  * @description Loads the Poppins font with specified weights and subsets for use in the application.
@@ -85,10 +89,22 @@ export default async function RootLayout({
         <Providers
           themeProps={{
             attribute: 'class',
-            defaultTheme: 'light',
+            defaultTheme: 'dark',
+            enableSystem: false,
             themes: ['dark', 'light'],
           }}
         >
+          <DashboardShellHeader
+            href={navbar.brandHref}
+            label={navbar.brandLabel}
+            logo={navbar.brandLogo}
+            logoAlt={navbar.brandLogoAlt}
+            menuCloseAriaLabel={copy.menuCloseAriaLabel}
+            menuOpenAriaLabel={copy.menuOpenAriaLabel}
+            navAriaLabel={copy.serviceNavigationAriaLabel}
+            navLinks={navbar.links}
+            themeToggleAriaLabel={copy.themeToggleAriaLabel}
+          />
           {children}
         </Providers>
       </body>

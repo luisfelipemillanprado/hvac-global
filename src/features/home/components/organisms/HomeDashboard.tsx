@@ -2,10 +2,10 @@ import { DashboardLayout } from '@/features/home/components/organisms/DashboardL
 
 export const HomeDashboard = () => {
   return (
-    <main className="bg-night min-h-screen w-full lg:h-svh lg:overflow-hidden">
-      <section className="mx-auto grid w-full lg:h-full lg:min-h-0">
+    <main className="bg-canvas min-h-screen lg:h-svh lg:overflow-hidden">
+      <div className="bg-surface-inset shadow-flyout border-line min-h-0 rounded-4xl border p-4 pt-26 lg:h-full lg:overflow-hidden">
         <DashboardLayout />
-      </section>
+      </div>
     </main>
   )
 }

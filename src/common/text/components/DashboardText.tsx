@@ -8,7 +8,7 @@ export const DashboardText = ({ text, variant, truncate, bold, as: Tag = 'p' }: 
     case 'default':
       return (
         <Tag
-          className={`text-body md:text-body-md lg:text-body-lg leading-body text-white ${bold ? 'font-bold' : 'font-normal'} ${truncate ? 'max-w-full min-w-0 truncate' : ''}`}
+          className={`text-body md:text-body-md lg:text-body-lg leading-body text-content ${bold ? 'font-bold' : 'font-normal'} ${truncate ? 'max-w-full min-w-0 truncate' : ''}`}
         >
           {text}
         </Tag>
@@ -16,7 +16,7 @@ export const DashboardText = ({ text, variant, truncate, bold, as: Tag = 'p' }: 
     case 'onDark':
       return (
         <Tag
-          className={`text-body md:text-body-md lg:text-body-lg leading-body text-white/80 ${bold ? 'font-bold' : 'font-normal'} ${truncate ? 'max-w-full min-w-0 truncate' : ''}`}
+          className={`text-body md:text-body-md lg:text-body-lg leading-body text-content-muted ${bold ? 'font-bold' : 'font-normal'} ${truncate ? 'max-w-full min-w-0 truncate' : ''}`}
         >
           {text}
         </Tag>

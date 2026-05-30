@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* Breakpoints — base 375px; mobile m{px}; tablet/desktop sm→2xl */
   --breakpoint-*: initial;
@@ -162,6 +164,73 @@
   }
 }
 
+/* Theme tokens — semantic surfaces and content (light/dark swap).
+   Named by UI surface type (same convention as the shadow utilities),
+   not by raw color, because a theme must swap values at runtime.
+   theme inline makes utilities compile to var() so the .dark / .light
+   class on html (set by next-themes) swaps them. */
+@theme inline {
+  --color-canvas: var(--canvas); /* app background */
+  --color-surface: var(--surface); /* solid panels · mobile menu */
+  --color-surface-glass: var(--surface-glass); /* sticky header · translucent */
+  --color-surface-sunken: var(--surface-sunken); /* insets · nav track */
+  --color-surface-inset: var(--surface-inset); /* icon wells */
+  --color-fill: var(--fill); /* subtle fills · cards · buttons */
+  --color-fill-hover: var(--fill-hover); /* hover · active fills */
+  --color-content: var(--content); /* primary text · icons */
+  --color-content-muted: var(--content-muted); /* secondary text */
+  --color-on-media: var(--on-media); /* text · icons over photos and accent */
+  --color-scrim: var(--scrim); /* dark pill · scrim over media */
+  --color-accent: var(--accent); /* brand accent · cool */
+  --color-accent-warm: var(--accent-warm); /* brand accent · warm */
+  --color-accent-strong: var(--accent-strong); /* brand accent · emphasis */
+  --color-line: var(--line); /* hairline borders */
+  --color-line-strong: var(--line-strong); /* stronger hairline */
+}
+
+/* Dark — production theme (default · maps surface roles onto the palette primitives) */
+:root,
+.dark {
+  color-scheme: dark;
+  --canvas: var(--color-night);
+  --surface: var(--color-jet-gray);
+  --surface-glass: oklch(from var(--color-jet-gray) l c h / 0.7);
+  --surface-sunken: oklch(from var(--color-night) l c h / 0.4);
+  --surface-inset: var(--color-eerie);
+  --fill: oklch(from var(--color-white) l c h / 0.05);
+  --fill-hover: oklch(from var(--color-white) l c h / 0.1);
+  --content: var(--color-white);
+  --content-muted: oklch(from var(--color-white) l c h / 0.8);
+  --on-media: var(--color-white);
+  --scrim: var(--color-night);
+  --accent: var(--color-periwinkle);
+  --accent-warm: var(--color-sunset);
+  --accent-strong: var(--color-hot-pink);
+  --line: oklch(from var(--color-white) l c h / 0.05);
+  --line-strong: oklch(from var(--color-white) l c h / 0.1);
+}
+
+/* Light — TEST placeholder values (fake · replace when the real light theme is designed) */
+.light {
+  color-scheme: light;
+  --canvas: oklch(0.97 0.005 280); /* faint lilac-gray */
+  --surface: oklch(0.995 0 0); /* near white */
+  --surface-glass: oklch(0.995 0 0 / 0.7); /* near white · 70% */
+  --surface-sunken: oklch(0.93 0 0 / 0.6); /* light inset */
+  --surface-inset: oklch(0.94 0 0); /* light icon wells */
+  --fill: oklch(0.2 0 0 / 0.05); /* black · 5% */
+  --fill-hover: oklch(0.2 0 0 / 0.1); /* black · 10% */
+  --content: oklch(0.2 0 0); /* near black */
+  --content-muted: oklch(0.2 0 0 / 0.65); /* muted */
+  --on-media: var(--color-white); /* TEST · over-media stays light · adjust later */
+  --scrim: var(--color-night); /* TEST · scrim over media stays dark · adjust later */
+  --accent: oklch(0.55 0.2 293); /* TEST · cool accent on light · adjust later */
+  --accent-warm: oklch(0.68 0.15 65); /* TEST · warm accent on light · adjust later */
+  --accent-strong: oklch(0.6 0.24 350); /* TEST · strong accent on light · adjust later */
+  --line: oklch(0.2 0 0 / 0.12); /* hairline */
+  --line-strong: oklch(0.2 0 0 / 0.2); /* stronger hairline */
+}
+
 /* Base — smooth scroll and hidden scrollbar */
 @layer base {
   html {
@@ -172,28 +241,14 @@
     overflow-y: scroll;
   }
   body {
+    background-color: var(--color-canvas);
+    color: var(--color-content);
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
   body::-webkit-scrollbar {
     display: none;
   }
-}
-
-/* Layout — centered row flex */
-@utility horizontal {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
-/* Layout — centered column flex */
-@utility vertical {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
 }
 
 /* Scroll — keep internal scroll usable without visible rails */
@@ -227,10 +282,10 @@
 }
 
 /* Glow — hero quick-status icons */
-@utility glow-periwinkle {
-  filter: drop-shadow(0 0 6px var(--color-periwinkle));
+@utility glow-accent {
+  filter: drop-shadow(0 0 6px var(--color-accent));
 }
 
-@utility glow-sunset {
-  filter: drop-shadow(0 0 6px var(--color-sunset));
+@utility glow-accent-warm {
+  filter: drop-shadow(0 0 6px var(--color-accent-warm));
 }
