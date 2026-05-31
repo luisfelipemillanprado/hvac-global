@@ -1,4 +1,4 @@
-import { ServiceCarousel } from '@/common/carousel/components/organisms/ServiceCarousel'
+import { ServiceCarousel } from '@/common/carousel/components/ServiceCarousel'
 import { DashboardHeroOverlay } from '@/features/home/components/molecules/DashboardHeroOverlay'
 import { DashboardInsightsColumn } from '@/features/home/components/molecules/DashboardInsightsColumn'
 import { DashboardMetricsColumn } from '@/features/home/components/molecules/DashboardMetricsColumn'

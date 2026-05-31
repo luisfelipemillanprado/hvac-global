@@ -1,23 +1,22 @@
-import { DashboardBadge } from '@/common/badge/components/atoms/DashboardBadge'
+import { DashboardBadge } from '@/common/badge/components/DashboardBadge'
 import { OurWorkDetailsButton } from '@/common/call-action/components/OurWorkDetailsButton'
 import { DashboardText } from '@/common/text/components/DashboardText'
 import { DashboardTitle } from '@/common/titles/components/DashboardTitle'
 import type { OurWorkCardProps } from '@/common/work/types'
 import { blurDataUrlGallery } from '@/utils/blurs/BlurDataUrl'
-import { MapPinIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 
 export const OurWorkCard = ({
   badgeIcon,
   badgeLabel,
+  description,
   detailsAriaLabel,
   image,
   imageAlt,
-  location,
   title,
 }: OurWorkCardProps) => {
   return (
-    <article className="shadow-panel border-line relative min-h-60 overflow-hidden rounded-2xl border">
+    <article className="shadow-panel relative min-h-62 overflow-hidden rounded-2xl">
       <Image
         src={image}
         alt={imageAlt}
@@ -29,13 +28,10 @@ export const OurWorkCard = ({
       />
       <div className="bg-overlay-bottom absolute inset-0" />
 
-      <div className="relative z-10 grid h-full content-end gap-4 p-4">
+      <div className="absolute inset-0 z-10 grid content-end gap-4 p-4">
         <DashboardBadge label={badgeLabel} icon={badgeIcon} />
         <DashboardTitle text={title} variant="h3" />
-        <div className="grid grid-flow-col items-center justify-start gap-1.5">
-          <MapPinIcon className="fill-accent-strong size-4 shrink-0" aria-hidden />
-          <DashboardText text={location} variant="onDark" />
-        </div>
+        <DashboardText text={description} variant="onDark" truncate />
       </div>
 
       <div className="absolute top-1/2 right-4 z-10 -translate-y-1/2">

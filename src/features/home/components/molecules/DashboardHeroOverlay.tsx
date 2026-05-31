@@ -1,4 +1,4 @@
-import { DashboardBadge } from '@/common/badge/components/atoms/DashboardBadge'
+import { DashboardBadge } from '@/common/badge/components/DashboardBadge'
 import { FreeQuoteButton } from '@/common/call-action/components/FreeQuoteButton'
 import { DashboardQuickStatusGrid } from '@/common/status/components/molecules/DashboardQuickStatusGrid'
 import { DashboardText } from '@/common/text/components/DashboardText'

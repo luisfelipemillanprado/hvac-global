@@ -14,7 +14,7 @@ export const homeAssets = {
       popularServicesViewAllLabel: 'View all',
       popularServicesViewAllHref: '#',
       popularServicesViewAllAriaLabel: 'View all popular services',
-      ourWorksTitle: 'Our Works',
+      ourWorksTitle: 'Featured',
       ourWorksViewAllLabel: 'View all',
       ourWorksViewAllHref: '#',
       ourWorksViewAllAriaLabel: 'View all our works',
@@ -203,7 +203,8 @@ export const homeAssets = {
         badgeIcon: 'install',
         badgeLabel: 'AC INSTALL',
         title: 'Smart AC Installation',
-        location: 'River Oaks, Houston',
+        description:
+          'High-efficiency split system sized, mounted and tuned for fast, even cooling all summer.',
         image: '/images/services/service4.webp',
         imageAlt: 'Smart AC installation in a Houston home',
         detailsAriaLabel: 'View Smart AC Installation details',
@@ -212,7 +213,8 @@ export const homeAssets = {
         badgeIcon: 'upgrade',
         badgeLabel: 'SYSTEM UPGRADE',
         title: 'Central HVAC Upgrade',
-        location: 'Memorial, Houston',
+        description:
+          'Full system swap with smart zoning and a high-SEER condenser for lower bills year-round.',
         image: '/images/services/service3.webp',
         imageAlt: 'Central HVAC system upgrade in Houston',
         detailsAriaLabel: 'View Central HVAC Upgrade details',
@@ -221,7 +223,8 @@ export const homeAssets = {
         badgeIcon: 'heating',
         badgeLabel: 'HEATING REPAIR',
         title: 'Furnace Heating Repair',
-        location: 'The Heights, Houston',
+        description:
+          'Diagnosed and restored a failing furnace, replacing the igniter for safe, reliable heat.',
         image: '/images/services/service5.webp',
         imageAlt: 'Furnace heating system repair in Houston',
         detailsAriaLabel: 'View Furnace Heating Repair details',
@@ -230,7 +233,8 @@ export const homeAssets = {
         badgeIcon: 'airQuality',
         badgeLabel: 'AIR QUALITY',
         title: 'Indoor Air Quality Setup',
-        location: 'Sugar Land, Houston',
+        description:
+          'Whole-home filtration and fresh-air intake installed to cut allergens and balance humidity.',
         image: '/images/services/service6.webp',
         imageAlt: 'Indoor air quality system installation in Houston',
         detailsAriaLabel: 'View Indoor Air Quality Setup details',

@@ -1,9 +1,9 @@
 import { ScheduleServiceCta } from '@/common/call-action/components/ScheduleServiceCta'
+import { WorkCarousel } from '@/common/carousel/components/WorkCarousel'
 import { PopularServiceCard } from '@/common/service/components/molecules/PopularServiceCard'
 import type { PopularServiceCardProps } from '@/common/service/types/popularServiceCard'
 import { DashboardQuickStatusGrid } from '@/common/status/components/molecules/DashboardQuickStatusGrid'
 import { DashboardTitle } from '@/common/titles/components/DashboardTitle'
-import { OurWorkCard } from '@/common/work/components/molecules/OurWorkCard'
 import type { OurWorkCardProps } from '@/common/work/types'
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 
@@ -70,11 +70,7 @@ export const DashboardInsightsColumn = ({
             <ArrowRightIcon className="size-4 shrink-0" aria-hidden />
           </a>
         </div>
-        <div className="grid gap-3">
-          {ourWorks.map((item) => (
-            <OurWorkCard key={item.title} {...item} />
-          ))}
-        </div>
+        <WorkCarousel ariaLabel={ourWorksTitle} works={ourWorks} />
       </section>
 
       <section
