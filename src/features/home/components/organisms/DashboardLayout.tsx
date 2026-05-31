@@ -12,7 +12,7 @@ const {
   panelPopularServices,
   popularServices,
   quickStatus,
-  recentInstallations,
+  ourWorks,
 } = homeAssets.dashboard
 
 export const DashboardLayout = () => {
@@ -61,11 +61,11 @@ export const DashboardLayout = () => {
           popularServicesViewAllAriaLabel={copy.popularServicesViewAllAriaLabel}
           popularServicesViewAllHref={copy.popularServicesViewAllHref}
           popularServicesViewAllLabel={copy.popularServicesViewAllLabel}
-          recentInstallations={recentInstallations}
-          recentInstallationsTitle={copy.recentInstallationsTitle}
-          recentInstallationsViewAllAriaLabel={copy.recentInstallationsViewAllAriaLabel}
-          recentInstallationsViewAllHref={copy.recentInstallationsViewAllHref}
-          recentInstallationsViewAllLabel={copy.recentInstallationsViewAllLabel}
+          ourWorks={ourWorks}
+          ourWorksTitle={copy.ourWorksTitle}
+          ourWorksViewAllAriaLabel={copy.ourWorksViewAllAriaLabel}
+          ourWorksViewAllHref={copy.ourWorksViewAllHref}
+          ourWorksViewAllLabel={copy.ourWorksViewAllLabel}
           scheduleServiceCta={{
             ariaLabel: copy.scheduleServiceCtaAriaLabel,
             subtitle: copy.scheduleServiceCtaSubtitle,

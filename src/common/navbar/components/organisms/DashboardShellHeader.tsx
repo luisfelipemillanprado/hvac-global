@@ -16,7 +16,7 @@ export const DashboardShellHeader = ({
   ...brand
 }: DashboardShellHeaderProps) => {
   return (
-    <header className="bg-surface-glass fixed inset-x-4 top-4 z-40 rounded-3xl border border-line p-4 backdrop-blur-xl lg:static lg:inset-x-auto lg:top-auto lg:z-auto">
+    <header className="bg-surface-glass fixed inset-x-4 top-4 z-40 rounded-3xl border border-line p-4 backdrop-blur-xl lg:static">
       <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 lg:grid-cols-[auto_minmax(0,1fr)_auto]">
         <NavbarBrand {...brand} />
 

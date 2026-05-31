@@ -1,6 +1,7 @@
 'use client'
 
 import type { ServiceCarouselProps } from '@/common/carousel/types'
+import { blurDataUrlGallery } from '@/utils/blurs/BlurDataUrl'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
@@ -36,7 +37,10 @@ export const ServiceCarousel = ({ ariaLabel, slides }: ServiceCarouselProps) => 
           src={slide.image}
           alt={slide.imageAlt}
           fill
-          sizes="(max-width: 64rem) 100vw, 50vw"
+          priority={index === 0}
+          placeholder="blur"
+          blurDataURL={blurDataUrlGallery}
+          sizes="(min-width: 80rem) calc(100vw - 736px), (min-width: 64rem) calc(100vw - 656px), 100vw"
           className={`object-cover transition-opacity duration-1500 ease-in-out ${index === activeIndex ? 'opacity-100' : 'opacity-0'}`}
         />
       ))}

@@ -1,11 +1,11 @@
-import type { ActionButtonProps } from '@/common/call-action/types'
+import type { FreeQuoteButtonProps } from '@/common/call-action/types'
 import { DashboardText } from '@/common/text/components/DashboardText'
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 
 /**
- * @description Renders a dashboard free-quote CTA as a native button (e.g. to open a form).
+ * @description Business action button that opens the free-quote form.
  */
-export const ActionButton = ({ text }: ActionButtonProps) => {
+export const FreeQuoteButton = ({ text }: FreeQuoteButtonProps) => {
   return (
     <button
       type="button"

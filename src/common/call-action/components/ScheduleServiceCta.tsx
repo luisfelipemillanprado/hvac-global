@@ -1,4 +1,4 @@
-import type { ScheduleServiceCtaProps } from '@/common/call-action/types/scheduleServiceCta'
+import type { ScheduleServiceCtaProps } from '@/common/call-action/types'
 import { DashboardSmallText } from '@/common/text/components/DashboardSmallText'
 import { DashboardText } from '@/common/text/components/DashboardText'
 import { ArrowRightIcon, CalendarDaysIcon } from '@heroicons/react/24/solid'
@@ -15,7 +15,7 @@ export const ScheduleServiceCta = ({ ariaLabel, subtitle, title }: ScheduleServi
         <DashboardText text={title} variant="default" truncate bold as="span" />
         <DashboardSmallText text={subtitle} variant="onDark" />
       </span>
-      <span className="bg-white grid size-9 shrink-0 items-center justify-center rounded-full">
+      <span className="grid size-9 shrink-0 items-center justify-center rounded-full bg-white">
         <ArrowRightIcon className="text-ink-black size-4" aria-hidden />
       </span>
     </button>

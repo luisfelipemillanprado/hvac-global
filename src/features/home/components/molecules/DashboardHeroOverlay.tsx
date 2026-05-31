@@ -1,5 +1,5 @@
 import { DashboardBadge } from '@/common/badge/components/atoms/DashboardBadge'
-import { ActionButton } from '@/common/call-action/components/ActionButton'
+import { FreeQuoteButton } from '@/common/call-action/components/FreeQuoteButton'
 import { DashboardQuickStatusGrid } from '@/common/status/components/molecules/DashboardQuickStatusGrid'
 import { DashboardText } from '@/common/text/components/DashboardText'
 import { DashboardTitle } from '@/common/titles/components/DashboardTitle'
@@ -14,19 +14,17 @@ export const DashboardHeroOverlay = ({
   title,
 }: DashboardHeroOverlayProps) => {
   return (
-    <div className="pointer-events-none absolute inset-0 z-10 grid grid-rows-[auto_minmax(0,1fr)] p-4">
+    <div className="pointer-events-none absolute inset-0 grid grid-rows-[auto_minmax(0,1fr)] p-4">
       <DashboardBadge label={title} icon={badgeIcon} />
 
-      <div className="pointer-events-auto self-end">
-        <div className="grid max-w-68 gap-2.5 sm:max-w-none">
-          <DashboardTitle text={service.title} variant="h1" />
-          <DashboardText text={service.description} variant="onDark" />
-          <section className="hidden sm:block" aria-label={quickStatusAriaLabel}>
-            <DashboardQuickStatusGrid className="grid w-full grid-cols-4 gap-2" items={quickStatus} />
-          </section>
-          <div className="mt-2 max-w-44">
-            <ActionButton text={ctaLabel} />
-          </div>
+      <div className="pointer-events-auto grid max-w-68 gap-2.5 self-end sm:max-w-none">
+        <DashboardTitle text={service.title} variant="h1" />
+        <DashboardText text={service.description} variant="onDark" />
+        <section className="hidden sm:block" aria-label={quickStatusAriaLabel}>
+          <DashboardQuickStatusGrid className="grid w-full grid-cols-4 gap-2" items={quickStatus} />
+        </section>
+        <div className="mt-2 max-w-44">
+          <FreeQuoteButton text={ctaLabel} />
         </div>
       </div>
     </div>

@@ -1,10 +1,3 @@
-export interface NavbarBrandProps {
-  href: string
-  label: string
-  logo: string
-  logoAlt: string
-}
-
 export type DashboardNavbarLinkIcon =
   | 'home'
   | 'services'
@@ -20,6 +13,13 @@ export type DashboardNavbarLink = {
   href: string
   icon: DashboardNavbarLinkIcon
   label: string
+}
+
+export interface NavbarBrandProps {
+  href: string
+  label: string
+  logo: string
+  logoAlt: string
 }
 
 export interface DashboardNavbarNavItemProps {

@@ -1,4 +1,4 @@
-export type DashboardBadgeIcon = 'bolt' | 'arrowRight'
+export type DashboardBadgeIcon = 'bolt' | 'arrowRight' | 'install' | 'upgrade' | 'heating' | 'airQuality'
 
 export type DashboardBadgeIconPosition = 'left' | 'right'
 
