@@ -43,12 +43,12 @@ export const DashboardNavbarMobileMenu = ({
         aria-expanded={isOpen}
         aria-label={isOpen ? menuCloseAriaLabel : menuOpenAriaLabel}
         onClick={() => setIsOpen((current) => !current)}
-        className="shadow-nav grid size-10 items-center justify-center rounded-2xl border border-line bg-fill-hover lg:hidden"
+        className="border-line bg-fill-hover grid size-10 items-center justify-center rounded-2xl border lg:hidden"
       >
         {isOpen ? (
-          <XMarkIcon className="size-5 fill-content" aria-hidden />
+          <XMarkIcon className="fill-content size-5" aria-hidden />
         ) : (
-          <Bars3Icon className="size-5 fill-content" aria-hidden />
+          <Bars3Icon className="fill-content size-5" aria-hidden />
         )}
       </button>
 
@@ -56,7 +56,7 @@ export const DashboardNavbarMobileMenu = ({
         ref={panelRef}
         aria-label={navAriaLabel}
         className={clsx(
-          'bg-surface shadow-flyout absolute inset-x-0 top-full z-50 mt-4 grid grid-cols-2 gap-2 rounded-3xl border border-line p-3.5 transition duration-300 lg:hidden',
+          'bg-surface shadow-flyout border-line absolute inset-x-0 top-full z-50 mt-4 grid grid-cols-2 gap-2 rounded-3xl border p-3.5 transition duration-300 lg:hidden',
           isOpen ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-2 opacity-0'
         )}
       >

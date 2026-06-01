@@ -5,7 +5,7 @@ import { homeAssets } from '@/utils/data/static/pages/home'
 import clsx from 'clsx'
 import { hasLocale } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
-import { Poppins, Reenie_Beanie } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import '../globals.css'
 
@@ -23,22 +23,6 @@ const { copy, navbar } = homeAssets.dashboard
 const poppins = Poppins({
   variable: '--font-poppins',
   weight: ['300', '400', '500', '600'],
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-/**
- * @description Loads the Reenie_Beanie font with specified weights and subsets for use in the application.
- * @constant
- * @type {ReturnType<typeof Reenie_Beanie>}
- * @property {string} variable - The CSS variable name for the font.
- * @property {string[]} weight - The font weights to include (400).
- * @property {string[]} subsets - The language subsets to include (e.g., 'latin').
- * @property {string} display - The font display strategy ('swap').
- */
-const reenieBeanie = Reenie_Beanie({
-  variable: '--font-reenie-beanie',
-  weight: ['400'],
   subsets: ['latin'],
   display: 'swap',
 })
@@ -80,11 +64,7 @@ export default async function RootLayout({
     notFound()
   }
   return (
-    <html
-      suppressHydrationWarning
-      lang={locale}
-      className={clsx(reenieBeanie.variable, poppins.className, poppins.variable)}
-    >
+    <html suppressHydrationWarning lang={locale} className={clsx(poppins.variable, poppins.className)}>
       <body className={clsx('relative')}>
         <Providers
           themeProps={{

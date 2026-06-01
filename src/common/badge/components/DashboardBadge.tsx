@@ -42,7 +42,7 @@ export const DashboardBadge = ({
 
   return (
     <div
-      className={`shadow-nav border-line ${light ? 'bg-fill' : 'bg-surface-glass/80'} pointer-events-auto grid w-fit grid-flow-col items-center gap-2 rounded-2xl border p-2 backdrop-blur-md`}
+      className={`${light ? 'bg-fill' : 'bg-jet-gray/70'} pointer-events-auto grid w-fit grid-flow-col items-center gap-2 rounded-2xl p-2`}
     >
       {iconPosition === 'left' && iconNode}
       <DashboardSmallText text={label} variant="default" bold />

@@ -12,10 +12,10 @@ export const DashboardNavbarThemeToggle = ({ themeToggleAriaLabel }: DashboardNa
       type="button"
       aria-label={themeToggleAriaLabel}
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-      className="grid size-10 items-center justify-center rounded-2xl border border-line-strong bg-fill"
+      className="border-line bg-fill grid size-10 items-center justify-center rounded-2xl border"
     >
-      <MoonIcon className="hidden size-5 fill-content dark:block" aria-hidden />
-      <SunIcon className="size-5 fill-content dark:hidden" aria-hidden />
+      <MoonIcon className="fill-content hidden size-5 dark:block" aria-hidden />
+      <SunIcon className="fill-content size-5 dark:hidden" aria-hidden />
     </button>
   )
 }

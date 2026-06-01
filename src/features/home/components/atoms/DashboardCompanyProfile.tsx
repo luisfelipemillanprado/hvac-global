@@ -1,0 +1,53 @@
+import { SocialLinks } from '@/common/social/components/SocialLinks'
+import { DashboardSmallText } from '@/common/text/components/DashboardSmallText'
+import { DashboardTitle } from '@/common/titles/components/DashboardTitle'
+import type { DashboardCompanyProfileProps } from '@/features/home/types'
+import { ArrowsPointingOutIcon } from '@heroicons/react/24/solid'
+import Image from 'next/image'
+
+export const DashboardCompanyProfile = ({
+  avatar,
+  avatarAlt,
+  ctaAriaLabel,
+  ctaLabel,
+  expandAriaLabel,
+  name,
+  role,
+  socialLinks,
+}: DashboardCompanyProfileProps) => {
+  return (
+    <article className="bg-jet-gray/70 shadow-panel grid min-h-min w-full shrink-0 justify-items-center gap-4 overflow-hidden rounded-3xl border border-white/5 px-4 pt-0 pb-4">
+      <div className="relative -mx-4 min-h-52 w-[calc(100%+2rem)]">
+        <div aria-hidden className="from-periwinkle via-hot-pink to-sunset h-24 w-full bg-linear-to-r" />
+        <div className="absolute inset-x-0 top-0 grid justify-items-end p-3">
+          <button
+            type="button"
+            aria-label={expandAriaLabel}
+            className="bg-night/70 shadow-nav grid size-9 items-center justify-center rounded-full border border-white/25"
+          >
+            <ArrowsPointingOutIcon className="size-5 text-white" aria-hidden />
+          </button>
+        </div>
+        <div className="relative z-10 -mt-12 grid w-full justify-items-center gap-3 px-4 pb-1">
+          <div className="shadow-nav relative size-24 overflow-hidden rounded-full border-2 border-white">
+            <Image src={avatar} alt={avatarAlt} fill sizes="6rem" className="object-cover" />
+          </div>
+          <div className="grid gap-1 text-center">
+            <DashboardTitle text={name} variant="h3" />
+            <DashboardSmallText text={role} variant="onDark" />
+          </div>
+        </div>
+      </div>
+
+      <SocialLinks links={socialLinks} />
+
+      <button
+        type="button"
+        aria-label={ctaAriaLabel}
+        className="from-periwinkle via-hot-pink to-sunset grid h-10 w-full items-center rounded-2xl bg-linear-to-r"
+      >
+        <DashboardSmallText text={ctaLabel} variant="default" bold />
+      </button>
+    </article>
+  )
+}

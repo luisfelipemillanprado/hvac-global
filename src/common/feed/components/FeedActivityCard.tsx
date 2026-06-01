@@ -17,7 +17,7 @@ export const FeedActivityCard = ({
   time,
 }: FeedActivityCardProps) => {
   return (
-    <article className="shadow-panel grid gap-3 rounded-2xl border border-white/5 bg-white/5 p-3 backdrop-blur-xl">
+    <article className="shadow-panel grid gap-3 rounded-2xl border border-white/5 bg-white/5 p-3">
       <div className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-start gap-3">
         <div className="relative size-10 overflow-hidden rounded-full border border-white/5">
           <Image src={avatar} alt={avatarAlt} fill sizes="2.5rem" className="object-cover" />

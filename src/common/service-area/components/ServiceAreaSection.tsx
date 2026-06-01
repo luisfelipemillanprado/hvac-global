@@ -18,7 +18,7 @@ export const ServiceAreaSection = ({
 }: ServiceAreaSectionProps) => {
   return (
     <section
-      className="bg-jet-gray/70 shadow-panel grid min-h-min shrink-0 gap-4 rounded-4xl border border-white/5 p-4 backdrop-blur-xl"
+      className="bg-jet-gray/70 shadow-panel grid min-h-min shrink-0 gap-4 rounded-4xl border border-white/5 p-4"
       aria-label={title}
     >
       <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
@@ -41,12 +41,12 @@ export const ServiceAreaSection = ({
               {technicianAvatars.map((avatar, index) => (
                 <div
                   key={avatar.src}
-                  className={`relative size-8 overflow-hidden rounded-full border-2 border-jet-gray ${index > 0 ? '-ml-2.5' : ''}`}
+                  className={`border-jet-gray relative size-8 overflow-hidden rounded-full border-2 ${index > 0 ? '-ml-2.5' : ''}`}
                 >
                   <Image src={avatar.src} alt={avatar.alt} fill sizes="2rem" className="object-cover" />
                 </div>
               ))}
-              <span className="bg-periwinkle -ml-2.5 grid size-8 shrink-0 items-center justify-center rounded-full border-2 border-jet-gray">
+              <span className="bg-periwinkle border-jet-gray -ml-2.5 grid size-8 shrink-0 items-center justify-center rounded-full border-2">
                 <DashboardSmallText text={technicianCount} variant="default" bold />
               </span>
             </div>

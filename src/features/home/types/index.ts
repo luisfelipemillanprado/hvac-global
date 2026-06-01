@@ -1,45 +1,86 @@
 import type { DashboardBadgeIcon } from '@/common/badge/types'
+import type { ScheduleServiceCtaProps } from '@/common/call-action/types'
+import type { FeedActivityCardProps } from '@/common/feed/types'
+import type { ServiceAreaSectionProps } from '@/common/service-area/types'
+import type { PopularServiceCardProps } from '@/common/service/types/popularServiceCard'
+import type { SocialNetwork } from '@/common/social/types'
+import type { OurWorkCardProps } from '@/common/work/types'
 
-export type DashboardService = {
-  title: string
-  description: string
-  metricValue: string
-  metricUnit: string
-  serviceId: string
-  startDate: string
-  startDateLabel?: string
-  address: string
-  addressLabel?: string
-  href: string
-  image: string
-  imageAlt: string
-}
+export type DashboardQuickStatusIcon = 'licensed' | 'certified' | 'sameDay' | 'financing'
 
-export type DashboardProgressPanel = {
-  title: string
-  value: string
-  unit: string
-  detailsAriaLabel: string
-  segments: readonly {
-    label: string
-    value: string
+export interface DashboardCompanyProfileProps {
+  avatar: string
+  avatarAlt: string
+  ctaAriaLabel: string
+  ctaLabel: string
+  expandAriaLabel: string
+  name: string
+  role: string
+  socialLinks: readonly {
+    ariaLabel: string
+    href: string
+    network: SocialNetwork
   }[]
 }
 
-export type DashboardHeroOverlayService = {
+export interface DashboardCommentsSectionProps {
+  items: readonly FeedActivityCardProps[]
   title: string
-  description: string
 }
 
-export interface DashboardHeroOverlayProps {
-  badgeIcon?: DashboardBadgeIcon
+export interface DashboardMetricsColumnProps {
+  comments: DashboardCommentsSectionProps
+  companyProfile: DashboardCompanyProfileProps
+  serviceArea: ServiceAreaSectionProps
+}
+
+export interface DashboardHeroPanelProps {
+  imageAriaLabel: string
+  image: string
+  imageAlt: string
+  badge: {
+    title: string
+    icon?: DashboardBadgeIcon
+  }
   ctaLabel: string
+  headline: {
+    title: string
+    description: string
+  }
+}
+
+export interface DashboardHeroColumnProps {
+  hero: DashboardHeroPanelProps
   quickStatus: readonly {
-    icon: 'licensed' | 'certified' | 'sameDay' | 'financing'
+    icon: DashboardQuickStatusIcon
     line: string
     subline: string
   }[]
   quickStatusAriaLabel: string
-  service: DashboardHeroOverlayService
-  title: string
 }
+
+export interface DashboardInsightsColumnProps {
+  quickStatus: readonly {
+    icon: DashboardQuickStatusIcon
+    line: string
+    subline: string
+  }[]
+  quickStatusAriaLabel: string
+  panelPopularServices: {
+    title: string
+    viewAll: { label: string; href: string; ariaLabel: string }
+    items: readonly PopularServiceCardProps[]
+  }
+  ourWorks: {
+    title: string
+    viewAll: { label: string; href: string; ariaLabel: string }
+    items: readonly OurWorkCardProps[]
+  }
+  scheduleServiceCta: ScheduleServiceCtaProps
+}
+
+export type DashboardHeroOverlayProps = Omit<
+  DashboardHeroPanelProps,
+  'image' | 'imageAlt' | 'imageAriaLabel'
+> &
+  Pick<DashboardHeroColumnProps, 'quickStatus' | 'quickStatusAriaLabel'>

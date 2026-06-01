@@ -6,14 +6,9 @@ import Image from 'next/image'
 /**
  * @description Renders an HVAC service card with image and booking action.
  */
-export const ServiceCard = ({
-  title,
-  saveAriaLabel,
-  image,
-  imageAlt,
-}: ServiceCardProps) => {
+export const ServiceCard = ({ title, saveAriaLabel, image, imageAlt }: ServiceCardProps) => {
   return (
-    <article className="bg-jet-gray/70 shadow-panel relative aspect-square min-h-35.5 overflow-hidden rounded-4xl border border-white/5 backdrop-blur-xl">
+    <article className="bg-jet-gray/70 shadow-panel relative aspect-square min-h-35.5 overflow-hidden rounded-4xl border border-white/5">
       <Image
         src={image}
         alt={imageAlt}
@@ -21,7 +16,7 @@ export const ServiceCard = ({
         sizes="(max-width: 64rem) 50vw, 10rem"
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-overlay-bottom" />
+      <div className="bg-overlay-bottom absolute inset-0" />
 
       <div className="relative z-10 grid h-full grid-rows-[auto_minmax(0,1fr)_auto] p-2.5">
         <div className="grid justify-end">

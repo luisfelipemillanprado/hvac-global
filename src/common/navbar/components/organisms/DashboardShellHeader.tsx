@@ -16,22 +16,19 @@ export const DashboardShellHeader = ({
   ...brand
 }: DashboardShellHeaderProps) => {
   return (
-    <header className="bg-surface-glass fixed inset-x-4 top-4 z-40 rounded-3xl border border-line p-4 backdrop-blur-xl lg:static">
+    <header className="bg-surface border-line fixed inset-x-4 top-4 z-40 rounded-3xl border p-4">
       <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 lg:grid-cols-[auto_minmax(0,1fr)_auto]">
         <NavbarBrand {...brand} />
 
-        <nav
-          aria-label={navAriaLabel}
-          className="scrollbar-ghost hidden min-w-0 lg:block lg:overflow-x-auto"
-        >
-          <div className="bg-surface-sunken grid w-max grid-flow-col gap-1 rounded-2xl border border-line p-1">
+        <nav aria-label={navAriaLabel} className="hidden min-w-0 lg:block">
+          <div className="bg-surface-sunken border-line grid w-max grid-flow-col gap-1 rounded-2xl border p-1">
             {navLinks.map((link) => (
               <DashboardNavbarNavItem key={link.label} {...link} />
             ))}
           </div>
         </nav>
 
-        <div className="grid grid-flow-col justify-end gap-x-2">
+        <div className="grid grid-flow-col justify-end gap-2">
           <DashboardNavbarThemeToggle themeToggleAriaLabel={themeToggleAriaLabel} />
           <DashboardNavbarMobileMenu
             menuCloseAriaLabel={menuCloseAriaLabel}
