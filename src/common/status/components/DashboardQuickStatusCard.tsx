@@ -25,8 +25,8 @@ const renderQuickStatusIcon = (icon: DashboardQuickStatusIcon) => {
 
 export const DashboardQuickStatusCard = ({ icon, line }: DashboardQuickStatusCardProps) => {
   return (
-    <article className="border-line shadow-nav bg-fill flex shrink-0 items-center gap-2 rounded-2xl border py-2 pr-4 pl-3">
-      <span className="bg-surface-inset flex size-8.5 shrink-0 items-center justify-center rounded-2xl">
+    <article className="border-line shadow-nav bg-fill grid min-h-12 shrink-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-2 rounded-2xl border pr-4 pl-2">
+      <span className="bg-surface-inset grid size-8 place-items-center rounded-2xl">
         {renderQuickStatusIcon(icon)}
       </span>
       <DashboardText text={line} variant="default" bold as="span" />

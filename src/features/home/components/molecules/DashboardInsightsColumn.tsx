@@ -16,7 +16,7 @@ export const DashboardInsightsColumn = ({
     <div className="order-1 min-h-0 lg:order-0">
       <aside className="scrollbar-ghost grid min-h-0 content-start gap-3 lg:h-full lg:overflow-y-auto lg:overscroll-contain">
         <section
-          className="bg-surface-glass shadow-panel border-line grid gap-2 rounded-3xl border px-4 py-3.5 sm:hidden"
+          className="bg-surface-glass shadow-panel border-line grid gap-2 rounded-3xl border p-3.5 sm:hidden"
           aria-label={quickStatus.ariaLabel}
         >
           <div className="scrollbar-ghost grid auto-cols-max grid-flow-col gap-2 overflow-x-auto">
