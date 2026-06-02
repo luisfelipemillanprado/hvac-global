@@ -3,19 +3,11 @@ import type { ScheduleServiceCtaProps } from '@/common/call-action/types'
 import type { FeedActivityCardProps } from '@/common/feed/types'
 import type { ServiceAreaSectionProps } from '@/common/service-area/types'
 import type { PopularServiceCardProps } from '@/common/service/types/popularServiceCard'
+import type { DashboardQuickStatusSectionProps } from '@/common/status/types'
 import type { SocialNetwork } from '@/common/social/types'
 import type { OurWorkCardProps } from '@/common/work/types'
 
-export type DashboardQuickStatusIcon = 'licensed' | 'certified' | 'sameDay' | 'financing'
-
-export interface DashboardQuickStatusSectionProps {
-  ariaLabel: string
-  items: readonly {
-    icon: DashboardQuickStatusIcon
-    line: string
-    subline: string
-  }[]
-}
+export type { DashboardQuickStatusSectionProps }
 
 export interface DashboardCompanyProfileProps {
   avatar: string

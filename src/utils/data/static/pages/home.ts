@@ -135,10 +135,11 @@ export const homeAssets = {
     quickStatus: {
       ariaLabel: 'Quick status',
       items: [
-        { icon: 'licensed', line: 'Licensed', subline: '& Insured' },
-        { icon: 'certified', line: 'Certified', subline: 'Technicians' },
-        { icon: 'sameDay', line: 'Same-Day', subline: 'Service' },
-        { icon: 'financing', line: 'Financing', subline: 'Available' },
+        { icon: 'licensed', line: 'Licensed' },
+        { icon: 'insured', line: 'Insured' },
+        { icon: 'certified', line: 'Certified' },
+        { icon: 'sameDay', line: 'Same-Day' },
+        { icon: 'financing', line: 'Financing' },
       ],
     },
     scheduleServiceCta: {

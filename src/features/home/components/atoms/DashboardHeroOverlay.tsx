@@ -1,6 +1,6 @@
 import { DashboardBadge } from '@/common/badge/components/DashboardBadge'
 import { FreeQuoteButton } from '@/common/call-action/components/FreeQuoteButton'
-import { DashboardQuickStatusGrid } from '@/common/status/components/molecules/DashboardQuickStatusGrid'
+import { DashboardQuickStatusCard } from '@/common/status/components/DashboardQuickStatusCard'
 import { DashboardText } from '@/common/text/components/DashboardText'
 import { DashboardTitle } from '@/common/titles/components/DashboardTitle'
 import type { DashboardHeroOverlayProps } from '@/features/home/types'
@@ -19,7 +19,11 @@ export const DashboardHeroOverlay = ({
         <DashboardTitle text={headline.title} variant="h1" />
         <DashboardText text={headline.description} variant="onDark" />
         <section className="hidden sm:block" aria-label={quickStatus.ariaLabel}>
-          <DashboardQuickStatusGrid className="grid w-full grid-cols-4 gap-2" items={quickStatus.items} />
+          <div className="grid w-full grid-cols-4 gap-2">
+            {quickStatus.items.map((item) => (
+              <DashboardQuickStatusCard key={item.icon} icon={item.icon} line={item.line} />
+            ))}
+          </div>
         </section>
         <div className="mt-1.5 max-w-44">
           <FreeQuoteButton text={ctaLabel} />

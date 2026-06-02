@@ -11,7 +11,7 @@ export const FreeQuoteButton = ({ text }: FreeQuoteButtonProps) => {
       type="button"
       className="shadow-control bg-gradient-cta grid h-11 w-full min-w-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-2 rounded-2xl px-4"
     >
-      <DashboardText text={text} variant="default" truncate bold as="span" />
+      <DashboardText text={text} variant="default" bold as="span" />
       <ArrowRightIcon className="text-on-media size-5" aria-hidden />
     </button>
   )
