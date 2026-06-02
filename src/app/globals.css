@@ -35,9 +35,9 @@
   /* Overlay — horizontal on hero/photos; stronger at start (left), fades right */
   --background-image-overlay: linear-gradient(
     90deg,
-    oklch(from var(--color-jet-black) l c h / 0.97) 0%,
-    oklch(from var(--color-jet-black) l c h / 0.72) 46%,
-    oklch(from var(--color-jet-black) l c h / 0.18) 100%
+    oklch(from var(--color-jet-black) l c h / 0.91) 0%,
+    oklch(from var(--color-jet-black) l c h / 0.66) 46%,
+    oklch(from var(--color-jet-black) l c h / 0.14) 100%
   );
 
   /* Overlay — bottom-up on service cards */
@@ -84,11 +84,9 @@
   --leading-small: 1.15; /* ~16.4px at 14.3px · ~18.2px at 15.8px */
 }
 
-/* Theme tokens — semantic surfaces and content (light/dark swap).
-   Named by UI surface type (same convention as the shadow utilities),
-   not by raw color, because a theme must swap values at runtime.
-   theme inline makes utilities compile to var() so the .dark / .light
-   class on html (set by next-themes) swaps them. */
+/* Semantic Tailwind colors (surface, content, line, …) wired to runtime CSS vars.
+   theme inline keeps utilities like bg-surface as var(--surface), not a fixed build-time color.
+   Values live in :root (dark default) and .light (user override via next-themes on html). */
 @theme inline {
   --color-canvas: var(--canvas); /* app background */
   --color-surface: var(--surface); /* solid panels · mobile menu */
@@ -108,9 +106,8 @@
   --color-line-strong: var(--line-strong); /* stronger hairline */
 }
 
-/* Dark — production theme (default · maps surface roles onto the palette primitives) */
-:root,
-.dark {
+/* Default theme — dark (production). :root applies on load and when html has class="dark". */
+:root {
   color-scheme: dark;
   --canvas: var(--color-night);
   --surface: var(--color-jet-gray);
@@ -199,6 +196,11 @@
 /* Shadow — nav icons and active links */
 @utility shadow-control {
   @apply shadow-hot-pink/25 shadow-lg;
+}
+
+/* Gradient — primary CTA brand fill (free quote, schedule, profile actions) */
+@utility bg-gradient-cta {
+  @apply from-periwinkle via-hot-pink to-sunset bg-linear-to-r;
 }
 
 /* Glow — hero quick-status icons */

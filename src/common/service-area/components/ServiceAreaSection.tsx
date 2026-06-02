@@ -18,7 +18,7 @@ export const ServiceAreaSection = ({
 }: ServiceAreaSectionProps) => {
   return (
     <section
-      className="bg-jet-gray/70 shadow-panel grid min-h-min shrink-0 gap-4 rounded-4xl border border-white/5 p-4"
+      className="bg-surface-glass shadow-panel border-line grid min-h-min shrink-0 gap-4 rounded-3xl border p-4"
       aria-label={title}
     >
       <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
@@ -26,7 +26,7 @@ export const ServiceAreaSection = ({
         <a
           href={viewMapHref}
           aria-label={viewMapAriaLabel}
-          className="text-body md:text-body-md lg:text-body-lg leading-body text-periwinkle grid grid-flow-col items-center gap-1 font-semibold"
+          className="text-body md:text-body-md lg:text-body-lg leading-body text-accent grid grid-flow-col items-center gap-1 font-semibold"
         >
           {viewMapLabel}
           <ArrowRightIcon className="size-4 shrink-0" aria-hidden />
@@ -41,12 +41,12 @@ export const ServiceAreaSection = ({
               {technicianAvatars.map((avatar, index) => (
                 <div
                   key={avatar.src}
-                  className={`border-jet-gray relative size-8 overflow-hidden rounded-full border-2 ${index > 0 ? '-ml-2.5' : ''}`}
+                  className={`border-surface relative size-8 overflow-hidden rounded-full border-2 ${index > 0 ? '-ml-2.5' : ''}`}
                 >
                   <Image src={avatar.src} alt={avatar.alt} fill sizes="2rem" className="object-cover" />
                 </div>
               ))}
-              <span className="bg-periwinkle border-jet-gray -ml-2.5 grid size-8 shrink-0 items-center justify-center rounded-full border-2">
+              <span className="bg-periwinkle border-surface -ml-2.5 grid size-8 shrink-0 items-center justify-center rounded-full border-2">
                 <DashboardSmallText text={technicianCount} variant="default" bold />
               </span>
             </div>
@@ -54,7 +54,7 @@ export const ServiceAreaSection = ({
           </div>
         </div>
 
-        <div className="shadow-nav min-h-40 overflow-hidden rounded-3xl border border-white/10">
+        <div className="shadow-nav border-line min-h-40 overflow-hidden rounded-3xl border">
           <iframe
             src={mapEmbedUrl}
             title={mapTitle}

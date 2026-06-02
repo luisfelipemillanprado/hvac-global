@@ -9,7 +9,7 @@ import { Poppins } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import '../globals.css'
 
-const { copy, navbar } = homeAssets.dashboard
+const { navbar } = homeAssets.dashboard
 
 /**
  * @description Loads the Poppins font with specified weights and subsets for use in the application.
@@ -79,11 +79,11 @@ export default async function RootLayout({
             label={navbar.brandLabel}
             logo={navbar.brandLogo}
             logoAlt={navbar.brandLogoAlt}
-            menuCloseAriaLabel={copy.menuCloseAriaLabel}
-            menuOpenAriaLabel={copy.menuOpenAriaLabel}
-            navAriaLabel={copy.serviceNavigationAriaLabel}
+            menuCloseAriaLabel={navbar.menuCloseAriaLabel}
+            menuOpenAriaLabel={navbar.menuOpenAriaLabel}
+            navAriaLabel={navbar.navAriaLabel}
             navLinks={navbar.links}
-            themeToggleAriaLabel={copy.themeToggleAriaLabel}
+            themeToggleAriaLabel={navbar.themeToggleAriaLabel}
           />
           {children}
         </Providers>

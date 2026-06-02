@@ -9,7 +9,7 @@ export const OurWorkDetailsButton = ({ ariaLabel }: OurWorkDetailsButtonProps) =
     <button
       type="button"
       aria-label={ariaLabel}
-      className="from-periwinkle via-hot-pink to-sunset shadow-control grid size-10 shrink-0 items-center justify-center rounded-2xl bg-linear-to-r"
+      className="shadow-control bg-gradient-cta grid size-10 items-center justify-center rounded-2xl"
     >
       <ArrowRightIcon className="fill-on-media size-5" aria-hidden />
     </button>

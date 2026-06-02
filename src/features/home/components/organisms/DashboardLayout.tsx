@@ -6,7 +6,6 @@ import { homeAssets } from '@/utils/data/static/pages/home'
 const {
   comments,
   companyProfile,
-  copy,
   hero,
   serviceArea,
   panelPopularServices,
@@ -24,15 +23,10 @@ export const DashboardLayout = () => {
         serviceArea={serviceArea}
       />
 
-      <DashboardHeroColumn
-        hero={hero}
-        quickStatus={quickStatus}
-        quickStatusAriaLabel={copy.quickStatusAriaLabel}
-      />
+      <DashboardHeroColumn hero={hero} quickStatus={quickStatus} />
 
       <DashboardInsightsColumn
         quickStatus={quickStatus}
-        quickStatusAriaLabel={copy.quickStatusAriaLabel}
         panelPopularServices={panelPopularServices}
         ourWorks={ourWorks}
         scheduleServiceCta={scheduleServiceCta}

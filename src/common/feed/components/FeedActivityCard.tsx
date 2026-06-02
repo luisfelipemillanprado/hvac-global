@@ -17,9 +17,9 @@ export const FeedActivityCard = ({
   time,
 }: FeedActivityCardProps) => {
   return (
-    <article className="shadow-panel grid gap-3 rounded-2xl border border-white/5 bg-white/5 p-3">
+    <article className="shadow-panel border-line bg-fill grid gap-3 rounded-2xl border p-3">
       <div className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-start gap-3">
-        <div className="relative size-10 overflow-hidden rounded-full border border-white/5">
+        <div className="border-line relative size-10 overflow-hidden rounded-full border">
           <Image src={avatar} alt={avatarAlt} fill sizes="2.5rem" className="object-cover" />
         </div>
         <div className="grid min-w-0 gap-0.5">
@@ -29,9 +29,9 @@ export const FeedActivityCard = ({
         <button
           type="button"
           aria-label={expandAriaLabel}
-          className="grid size-8 items-center justify-center rounded-full border border-white/5 bg-white/5"
+          className="border-line bg-fill grid size-8 items-center justify-center rounded-full border"
         >
-          <ArrowsPointingOutIcon className="size-4 text-white/80" aria-hidden />
+          <ArrowsPointingOutIcon className="text-content-muted size-4" aria-hidden />
         </button>
       </div>
       <DashboardText text={quote} variant="onDark" />
@@ -39,14 +39,14 @@ export const FeedActivityCard = ({
         <div className="grid min-w-0 grid-flow-col items-center gap-2">
           <span
             aria-label={ratingAriaLabel}
-            className="grid w-fit shrink-0 grid-flow-col items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2.5 py-1"
+            className="border-line-strong bg-fill grid w-fit shrink-0 grid-flow-col items-center gap-1 rounded-full border px-2.5 py-1"
           >
             <StarIcon className="text-sunset size-4" aria-hidden />
             <DashboardSmallText text={ratingValue} variant="default" bold />
           </span>
           <DashboardSmallText text={time} variant="onDark" />
         </div>
-        <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1">
+        <span className="border-line-strong bg-fill rounded-full border px-2.5 py-1">
           <DashboardSmallText text={statusLabel} variant="default" bold />
         </span>
       </div>

@@ -12,17 +12,17 @@ import Link from 'next/link'
 const renderSocialIcon = (network: SocialNetwork) => {
   switch (network) {
     case 'facebook':
-      return <SiFacebook className="size-5 text-white" aria-hidden />
+      return <SiFacebook className="text-content size-5" aria-hidden />
     case 'instagram':
-      return <SiInstagram className="size-5 text-white" aria-hidden />
+      return <SiInstagram className="text-content size-5" aria-hidden />
     case 'youtube':
-      return <SiYoutube className="size-5 text-white" aria-hidden />
+      return <SiYoutube className="text-content size-5" aria-hidden />
     case 'x':
-      return <SiX className="size-4 text-white" aria-hidden />
+      return <SiX className="text-content size-4" aria-hidden />
     case 'whatsapp':
-      return <SiWhatsapp className="size-5 text-white" aria-hidden />
+      return <SiWhatsapp className="text-content size-5" aria-hidden />
     case 'tiktok':
-      return <SiTiktok className="size-4.5 text-white" aria-hidden />
+      return <SiTiktok className="text-content size-4.5" aria-hidden />
   }
 }
 
@@ -36,7 +36,7 @@ export const SocialLinks = ({ links }: SocialLinksProps) => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={link.ariaLabel}
-          className="grid size-10 items-center justify-center rounded-full border border-white/5 bg-white/5"
+          className="border-line bg-fill grid size-10 items-center justify-center rounded-full border"
         >
           {renderSocialIcon(link.network)}
         </Link>

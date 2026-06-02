@@ -8,7 +8,7 @@ import Image from 'next/image'
  */
 export const ServiceCard = ({ title, saveAriaLabel, image, imageAlt }: ServiceCardProps) => {
   return (
-    <article className="bg-jet-gray/70 shadow-panel relative aspect-square min-h-35.5 overflow-hidden rounded-4xl border border-white/5">
+    <article className="bg-surface-glass shadow-panel border-line relative aspect-square min-h-35.5 overflow-hidden rounded-3xl border">
       <Image
         src={image}
         alt={imageAlt}
@@ -23,7 +23,7 @@ export const ServiceCard = ({ title, saveAriaLabel, image, imageAlt }: ServiceCa
           <button
             type="button"
             aria-label={saveAriaLabel}
-            className="from-periwinkle via-hot-pink to-sunset shadow-control grid size-8 items-center justify-center rounded-full bg-linear-to-r text-white"
+            className="from-periwinkle via-hot-pink to-sunset shadow-control text-on-media grid size-8 items-center justify-center rounded-full bg-linear-to-r"
           >
             <PlusIcon className="size-4.5" aria-hidden />
           </button>

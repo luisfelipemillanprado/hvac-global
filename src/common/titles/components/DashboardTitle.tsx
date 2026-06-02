@@ -9,7 +9,7 @@ export const DashboardTitle = ({ text, variant, onDark, id }: DashboardTitleProp
       return (
         <h1
           id={id}
-          className={`text-main-title md:text-main-title-md lg:text-main-title-lg leading-main-title font-black ${onDark ? 'text-ink-black' : 'text-white'}`}
+          className={`text-main-title md:text-main-title-md lg:text-main-title-lg leading-main-title font-black ${onDark ? 'text-content' : 'text-on-media'}`}
         >
           {text}
         </h1>
@@ -18,7 +18,7 @@ export const DashboardTitle = ({ text, variant, onDark, id }: DashboardTitleProp
       return (
         <h3
           id={id}
-          className={`text-tertiary-title md:text-tertiary-title-md lg:text-tertiary-title-lg leading-tertiary-title truncate font-bold ${onDark ? 'text-ink-black' : 'text-white'}`}
+          className={`text-tertiary-title md:text-tertiary-title-md lg:text-tertiary-title-lg leading-tertiary-title truncate font-bold ${onDark ? 'text-content' : 'text-on-media'}`}
         >
           {text}
         </h3>
@@ -27,7 +27,7 @@ export const DashboardTitle = ({ text, variant, onDark, id }: DashboardTitleProp
       return (
         <h2
           id={id}
-          className={`text-secondary-title md:text-secondary-title-md lg:text-secondary-title-lg leading-secondary-title font-black ${onDark ? 'text-ink-black' : 'text-white'}`}
+          className={`text-secondary-title md:text-secondary-title-md lg:text-secondary-title-lg leading-secondary-title font-black ${onDark ? 'text-content' : 'text-on-media'}`}
         >
           {text}
         </h2>

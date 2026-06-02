@@ -8,7 +8,6 @@ import { ArrowRightIcon } from '@heroicons/react/24/solid'
 
 export const DashboardInsightsColumn = ({
   quickStatus,
-  quickStatusAriaLabel,
   panelPopularServices,
   ourWorks,
   scheduleServiceCta,
@@ -18,9 +17,9 @@ export const DashboardInsightsColumn = ({
       <aside className="scrollbar-ghost grid min-h-0 content-start gap-3 lg:h-full lg:overflow-y-auto lg:overscroll-contain">
         <section
           className="bg-surface-glass shadow-panel border-line grid gap-2 rounded-3xl border p-3 sm:hidden"
-          aria-label={quickStatusAriaLabel}
+          aria-label={quickStatus.ariaLabel}
         >
-          <DashboardQuickStatusGrid className="grid grid-cols-2 gap-2" items={quickStatus} />
+          <DashboardQuickStatusGrid className="grid grid-cols-2 gap-2" items={quickStatus.items} />
         </section>
 
         <section

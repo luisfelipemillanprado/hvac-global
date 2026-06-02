@@ -8,7 +8,7 @@ export const DashboardSmallText = ({ text, variant, truncate, bold }: DashboardS
     case 'default':
       return (
         <span
-          className={`text-small md:text-small-md lg:text-small-lg leading-small text-white ${bold ? 'font-bold' : 'font-normal'} ${truncate ? 'max-w-full min-w-0 truncate' : ''}`}
+          className={`text-small md:text-small-md lg:text-small-lg leading-small text-content ${bold ? 'font-bold' : 'font-normal'} ${truncate ? 'max-w-full min-w-0 truncate' : ''}`}
         >
           {text}
         </span>
@@ -16,7 +16,7 @@ export const DashboardSmallText = ({ text, variant, truncate, bold }: DashboardS
     case 'onDark':
       return (
         <span
-          className={`text-small md:text-small-md lg:text-small-lg leading-small text-white/80 ${bold ? 'font-bold' : 'font-normal'} ${truncate ? 'max-w-full min-w-0 truncate' : ''}`}
+          className={`text-small md:text-small-md lg:text-small-lg leading-small text-content-muted ${bold ? 'font-bold' : 'font-normal'} ${truncate ? 'max-w-full min-w-0 truncate' : ''}`}
         >
           {text}
         </span>
@@ -24,7 +24,7 @@ export const DashboardSmallText = ({ text, variant, truncate, bold }: DashboardS
     case 'onLight':
       return (
         <span
-          className={`text-small md:text-small-md lg:text-small-lg leading-small text-ink-black ${bold ? 'font-bold' : 'font-normal'} ${truncate ? 'max-w-full min-w-0 truncate' : ''}`}
+          className={`text-small md:text-small-md lg:text-small-lg leading-small text-content ${bold ? 'font-bold' : 'font-normal'} ${truncate ? 'max-w-full min-w-0 truncate' : ''}`}
         >
           {text}
         </span>

@@ -24,7 +24,7 @@ export const DashboardText = ({ text, variant, truncate, bold, as: Tag = 'p' }: 
     case 'onLight':
       return (
         <Tag
-          className={`text-body md:text-body-md lg:text-body-lg leading-body text-ink-black ${bold ? 'font-bold' : 'font-normal'} ${truncate ? 'max-w-full min-w-0 truncate' : ''}`}
+          className={`text-body md:text-body-md lg:text-body-lg leading-body text-content ${bold ? 'font-bold' : 'font-normal'} ${truncate ? 'max-w-full min-w-0 truncate' : ''}`}
         >
           {text}
         </Tag>

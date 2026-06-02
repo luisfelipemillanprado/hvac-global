@@ -8,16 +8,14 @@ export const ScheduleServiceCta = ({ ariaLabel, subtitle, title }: ScheduleServi
     <button
       type="button"
       aria-label={ariaLabel}
-      className="shadow-control from-periwinkle via-hot-pink to-sunset grid w-full min-w-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 rounded-2xl bg-linear-to-r px-4 py-3"
+      className="shadow-control bg-gradient-cta grid w-full grid-cols-[auto_auto_auto] items-center justify-between rounded-2xl px-4 py-3.5"
     >
-      <CalendarDaysIcon className="size-6 shrink-0 text-white" aria-hidden />
-      <span className="grid min-w-0 justify-items-start gap-0.5 text-left">
-        <DashboardText text={title} variant="default" truncate bold as="span" />
+      <CalendarDaysIcon className="text-on-media size-6" aria-hidden />
+      <span className="grid gap-0.5 text-left">
+        <DashboardText text={title} variant="default" bold as="span" />
         <DashboardSmallText text={subtitle} variant="onDark" />
       </span>
-      <span className="grid size-9 shrink-0 items-center justify-center rounded-full bg-white">
-        <ArrowRightIcon className="text-ink-black size-4" aria-hidden />
-      </span>
+      <ArrowRightIcon className="text-on-media size-6" aria-hidden />
     </button>
   )
 }

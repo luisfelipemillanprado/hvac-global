@@ -1,12 +1,5 @@
 export const homeAssets = {
   dashboard: {
-    copy: {
-      quickStatusAriaLabel: 'Quick status',
-      serviceNavigationAriaLabel: 'Main navigation',
-      menuOpenAriaLabel: 'Open dashboard navigation menu',
-      menuCloseAriaLabel: 'Close dashboard navigation menu',
-      themeToggleAriaLabel: 'Toggle color theme',
-    },
     serviceArea: {
       title: 'Service Area',
       description: 'Proudly serving Houston and surrounding areas.',
@@ -30,6 +23,10 @@ export const homeAssets = {
       brandLabel: "HENRY'S TOP NOTCH",
       brandLogo: '/images/logo/logo.webp',
       brandLogoAlt: '',
+      menuOpenAriaLabel: 'Open dashboard navigation menu',
+      menuCloseAriaLabel: 'Close dashboard navigation menu',
+      navAriaLabel: 'Main navigation',
+      themeToggleAriaLabel: 'Toggle color theme',
       links: [
         { label: 'Home', href: '/', icon: 'home', ariaLabel: 'Go to home' },
         { label: 'Services', href: '#services', icon: 'services', ariaLabel: 'View services' },
@@ -135,12 +132,15 @@ export const homeAssets = {
         },
       ],
     },
-    quickStatus: [
-      { icon: 'licensed', line: 'Licensed', subline: '& Insured' },
-      { icon: 'certified', line: 'Certified', subline: 'Technicians' },
-      { icon: 'sameDay', line: 'Same-Day', subline: 'Service' },
-      { icon: 'financing', line: 'Financing', subline: 'Available' },
-    ],
+    quickStatus: {
+      ariaLabel: 'Quick status',
+      items: [
+        { icon: 'licensed', line: 'Licensed', subline: '& Insured' },
+        { icon: 'certified', line: 'Certified', subline: 'Technicians' },
+        { icon: 'sameDay', line: 'Same-Day', subline: 'Service' },
+        { icon: 'financing', line: 'Financing', subline: 'Available' },
+      ],
+    },
     scheduleServiceCta: {
       title: 'Schedule Your Service',
       subtitle: 'Fast, professional & reliable',
@@ -154,38 +154,38 @@ export const homeAssets = {
         ariaLabel: 'View all popular services',
       },
       items: [
-      {
-        title: 'A/C Repair',
-        rating: '4.9',
-        ratingAriaLabel: '4.9 out of 5 star rating',
-        icon: 'repair',
-        image: '/images/services/service1.webp',
-        imageAlt: 'Technician repairing an air conditioning system',
-      },
-      {
-        title: 'HVAC Maintenance',
-        rating: '4.8',
-        ratingAriaLabel: '4.8 out of 5 star rating',
-        icon: 'maintenance',
-        image: '/images/services/service2.webp',
-        imageAlt: 'HVAC maintenance service in a Houston home',
-      },
-      {
-        title: 'System Installation',
-        rating: '4.9',
-        ratingAriaLabel: '4.9 out of 5 star rating',
-        icon: 'installation',
-        image: '/images/services/service4.webp',
-        imageAlt: 'New HVAC system installation service',
-      },
-      {
-        title: 'Indoor Air Quality',
-        rating: '4.7',
-        ratingAriaLabel: '4.7 out of 5 star rating',
-        icon: 'airQuality',
-        image: '/images/services/service5.webp',
-        imageAlt: 'Indoor air quality and filtration service',
-      },
+        {
+          title: 'A/C Repair',
+          rating: '4.9',
+          ratingAriaLabel: '4.9 out of 5 star rating',
+          icon: 'repair',
+          image: '/images/services/service1.webp',
+          imageAlt: 'Technician repairing an air conditioning system',
+        },
+        {
+          title: 'HVAC Maintenance',
+          rating: '4.8',
+          ratingAriaLabel: '4.8 out of 5 star rating',
+          icon: 'maintenance',
+          image: '/images/services/service2.webp',
+          imageAlt: 'HVAC maintenance service in a Houston home',
+        },
+        {
+          title: 'System Installation',
+          rating: '4.9',
+          ratingAriaLabel: '4.9 out of 5 star rating',
+          icon: 'installation',
+          image: '/images/services/service4.webp',
+          imageAlt: 'New HVAC system installation service',
+        },
+        {
+          title: 'Indoor Air Quality',
+          rating: '4.7',
+          ratingAriaLabel: '4.7 out of 5 star rating',
+          icon: 'airQuality',
+          image: '/images/services/service5.webp',
+          imageAlt: 'Indoor air quality and filtration service',
+        },
       ],
     },
     ourWorks: {
@@ -196,51 +196,51 @@ export const homeAssets = {
         ariaLabel: 'View all our works',
       },
       items: [
-      {
-        badgeIcon: 'install',
-        badgeLabel: 'AC INSTALL',
-        title: 'Smart AC Installation',
-        description:
-          'High-efficiency split system sized, mounted and tuned for fast, even cooling all summer.',
-        image: '/images/services/service4.webp',
-        imageAlt: 'Smart AC installation in a Houston home',
-        detailsAriaLabel: 'View Smart AC Installation details',
-      },
-      {
-        badgeIcon: 'upgrade',
-        badgeLabel: 'SYSTEM UPGRADE',
-        title: 'Central HVAC Upgrade',
-        description:
-          'Full system swap with smart zoning and a high-SEER condenser for lower bills year-round.',
-        image: '/images/services/service3.webp',
-        imageAlt: 'Central HVAC system upgrade in Houston',
-        detailsAriaLabel: 'View Central HVAC Upgrade details',
-      },
-      {
-        badgeIcon: 'heating',
-        badgeLabel: 'HEATING REPAIR',
-        title: 'Furnace Heating Repair',
-        description:
-          'Diagnosed and restored a failing furnace, replacing the igniter for safe, reliable heat.',
-        image: '/images/services/service5.webp',
-        imageAlt: 'Furnace heating system repair in Houston',
-        detailsAriaLabel: 'View Furnace Heating Repair details',
-      },
-      {
-        badgeIcon: 'airQuality',
-        badgeLabel: 'AIR QUALITY',
-        title: 'Indoor Air Quality Setup',
-        description:
-          'Whole-home filtration and fresh-air intake installed to cut allergens and balance humidity.',
-        image: '/images/services/service6.webp',
-        imageAlt: 'Indoor air quality system installation in Houston',
-        detailsAriaLabel: 'View Indoor Air Quality Setup details',
-      },
+        {
+          badgeIcon: 'install',
+          badgeLabel: 'AC INSTALL',
+          title: 'Smart AC Installation',
+          description:
+            'High-efficiency split system sized, mounted and tuned for fast, even cooling all summer.',
+          image: '/images/services/service4.webp',
+          imageAlt: 'Smart AC installation in a Houston home',
+          detailsAriaLabel: 'View Smart AC Installation details',
+        },
+        {
+          badgeIcon: 'upgrade',
+          badgeLabel: 'SYSTEM UPGRADE',
+          title: 'Central HVAC Upgrade',
+          description:
+            'Full system swap with smart zoning and a high-SEER condenser for lower bills year-round.',
+          image: '/images/services/service3.webp',
+          imageAlt: 'Central HVAC system upgrade in Houston',
+          detailsAriaLabel: 'View Central HVAC Upgrade details',
+        },
+        {
+          badgeIcon: 'heating',
+          badgeLabel: 'HEATING REPAIR',
+          title: 'Furnace Heating Repair',
+          description:
+            'Diagnosed and restored a failing furnace, replacing the igniter for safe, reliable heat.',
+          image: '/images/services/service5.webp',
+          imageAlt: 'Furnace heating system repair in Houston',
+          detailsAriaLabel: 'View Furnace Heating Repair details',
+        },
+        {
+          badgeIcon: 'airQuality',
+          badgeLabel: 'AIR QUALITY',
+          title: 'Indoor Air Quality Setup',
+          description:
+            'Whole-home filtration and fresh-air intake installed to cut allergens and balance humidity.',
+          image: '/images/services/service6.webp',
+          imageAlt: 'Indoor air quality system installation in Houston',
+          detailsAriaLabel: 'View Indoor Air Quality Setup details',
+        },
       ],
     },
     hero: {
       imageAriaLabel: 'Houston Comfort Control',
-      image: '/images/services/service1.webp',
+      image: '/images/hero/hero.webp',
       imageAlt: 'Technician repairing an air conditioning system',
       badge: {
         title: 'Always Ready',

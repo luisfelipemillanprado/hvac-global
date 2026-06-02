@@ -30,7 +30,7 @@ export const DashboardGauge = ({ ariaLabel, value }: DashboardGaugeProps) => {
           cy="26"
           r="21"
           fill="none"
-          stroke="oklch(from var(--color-white) l c h / 0.12)"
+          stroke="var(--line)"
           strokeWidth="4"
         />
         <circle
@@ -48,7 +48,7 @@ export const DashboardGauge = ({ ariaLabel, value }: DashboardGaugeProps) => {
       </svg>
 
       <div className="grid size-9 place-items-center rounded-full">
-        <span className="text-secondary-title md:text-secondary-title-md lg:text-secondary-title-lg leading-secondary-title font-black text-white">
+        <span className="text-secondary-title md:text-secondary-title-md lg:text-secondary-title-lg leading-secondary-title font-black text-on-media">
           {value}
         </span>
       </div>

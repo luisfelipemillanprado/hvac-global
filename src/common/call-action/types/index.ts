@@ -1,3 +1,8 @@
+export interface CompanyProfileCtaProps {
+  ariaLabel: string
+  text: string
+}
+
 export interface FreeQuoteButtonProps {
   text: string
 }

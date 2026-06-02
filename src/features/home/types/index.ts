@@ -8,6 +8,15 @@ import type { OurWorkCardProps } from '@/common/work/types'
 
 export type DashboardQuickStatusIcon = 'licensed' | 'certified' | 'sameDay' | 'financing'
 
+export interface DashboardQuickStatusSectionProps {
+  ariaLabel: string
+  items: readonly {
+    icon: DashboardQuickStatusIcon
+    line: string
+    subline: string
+  }[]
+}
+
 export interface DashboardCompanyProfileProps {
   avatar: string
   avatarAlt: string
@@ -51,21 +60,11 @@ export interface DashboardHeroPanelProps {
 
 export interface DashboardHeroColumnProps {
   hero: DashboardHeroPanelProps
-  quickStatus: readonly {
-    icon: DashboardQuickStatusIcon
-    line: string
-    subline: string
-  }[]
-  quickStatusAriaLabel: string
+  quickStatus: DashboardQuickStatusSectionProps
 }
 
 export interface DashboardInsightsColumnProps {
-  quickStatus: readonly {
-    icon: DashboardQuickStatusIcon
-    line: string
-    subline: string
-  }[]
-  quickStatusAriaLabel: string
+  quickStatus: DashboardQuickStatusSectionProps
   panelPopularServices: {
     title: string
     viewAll: { label: string; href: string; ariaLabel: string }
@@ -83,4 +82,4 @@ export type DashboardHeroOverlayProps = Omit<
   DashboardHeroPanelProps,
   'image' | 'imageAlt' | 'imageAriaLabel'
 > &
-  Pick<DashboardHeroColumnProps, 'quickStatus' | 'quickStatusAriaLabel'>
+  Pick<DashboardHeroColumnProps, 'quickStatus'>
