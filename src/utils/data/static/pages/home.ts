@@ -1,7 +1,7 @@
 export const homeAssets = {
   dashboard: {
     serviceArea: {
-      title: 'Service Area',
+      badge: { label: 'Service Area', light: true },
       description: 'Proudly serving Houston and surrounding areas.',
       mapTitle: "Henry's Top Notch Houston service area map",
       viewMapLabel: 'View map',
@@ -80,7 +80,12 @@ export const homeAssets = {
       ],
     },
     comments: {
-      title: 'Customer reviews',
+      badge: { label: 'Customer reviews', light: true },
+      viewAll: {
+        label: 'View all',
+        href: '#reviews',
+        ariaLabel: 'View all customer reviews',
+      },
       items: [
         {
           author: 'Maria G.',
@@ -148,7 +153,7 @@ export const homeAssets = {
       ariaLabel: 'Schedule your HVAC service',
     },
     panelPopularServices: {
-      title: 'Popular Services',
+      badge: { label: 'Popular Services', light: true },
       viewAll: {
         label: 'View all',
         href: '#',
@@ -190,52 +195,52 @@ export const homeAssets = {
       ],
     },
     ourWorks: {
-      title: 'Featured',
+      badge: { label: 'Featured Projects', light: true },
       viewAll: {
         label: 'View all',
         href: '#',
-        ariaLabel: 'View all our works',
+        ariaLabel: 'View all featured projects',
       },
       items: [
         {
           badgeIcon: 'install',
           badgeLabel: 'AC INSTALL',
           title: 'Smart AC Installation',
-          description:
-            'High-efficiency split system sized, mounted and tuned for fast, even cooling all summer.',
+          description: 'Installed high efficiency split system for rapid cooling.',
           image: '/images/services/service4.webp',
           imageAlt: 'Smart AC installation in a Houston home',
           detailsAriaLabel: 'View Smart AC Installation details',
+          menuAriaLabel: 'Open Smart AC Installation menu',
         },
         {
           badgeIcon: 'upgrade',
           badgeLabel: 'SYSTEM UPGRADE',
           title: 'Central HVAC Upgrade',
-          description:
-            'Full system swap with smart zoning and a high-SEER condenser for lower bills year-round.',
+          description: 'Upgraded legacy unit to smart zoned high efficiency.',
           image: '/images/services/service3.webp',
           imageAlt: 'Central HVAC system upgrade in Houston',
           detailsAriaLabel: 'View Central HVAC Upgrade details',
+          menuAriaLabel: 'Open Central HVAC Upgrade menu',
         },
         {
           badgeIcon: 'heating',
           badgeLabel: 'HEATING REPAIR',
           title: 'Furnace Heating Repair',
-          description:
-            'Diagnosed and restored a failing furnace, replacing the igniter for safe, reliable heat.',
+          description: 'Restored failed furnace heating with new reliable igniter.',
           image: '/images/services/service5.webp',
           imageAlt: 'Furnace heating system repair in Houston',
           detailsAriaLabel: 'View Furnace Heating Repair details',
+          menuAriaLabel: 'Open Furnace Heating Repair menu',
         },
         {
           badgeIcon: 'airQuality',
           badgeLabel: 'AIR QUALITY',
           title: 'Indoor Air Quality Setup',
-          description:
-            'Whole-home filtration and fresh-air intake installed to cut allergens and balance humidity.',
+          description: 'Integrated home filtration system to eliminate airborne allergens.',
           image: '/images/services/service6.webp',
           imageAlt: 'Indoor air quality system installation in Houston',
           detailsAriaLabel: 'View Indoor Air Quality Setup details',
+          menuAriaLabel: 'Open Indoor Air Quality Setup menu',
         },
       ],
     },

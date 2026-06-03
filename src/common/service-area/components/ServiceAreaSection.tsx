@@ -1,7 +1,6 @@
 import type { ServiceAreaSectionProps } from '@/common/service-area/types'
 import { DashboardSmallText } from '@/common/text/components/DashboardSmallText'
-import { DashboardTitle } from '@/common/titles/components/DashboardTitle'
-import { ArrowRightIcon } from '@heroicons/react/24/solid'
+import { DashboardSectionHeader } from '@/common/section-header/components/DashboardSectionHeader'
 import Image from 'next/image'
 
 export const ServiceAreaSection = ({
@@ -11,7 +10,7 @@ export const ServiceAreaSection = ({
   technicianAvatars,
   technicianCount,
   techniciansLabel,
-  title,
+  badge,
   viewMapAriaLabel,
   viewMapHref,
   viewMapLabel,
@@ -19,19 +18,12 @@ export const ServiceAreaSection = ({
   return (
     <section
       className="bg-surface-glass shadow-panel border-line grid min-h-min shrink-0 gap-4 rounded-3xl border p-4"
-      aria-label={title}
+      aria-label={badge.label}
     >
-      <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
-        <DashboardTitle text={title} variant="h3" />
-        <a
-          href={viewMapHref}
-          aria-label={viewMapAriaLabel}
-          className="text-body md:text-body-md lg:text-body-lg leading-body text-accent grid grid-flow-col items-center gap-1 font-semibold"
-        >
-          {viewMapLabel}
-          <ArrowRightIcon className="size-4 shrink-0" aria-hidden />
-        </a>
-      </div>
+      <DashboardSectionHeader
+        badge={badge}
+        viewAll={{ href: viewMapHref, label: viewMapLabel, ariaLabel: viewMapAriaLabel }}
+      />
 
       <div className="grid min-w-0 gap-4">
         <div className="grid min-w-0 gap-3">

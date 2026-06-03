@@ -1,17 +1,17 @@
 import type { OurWorkDetailsButtonProps } from '@/common/call-action/types'
-import { ArrowRightIcon } from '@heroicons/react/24/solid'
+import { EllipsisHorizontalIcon } from '@heroicons/react/24/solid'
 
 /**
- * @description Business action button to open the details of one of our works.
+ * @description Business action button to open work item details (card header control).
  */
 export const OurWorkDetailsButton = ({ ariaLabel }: OurWorkDetailsButtonProps) => {
   return (
     <button
       type="button"
       aria-label={ariaLabel}
-      className="shadow-control bg-gradient-cta grid size-10 items-center justify-center rounded-2xl"
+      className="border-line bg-fill grid size-10 shrink-0 items-center justify-center rounded-2xl border"
     >
-      <ArrowRightIcon className="fill-on-media size-5" aria-hidden />
+      <EllipsisHorizontalIcon className="text-content-muted size-5" aria-hidden />
     </button>
   )
 }

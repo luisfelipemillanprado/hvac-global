@@ -1,13 +1,16 @@
-import type { DashboardBadgeIcon } from '@/common/badge/types'
+import type { DashboardBadgeIcon, DashboardBadgeProps } from '@/common/badge/types'
 import type { ScheduleServiceCtaProps } from '@/common/call-action/types'
 import type { FeedActivityCardProps } from '@/common/feed/types'
 import type { ServiceAreaSectionProps } from '@/common/service-area/types'
 import type { PopularServiceCardProps } from '@/common/service/types/popularServiceCard'
-import type { DashboardQuickStatusSectionProps } from '@/common/status/types'
 import type { SocialNetwork } from '@/common/social/types'
+import type { DashboardQuickStatusCardProps } from '@/common/status/types'
 import type { OurWorkCardProps } from '@/common/work/types'
 
-export type { DashboardQuickStatusSectionProps }
+export interface DashboardQuickStatusSectionProps {
+  ariaLabel: string
+  items: readonly DashboardQuickStatusCardProps[]
+}
 
 export interface DashboardCompanyProfileProps {
   avatar: string
@@ -25,8 +28,9 @@ export interface DashboardCompanyProfileProps {
 }
 
 export interface DashboardCommentsSectionProps {
+  badge: DashboardBadgeProps
   items: readonly FeedActivityCardProps[]
-  title: string
+  viewAll: { label: string; href: string; ariaLabel: string }
 }
 
 export interface DashboardMetricsColumnProps {
@@ -58,12 +62,12 @@ export interface DashboardHeroColumnProps {
 export interface DashboardInsightsColumnProps {
   quickStatus: DashboardQuickStatusSectionProps
   panelPopularServices: {
-    title: string
+    badge: DashboardBadgeProps
     viewAll: { label: string; href: string; ariaLabel: string }
     items: readonly PopularServiceCardProps[]
   }
   ourWorks: {
-    title: string
+    badge: DashboardBadgeProps
     viewAll: { label: string; href: string; ariaLabel: string }
     items: readonly OurWorkCardProps[]
   }

@@ -5,6 +5,7 @@ export interface OurWorkCardProps {
   badgeLabel: string
   description: string
   detailsAriaLabel: string
+  menuAriaLabel: string
   image: string
   imageAlt: string
   title: string

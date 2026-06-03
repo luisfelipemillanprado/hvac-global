@@ -16,3 +16,8 @@ export interface ScheduleServiceCtaProps {
   subtitle: string
   title: string
 }
+
+export interface ViewAllButtonProps {
+  ariaLabel: string
+  href: string
+}
