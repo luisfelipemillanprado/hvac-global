@@ -1,12 +1,13 @@
-import type { DashboardBadgeIcon } from '@/common/badge/types'
+import type { ViewAllButtonProps } from '@/common/call-action/types'
 
 export interface OurWorkCardProps {
-  badgeIcon: DashboardBadgeIcon
-  badgeLabel: string
   description: string
   detailsAriaLabel: string
-  menuAriaLabel: string
   image: string
   imageAlt: string
+  ratingAriaLabel: string
+  ratingValue: string
+  time: string
   title: string
+  viewAll: ViewAllButtonProps
 }

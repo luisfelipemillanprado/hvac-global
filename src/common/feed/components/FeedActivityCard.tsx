@@ -1,7 +1,8 @@
 import type { FeedActivityCardProps } from '@/common/feed/types'
+import { DashboardRatingChip } from '@/common/rating/components/DashboardRatingChip'
 import { DashboardSmallText } from '@/common/text/components/DashboardSmallText'
 import { DashboardText } from '@/common/text/components/DashboardText'
-import { ArrowsPointingOutIcon, StarIcon } from '@heroicons/react/24/solid'
+import { ArrowsPointingOutIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 
 export const FeedActivityCard = ({
@@ -37,13 +38,7 @@ export const FeedActivityCard = ({
       <DashboardText text={quote} variant="onDark" />
       <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2">
         <div className="grid min-w-0 grid-flow-col items-center gap-2">
-          <span
-            aria-label={ratingAriaLabel}
-            className="border-line-strong bg-fill grid w-fit shrink-0 grid-flow-col items-center gap-1 rounded-full border px-2.5 py-1"
-          >
-            <StarIcon className="text-sunset size-4" aria-hidden />
-            <DashboardSmallText text={ratingValue} variant="default" bold />
-          </span>
+          <DashboardRatingChip ariaLabel={ratingAriaLabel} value={ratingValue} />
           <DashboardSmallText text={time} variant="onDark" />
         </div>
         <span className="border-line-strong bg-fill rounded-full border px-2.5 py-1">
