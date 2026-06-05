@@ -4,7 +4,7 @@ export interface PopularServiceCardProps {
   icon: PopularServiceIcon
   image: string
   imageAlt: string
-  rating: string
   ratingAriaLabel: string
+  ratingValue: string
   title: string
 }

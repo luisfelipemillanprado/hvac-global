@@ -11,6 +11,11 @@ export interface OurWorkDetailsButtonProps {
   ariaLabel: string
 }
 
+export interface OurWorkViewDetailsButtonProps {
+  ariaLabel: string
+  label: string
+}
+
 export interface ScheduleServiceCtaProps {
   ariaLabel: string
   subtitle: string

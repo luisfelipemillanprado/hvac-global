@@ -22,8 +22,8 @@ export const PopularServiceCard = ({
   icon,
   image,
   imageAlt,
-  rating,
   ratingAriaLabel,
+  ratingValue,
   title,
 }: PopularServiceCardProps) => {
   const Icon = iconByType[icon]
@@ -44,7 +44,7 @@ export const PopularServiceCard = ({
           <DashboardTitle text={title} variant="h3" />
           <div aria-label={ratingAriaLabel} className="grid grid-flow-col items-center gap-1">
             <StarIcon className="text-sunset size-4 shrink-0" aria-hidden />
-            <DashboardSmallText text={rating} variant="default" bold />
+            <DashboardSmallText text={ratingValue} variant="default" bold />
           </div>
         </div>
       </div>

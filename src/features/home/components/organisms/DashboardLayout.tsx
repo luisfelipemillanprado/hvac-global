@@ -8,7 +8,7 @@ const {
   companyProfile,
   hero,
   serviceArea,
-  panelPopularServices,
+  popularServices,
   quickStatus,
   ourWorks,
   scheduleServiceCta,
@@ -27,7 +27,7 @@ export const DashboardLayout = () => {
 
       <DashboardInsightsColumn
         quickStatus={quickStatus}
-        panelPopularServices={panelPopularServices}
+        popularServices={popularServices}
         ourWorks={ourWorks}
         scheduleServiceCta={scheduleServiceCta}
       />

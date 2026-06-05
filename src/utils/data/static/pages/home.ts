@@ -1,7 +1,7 @@
 export const homeAssets = {
   dashboard: {
     serviceArea: {
-      badge: { label: 'Service Area', light: true },
+      badge: { label: 'Service Area' },
       description: 'Proudly serving Houston and surrounding areas.',
       mapTitle: "Henry's Top Notch Houston service area map",
       viewMapLabel: 'View map',
@@ -80,7 +80,7 @@ export const homeAssets = {
       ],
     },
     comments: {
-      badge: { label: 'Customer reviews', light: true },
+      badge: { label: 'Customer reviews' },
       viewAll: {
         label: 'View all',
         href: '#reviews',
@@ -152,8 +152,8 @@ export const homeAssets = {
       subtitle: 'Fast, professional & reliable',
       ariaLabel: 'Schedule your HVAC service',
     },
-    panelPopularServices: {
-      badge: { label: 'Popular Services', light: true },
+    popularServices: {
+      badge: { label: 'Popular Services' },
       viewAll: {
         label: 'View all',
         href: '#',
@@ -162,7 +162,7 @@ export const homeAssets = {
       items: [
         {
           title: 'A/C Repair',
-          rating: '4.9',
+          ratingValue: '4.9',
           ratingAriaLabel: '4.9 out of 5 star rating',
           icon: 'repair',
           image: '/images/services/service1.webp',
@@ -170,7 +170,7 @@ export const homeAssets = {
         },
         {
           title: 'HVAC Maintenance',
-          rating: '4.8',
+          ratingValue: '4.8',
           ratingAriaLabel: '4.8 out of 5 star rating',
           icon: 'maintenance',
           image: '/images/services/service2.webp',
@@ -178,7 +178,7 @@ export const homeAssets = {
         },
         {
           title: 'System Installation',
-          rating: '4.9',
+          ratingValue: '4.9',
           ratingAriaLabel: '4.9 out of 5 star rating',
           icon: 'installation',
           image: '/images/services/service4.webp',
@@ -186,7 +186,7 @@ export const homeAssets = {
         },
         {
           title: 'Indoor Air Quality',
-          rating: '4.7',
+          ratingValue: '4.7',
           ratingAriaLabel: '4.7 out of 5 star rating',
           icon: 'airQuality',
           image: '/images/services/service5.webp',
@@ -195,7 +195,7 @@ export const homeAssets = {
       ],
     },
     ourWorks: {
-      badge: { label: 'Featured Projects', light: true },
+      badge: { label: 'Featured Projects' },
       viewAll: {
         label: 'View all',
         href: '#',
@@ -211,7 +211,10 @@ export const homeAssets = {
           ratingValue: '5',
           ratingAriaLabel: '5 out of 5 star rating',
           time: 'Jun 2024',
-          viewAll: { href: '#', ariaLabel: 'View Smart AC Installation' },
+          viewDetails: {
+            label: 'View details',
+            ariaLabel: 'View details for Smart AC Installation',
+          },
         },
         {
           title: 'Central HVAC Upgrade',
@@ -222,7 +225,10 @@ export const homeAssets = {
           ratingValue: '4.9',
           ratingAriaLabel: '4.9 out of 5 star rating',
           time: 'Mar 2024',
-          viewAll: { href: '#', ariaLabel: 'View Central HVAC Upgrade' },
+          viewDetails: {
+            label: 'View details',
+            ariaLabel: 'View details for Central HVAC Upgrade',
+          },
         },
         {
           title: 'Furnace Heating Repair',
@@ -233,7 +239,10 @@ export const homeAssets = {
           ratingValue: '5',
           ratingAriaLabel: '5 out of 5 star rating',
           time: 'Jan 2024',
-          viewAll: { href: '#', ariaLabel: 'View Furnace Heating Repair' },
+          viewDetails: {
+            label: 'View details',
+            ariaLabel: 'View details for Furnace Heating Repair',
+          },
         },
         {
           title: 'Indoor Air Quality Setup',
@@ -244,7 +253,10 @@ export const homeAssets = {
           ratingValue: '4.8',
           ratingAriaLabel: '4.8 out of 5 star rating',
           time: 'Aug 2024',
-          viewAll: { href: '#', ariaLabel: 'View Indoor Air Quality Setup' },
+          viewDetails: {
+            label: 'View details',
+            ariaLabel: 'View details for Indoor Air Quality Setup',
+          },
         },
       ],
     },

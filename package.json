@@ -2,6 +2,7 @@
   "name": "henrys-top-notch",
   "type": "module",
   "version": "0.1.0",
+  "packageManager": "pnpm@11.5.1",
   "author": "Remiux <remiuxsoft@gmail.com>",
   "homepage": "https://henrys-top-notch.com",
   "repository": {
@@ -27,7 +28,6 @@
     "henrys-top-notch",
     "landing-page",
     "design-system",
-    "ui-components",
     "responsive",
     "performance",
     "accessibility",
@@ -36,6 +36,7 @@
     "startup"
   ],
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "concurrently \"tsx i118builder/index.ts --watch\" \"next dev\"",
     "build": "tsx i118builder/index.ts && next build",
     "i18n:build": "tsx i118builder/index.ts",
@@ -49,16 +50,16 @@
   "dependencies": {
     "@aws-sdk/client-sesv2": "^3.995.0",
     "@heroicons/react": "^2.2.0",
-    "@heroui/react": "3.0.0-beta.8",
-    "@heroui/styles": "3.0.0-beta.8",
     "@icons-pack/react-simple-icons": "^13.8.0",
+    "clsx": "^2.1.1",
+    "embla-carousel": "9.0.0-rc02",
+    "embla-carousel-react": "9.0.0-rc02",
     "next": "16.1.6",
     "next-intl": "^4.9.0",
     "next-themes": "^0.4.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "sharp": "^0.34.5",
-    "swiper": "^12.0.3"
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.4.2",
@@ -74,6 +75,7 @@
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
+    "only-allow": "^1.2.2",
     "prettier": "3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.0",

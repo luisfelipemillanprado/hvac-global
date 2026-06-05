@@ -33,6 +33,18 @@ export interface DashboardCommentsSectionProps {
   viewAll: { label: string; href: string; ariaLabel: string }
 }
 
+export interface DashboardOurWorksSectionProps {
+  badge: DashboardBadgeProps
+  items: readonly OurWorkCardProps[]
+  viewAll: { label: string; href: string; ariaLabel: string }
+}
+
+export interface DashboardPopularServicesSectionProps {
+  badge: DashboardBadgeProps
+  items: readonly PopularServiceCardProps[]
+  viewAll: { label: string; href: string; ariaLabel: string }
+}
+
 export interface DashboardMetricsColumnProps {
   comments: DashboardCommentsSectionProps
   companyProfile: DashboardCompanyProfileProps
@@ -61,16 +73,8 @@ export interface DashboardHeroColumnProps {
 
 export interface DashboardInsightsColumnProps {
   quickStatus: DashboardQuickStatusSectionProps
-  panelPopularServices: {
-    badge: DashboardBadgeProps
-    viewAll: { label: string; href: string; ariaLabel: string }
-    items: readonly PopularServiceCardProps[]
-  }
-  ourWorks: {
-    badge: DashboardBadgeProps
-    viewAll: { label: string; href: string; ariaLabel: string }
-    items: readonly OurWorkCardProps[]
-  }
+  popularServices: DashboardPopularServicesSectionProps
+  ourWorks: DashboardOurWorksSectionProps
   scheduleServiceCta: ScheduleServiceCtaProps
 }
 

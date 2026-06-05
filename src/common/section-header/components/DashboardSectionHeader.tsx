@@ -5,7 +5,7 @@ import type { DashboardSectionHeaderProps } from '@/common/section-header/types'
 export const DashboardSectionHeader = ({ badge, viewAll }: DashboardSectionHeaderProps) => {
   return (
     <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
-      <DashboardBadge {...badge} />
+      <DashboardBadge {...badge} light />
       <ViewAllButton href={viewAll.href} ariaLabel={viewAll.ariaLabel} />
     </div>
   )

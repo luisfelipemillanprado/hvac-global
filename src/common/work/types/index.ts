@@ -1,4 +1,4 @@
-import type { ViewAllButtonProps } from '@/common/call-action/types'
+import type { OurWorkViewDetailsButtonProps } from '@/common/call-action/types'
 
 export interface OurWorkCardProps {
   description: string
@@ -9,5 +9,5 @@ export interface OurWorkCardProps {
   ratingValue: string
   time: string
   title: string
-  viewAll: ViewAllButtonProps
+  viewDetails: OurWorkViewDetailsButtonProps
 }

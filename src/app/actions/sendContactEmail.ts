@@ -4,32 +4,11 @@ import { checkContactUsRateLimit } from '@/utils/security/emails/contact-us/Cont
 import { contactUsTemplate } from '@/utils/templates/emails/contact-us/ContactUsTemplate'
 import { validateContactPayload } from '@/utils/validators/forms/contact/ContactUsValidator'
 import { SESv2Client, SendEmailCommand } from '@aws-sdk/client-sesv2'
-import { NodeHttpHandler } from '@smithy/node-http-handler'
-import https from 'https'
 import { headers } from 'next/headers'
 import 'server-only'
 
-/**
- * @description Initializes an AWS SESv2 client with custom configuration.
- * @constant sesClient
- * @property {string} region - The AWS region where SES is configured (from environment variables).
- * @property {NodeHttpHandler} requestHandler - Custom HTTP handler with specific timeouts and connection settings.
- * @property {https.Agent} httpsAgent - Custom HTTPS agent for connection pooling and keep-alive.
- * @property {number} maxAttempts - Maximum number of retry attempts for failed requests (set to 3).
- * @see {@link SESv2Client}
- * @see {@link NodeHttpHandler}
- * @see {@link https.Agent}
- */
 const sesClient = new SESv2Client({
   region: process.env.AWS_REGION,
-  requestHandler: new NodeHttpHandler({
-    connectionTimeout: 5000,
-    socketTimeout: 10000,
-    httpsAgent: new https.Agent({
-      keepAlive: true,
-      maxSockets: 5,
-    }),
-  }),
   maxAttempts: 3,
 })
 
