@@ -15,7 +15,7 @@ const TWEEN_FACTOR_BASE = 0.84
 
 const clamp = (number: number, min: number, max: number) => Math.min(Math.max(number, min), max)
 
-export const WorkCarousel = ({ works }: WorkCarouselProps) => {
+export const WorkCarousel = ({ badge, works }: WorkCarouselProps) => {
   const options: EmblaOptionsType = {
     loop: true,
     align: 'center',
@@ -38,37 +38,27 @@ export const WorkCarousel = ({ works }: WorkCarouselProps) => {
       const scrollProgress = emblaApi.scrollProgress()
       const slidesInView = emblaApi.slidesInView()
       const isScrollEvent = event?.type === 'scroll'
-
       emblaApi.snapList().forEach((scrollSnap, snapIndex) => {
         let diffToTarget = scrollSnap - scrollProgress
-
         const slidesInSnap = engine.scrollSnapList.slidesBySnap[snapIndex]
-
         slidesInSnap.forEach((slideIndex) => {
           if (isScrollEvent && !slidesInView.includes(slideIndex)) return
-
           if (engine.options.loop) {
             engine.slideLooper.loopPoints.forEach((loopItem) => {
               const target = loopItem.target()
-
               if (slideIndex === loopItem.index && target !== 0) {
                 const sign = Math.sign(target)
-
                 if (sign === -1) {
                   diffToTarget = scrollSnap - (1 + scrollProgress)
                 }
-
                 if (sign === 1) {
                   diffToTarget = scrollSnap + (1 - scrollProgress)
                 }
               }
             })
           }
-
           const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current)
-
           const opacity = clamp(tweenValue, 0, 1)
-
           emblaApi.slideNodes()[slideIndex].style.opacity = opacity.toString()
         })
       })
@@ -79,22 +69,26 @@ export const WorkCarousel = ({ works }: WorkCarouselProps) => {
   useEffect(() => {
     if (!emblaApi) return
 
-    setTweenFactor(emblaApi)
-    tweenOpacity(emblaApi)
-
-    emblaApi.on('scroll', tweenOpacity)
-    emblaApi.on('reinit', () => {
+    const syncTween = () => {
       setTweenFactor(emblaApi)
       tweenOpacity(emblaApi)
-    })
+    }
+
+    emblaApi.on('scroll', tweenOpacity).on('reinit', syncTween)
+
+    queueMicrotask(syncTween)
+
+    return () => {
+      emblaApi.off('scroll', tweenOpacity).off('reinit', syncTween)
+    }
   }, [emblaApi, setTweenFactor, tweenOpacity])
 
   return (
     <div className="overflow-hidden" ref={emblaRef}>
       <div className="-ml-4 flex">
         {works.map((item) => (
-          <div key={item.title} className="min-w-0 flex-[0_0_80%] pl-4">
-            <OurWorkCard {...item} />
+          <div key={item.title} className="min-w-0 flex-[0_0_82%] pl-4">
+            <OurWorkCard {...item} badge={badge} />
           </div>
         ))}
       </div>

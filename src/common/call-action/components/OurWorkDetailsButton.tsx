@@ -1,5 +1,5 @@
 import type { OurWorkDetailsButtonProps } from '@/common/call-action/types'
-import { EllipsisHorizontalIcon } from '@heroicons/react/24/solid'
+import { ArrowLongRightIcon } from '@heroicons/react/24/solid'
 
 /**
  * @description Business action button to open work item details (card header control).
@@ -9,9 +9,9 @@ export const OurWorkDetailsButton = ({ ariaLabel }: OurWorkDetailsButtonProps) =
     <button
       type="button"
       aria-label={ariaLabel}
-      className="border-line bg-fill grid size-10 shrink-0 items-center justify-center rounded-2xl border"
+      className="border-line bg-surface-sunken grid size-10 shrink-0 items-center justify-center rounded-2xl border"
     >
-      <EllipsisHorizontalIcon className="text-content-muted size-5" aria-hidden />
+      <ArrowLongRightIcon className="fill-on-media size-5" aria-hidden />
     </button>
   )
 }

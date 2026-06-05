@@ -29,9 +29,6 @@ const renderBadgeIcon = (icon: DashboardBadgeIcon) => {
   }
 }
 
-/**
- * @description Rounded glass pill with a bold small label and an optional icon on either side.
- */
 export const DashboardBadge = ({
   label,
   icon,

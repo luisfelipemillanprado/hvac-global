@@ -5,8 +5,7 @@ export interface OurWorkCardProps {
   detailsAriaLabel: string
   image: string
   imageAlt: string
-  ratingAriaLabel: string
-  ratingValue: string
+  location: string
   time: string
   title: string
   viewDetails: OurWorkViewDetailsButtonProps

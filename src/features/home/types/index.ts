@@ -34,9 +34,9 @@ export interface DashboardCommentsSectionProps {
 }
 
 export interface DashboardOurWorksSectionProps {
+  ariaLabel: string
   badge: DashboardBadgeProps
   items: readonly OurWorkCardProps[]
-  viewAll: { label: string; href: string; ariaLabel: string }
 }
 
 export interface DashboardPopularServicesSectionProps {
