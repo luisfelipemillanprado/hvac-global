@@ -29,7 +29,7 @@ export const OurWorkCard = ({
       />
       <div className="bg-overlay-bottom pointer-events-none absolute inset-0" aria-hidden />
 
-      <div className="absolute inset-x-0 top-0 z-10 flex justify-end p-4">
+      <div className="absolute inset-x-0 top-0 z-10 flex p-4">
         <DashboardBadge {...badge} />
       </div>
 
@@ -37,7 +37,7 @@ export const OurWorkCard = ({
         <OurWorkDetailsCtaButton ariaLabel={viewDetails.ariaLabel} label={viewDetails.label} />
       </div>
 
-      <div className="absolute inset-x-0 bottom-0 z-10 grid gap-2 p-4">
+      <div className="absolute inset-x-0 bottom-0 z-10 grid gap-3 p-4">
         <DashboardTitle text={title} variant="h3" />
         <div className="grid grid-flow-col items-center justify-start gap-1.5">
           <MapPinIcon className="fill-accent size-5 shrink-0" aria-hidden />
