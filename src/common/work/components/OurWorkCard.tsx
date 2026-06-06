@@ -17,7 +17,7 @@ export const OurWorkCard = ({
   viewDetails,
 }: OurWorkCardProps & { badge: DashboardBadgeProps }) => {
   return (
-    <article className="shadow-panel relative h-80 overflow-hidden rounded-3xl">
+    <article className="shadow-panel border-line relative h-80 overflow-hidden rounded-3xl border">
       <Image
         src={image}
         alt={imageAlt}

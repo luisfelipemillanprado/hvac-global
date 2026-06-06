@@ -197,16 +197,16 @@ export const homeAssets = {
     ourWorks: {
       ariaLabel: 'Featured Projects',
       badge: {
-        label: 'Featured',
+        label: 'Featured Projects',
         icon: 'bolt',
       },
       items: [
         {
-          title: 'Emergency AC Repair',
-          description: 'Restored cooling same day with full system diagnostic and repair.',
-          image: '/images/services/service1.webp',
+          title: 'AC Condenser Swap',
+          description: 'Replaced faulty outdoor unit with efficient new condenser.',
+          image: '/images/works/work1.webp',
           imageAlt: 'Emergency air conditioning repair in a Houston home',
-          location: 'Houston, TX',
+          location: 'The Heights, Houston, TX',
           detailsAriaLabel: 'View Emergency AC Repair details',
           time: 'Jul 2024',
           viewDetails: {
@@ -215,11 +215,11 @@ export const homeAssets = {
           },
         },
         {
-          title: 'Preventive HVAC Tune-Up',
-          description: 'Completed full seasonal maintenance to prevent breakdowns and lower bills.',
-          image: '/images/services/service2.webp',
+          title: 'Mini-Split Install',
+          description: 'Mounted quiet wall units for independent room cooling.',
+          image: '/images/works/work3.webp',
           imageAlt: 'Preventive HVAC tune-up service in Houston',
-          location: 'Houston, TX',
+          location: 'Montrose, Houston, TX',
           detailsAriaLabel: 'View Preventive HVAC Tune-Up details',
           time: 'May 2024',
           viewDetails: {
@@ -228,11 +228,11 @@ export const homeAssets = {
           },
         },
         {
-          title: 'Central HVAC Upgrade',
-          description: 'Upgraded legacy unit to smart zoned high efficiency.',
-          image: '/images/services/service3.webp',
+          title: 'Coil Replacement',
+          description: 'Replaced leaking indoor coil to restore system pressure.',
+          image: '/images/works/work4.webp',
           imageAlt: 'Central HVAC system upgrade in Houston',
-          location: 'Houston, TX',
+          location: 'West University Place, TX',
           detailsAriaLabel: 'View Central HVAC Upgrade details',
           time: 'Mar 2024',
           viewDetails: {
@@ -241,11 +241,11 @@ export const homeAssets = {
           },
         },
         {
-          title: 'Smart AC Installation',
-          description: 'Installed high efficiency split system for rapid cooling.',
-          image: '/images/services/service4.webp',
+          title: 'Ductwork Sealing',
+          description: 'Sealed attic ventilation channels to stop energy loss.',
+          image: '/images/works/work4.webp',
           imageAlt: 'Smart AC installation in a Houston home',
-          location: 'Houston, TX',
+          location: 'Memorial, Houston, TX',
           detailsAriaLabel: 'View Smart AC Installation details',
           time: 'Jun 2024',
           viewDetails: {
@@ -254,11 +254,11 @@ export const homeAssets = {
           },
         },
         {
-          title: 'Furnace Heating Repair',
-          description: 'Restored failed furnace heating with new reliable igniter.',
-          image: '/images/services/service5.webp',
+          title: 'Furnace Upgrade',
+          description: 'Replaced outdated gas heating with efficient modern system.',
+          image: '/images/works/work5.webp',
           imageAlt: 'Furnace heating system repair in Houston',
-          location: 'Houston, TX',
+          location: 'River Oaks, Houston, TX',
           detailsAriaLabel: 'View Furnace Heating Repair details',
           time: 'Jan 2024',
           viewDetails: {
@@ -267,11 +267,11 @@ export const homeAssets = {
           },
         },
         {
-          title: 'Indoor Air Quality Setup',
-          description: 'Integrated home filtration system to eliminate airborne allergens.',
-          image: '/images/services/service6.webp',
+          title: 'UV Purifier Setup',
+          description: 'Installed ultraviolet light scrubbers to neutralize indoor pathogens.',
+          image: '/images/works/work2.webp',
           imageAlt: 'Indoor air quality system installation in Houston',
-          location: 'Houston, TX',
+          location: 'The Woodlands, TX',
           detailsAriaLabel: 'View Indoor Air Quality Setup details',
           time: 'Aug 2024',
           viewDetails: {

@@ -58,7 +58,7 @@ export const WorkCarousel = ({ badge, works }: WorkCarouselProps) => {
             })
           }
           const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current)
-          const opacity = clamp(tweenValue, 0, 1)
+          const opacity = clamp(tweenValue, 0.5, 1)
           emblaApi.slideNodes()[slideIndex].style.opacity = opacity.toString()
         })
       })
