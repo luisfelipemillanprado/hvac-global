@@ -1,5 +1,4 @@
 import { DashboardBadge } from '@/common/badge/components/DashboardBadge'
-import type { DashboardBadgeProps } from '@/common/badge/types'
 import { OurWorkDetailsCtaButton } from '@/common/call-action/components/OurWorkDetailsCtaButton'
 import { DashboardText } from '@/common/text/components/DashboardText'
 import { DashboardTitle } from '@/common/titles/components/DashboardTitle'
@@ -14,10 +13,10 @@ export const OurWorkCard = ({
   imageAlt,
   location,
   title,
-  viewDetails,
-}: OurWorkCardProps & { badge: DashboardBadgeProps }) => {
+  viewDetails: { ariaLabel },
+}: OurWorkCardProps) => {
   return (
-    <article className="shadow-panel border-line relative h-80 overflow-hidden rounded-3xl border">
+    <article className="shadow-panel border-line relative h-74 overflow-hidden rounded-2xl border">
       <Image
         src={image}
         alt={imageAlt}
@@ -34,7 +33,7 @@ export const OurWorkCard = ({
       </div>
 
       <div className="absolute inset-0 z-10 grid place-items-center">
-        <OurWorkDetailsCtaButton ariaLabel={viewDetails.ariaLabel} label={viewDetails.label} />
+        <OurWorkDetailsCtaButton ariaLabel={ariaLabel} />
       </div>
 
       <div className="absolute inset-x-0 bottom-0 z-10 grid gap-3 p-4">

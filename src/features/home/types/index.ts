@@ -5,7 +5,7 @@ import type { ServiceAreaSectionProps } from '@/common/service-area/types'
 import type { PopularServiceCardProps } from '@/common/service/types'
 import type { SocialNetwork } from '@/common/social/types'
 import type { DashboardQuickStatusCardProps } from '@/common/status/types'
-import type { OurWorkCardProps } from '@/common/work/types'
+import type { OurWorkItemProps } from '@/common/work/types'
 
 export interface DashboardQuickStatusSectionProps {
   ariaLabel: string
@@ -34,9 +34,9 @@ export interface DashboardCommentsSectionProps {
 }
 
 export interface DashboardOurWorksSectionProps {
-  ariaLabel: string
   badge: DashboardBadgeProps
-  items: readonly OurWorkCardProps[]
+  items: readonly OurWorkItemProps[]
+  viewAll: { label: string; href: string; ariaLabel: string }
 }
 
 export interface DashboardPopularServicesSectionProps {

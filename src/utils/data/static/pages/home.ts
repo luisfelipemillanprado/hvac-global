@@ -83,13 +83,13 @@ export const homeAssets = {
       badge: { label: 'Customer Reviews' },
       viewAll: {
         label: 'View all',
-        href: '#reviews',
+        href: '/reviews',
         ariaLabel: 'View all customer reviews',
       },
       items: [
         {
           author: 'Maria G.',
-          quote: 'Fast midnight AC fix and transparent pricing.',
+          quote: 'Fast midnight AC fix with totally transparent pricing.',
           role: 'Homeowner',
           ratingValue: '4.9',
           ratingAriaLabel: '4.9 out of 5 star rating',
@@ -102,7 +102,7 @@ export const homeAssets = {
         {
           author: 'James R.',
           quote: 'Great tune-up. Saved us from summer breakdowns.',
-          role: 'Property manager',
+          role: 'Property Owner',
           ratingValue: '5.0',
           ratingAriaLabel: '5 out of 5 star rating',
           time: 'Yesterday',
@@ -113,7 +113,7 @@ export const homeAssets = {
         },
         {
           author: 'Linda P.',
-          quote: 'Saved our family during the winter storm.',
+          quote: 'Saved our family freeze during the winter storm.',
           role: 'Homeowner',
           ratingValue: '4.8',
           ratingAriaLabel: '4.8 out of 5 star rating',
@@ -125,7 +125,7 @@ export const homeAssets = {
         },
         {
           author: 'David K.',
-          quote: 'Professional system replacement and spotless cleanup.',
+          quote: 'Professional replacement and spotless cleanup.',
           role: 'Homeowner',
           ratingValue: '5.0',
           ratingAriaLabel: '5 out of 5 star rating',
@@ -207,87 +207,64 @@ export const homeAssets = {
       ],
     },
     ourWorks: {
-      ariaLabel: 'Featured Projects',
-      badge: {
-        label: 'Featured Projects',
-        icon: 'bolt',
+      badge: { label: 'Featured Projects' },
+      viewAll: {
+        label: 'View all',
+        href: '#',
+        ariaLabel: 'View all featured projects',
       },
       items: [
         {
           title: 'AC Condenser Swap',
-          description: 'Replaced faulty outdoor unit with efficient new condenser.',
           image: '/images/works/work1.webp',
           imageAlt: 'Emergency air conditioning repair in a Houston home',
           location: 'The Heights, Houston, TX',
-          detailsAriaLabel: 'View Emergency AC Repair details',
-          time: 'Jul 2024',
           viewDetails: {
-            label: 'View details',
             ariaLabel: 'View details for Emergency AC Repair',
           },
         },
         {
           title: 'Mini-Split Install',
-          description: 'Mounted quiet wall units for independent room cooling.',
           image: '/images/works/work3.webp',
           imageAlt: 'Preventive HVAC tune-up service in Houston',
           location: 'Montrose, Houston, TX',
-          detailsAriaLabel: 'View Preventive HVAC Tune-Up details',
-          time: 'May 2024',
           viewDetails: {
-            label: 'View details',
             ariaLabel: 'View details for Preventive HVAC Tune-Up',
           },
         },
         {
           title: 'Coil Replacement',
-          description: 'Replaced leaking indoor coil to restore system pressure.',
           image: '/images/works/work4.webp',
           imageAlt: 'Central HVAC system upgrade in Houston',
           location: 'West University Place, TX',
-          detailsAriaLabel: 'View Central HVAC Upgrade details',
-          time: 'Mar 2024',
           viewDetails: {
-            label: 'View details',
             ariaLabel: 'View details for Central HVAC Upgrade',
           },
         },
         {
           title: 'Ductwork Sealing',
-          description: 'Sealed attic ventilation channels to stop energy loss.',
           image: '/images/works/work4.webp',
           imageAlt: 'Smart AC installation in a Houston home',
           location: 'Memorial, Houston, TX',
-          detailsAriaLabel: 'View Smart AC Installation details',
-          time: 'Jun 2024',
           viewDetails: {
-            label: 'View details',
             ariaLabel: 'View details for Smart AC Installation',
           },
         },
         {
           title: 'Furnace Upgrade',
-          description: 'Replaced outdated gas heating with efficient modern system.',
           image: '/images/works/work5.webp',
           imageAlt: 'Furnace heating system repair in Houston',
           location: 'River Oaks, Houston, TX',
-          detailsAriaLabel: 'View Furnace Heating Repair details',
-          time: 'Jan 2024',
           viewDetails: {
-            label: 'View details',
             ariaLabel: 'View details for Furnace Heating Repair',
           },
         },
         {
           title: 'UV Purifier Setup',
-          description: 'Installed ultraviolet light scrubbers to neutralize indoor pathogens.',
           image: '/images/works/work2.webp',
           imageAlt: 'Indoor air quality system installation in Houston',
           location: 'The Woodlands, TX',
-          detailsAriaLabel: 'View Indoor Air Quality Setup details',
-          time: 'Aug 2024',
           viewDetails: {
-            label: 'View details',
             ariaLabel: 'View details for Indoor Air Quality Setup',
           },
         },

@@ -1,12 +1,14 @@
-import type { OurWorkViewDetailsButtonProps } from '@/common/call-action/types'
+import type { DashboardBadgeProps } from '@/common/badge/types'
+import type { OurWorkDetailsCtaButtonProps } from '@/common/call-action/types'
 
-export interface OurWorkCardProps {
-  description: string
-  detailsAriaLabel: string
+export interface OurWorkItemProps {
   image: string
   imageAlt: string
   location: string
-  time: string
   title: string
-  viewDetails: OurWorkViewDetailsButtonProps
+  viewDetails: OurWorkDetailsCtaButtonProps
+}
+
+export interface OurWorkCardProps extends OurWorkItemProps {
+  badge: DashboardBadgeProps
 }
