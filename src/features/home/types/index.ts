@@ -2,7 +2,7 @@ import type { DashboardBadgeIcon, DashboardBadgeProps } from '@/common/badge/typ
 import type { ScheduleServiceCtaProps } from '@/common/call-action/types'
 import type { FeedActivityCardProps } from '@/common/feed/types'
 import type { ServiceAreaSectionProps } from '@/common/service-area/types'
-import type { PopularServiceCardProps } from '@/common/service/types/popularServiceCard'
+import type { PopularServiceCardProps } from '@/common/service/types'
 import type { SocialNetwork } from '@/common/social/types'
 import type { DashboardQuickStatusCardProps } from '@/common/status/types'
 import type { OurWorkCardProps } from '@/common/work/types'

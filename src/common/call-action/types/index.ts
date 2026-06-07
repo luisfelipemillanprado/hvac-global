@@ -7,10 +7,6 @@ export interface FreeQuoteButtonProps {
   text: string
 }
 
-export interface OurWorkDetailsButtonProps {
-  ariaLabel: string
-}
-
 export interface OurWorkViewDetailsButtonProps {
   ariaLabel: string
   label: string
@@ -25,4 +21,8 @@ export interface ScheduleServiceCtaProps {
 export interface ViewAllButtonProps {
   ariaLabel: string
   href: string
+}
+
+export interface ViewDetailsButtonProps {
+  ariaLabel: string
 }

@@ -1,5 +1,5 @@
 import { DashboardSectionHeader } from '@/common/section-header/components/DashboardSectionHeader'
-import { PopularServiceCard } from '@/common/service/components/molecules/PopularServiceCard'
+import { PopularServiceCard } from '@/common/service/components/organisms/PopularServiceCard'
 import type { DashboardPopularServicesSectionProps } from '@/features/home/types'
 
 export const DashboardPopularServicesSection = ({
@@ -13,7 +13,7 @@ export const DashboardPopularServicesSection = ({
       aria-label={badge.label}
     >
       <DashboardSectionHeader badge={badge} viewAll={viewAll} />
-      <div className="scrollbar-ghost grid grid-flow-col gap-3 overflow-x-auto">
+      <div className="grid grid-cols-1 gap-3">
         {items.map((service) => (
           <PopularServiceCard key={service.title} {...service} />
         ))}
