@@ -17,12 +17,12 @@ export const PopularServiceCard = ({
   title,
 }: PopularServiceCardProps) => {
   return (
-    <article className="bg-fill shadow-panel border-line grid w-full min-w-0 gap-4.5 rounded-2xl border p-4">
+    <article className="bg-fill shadow-panel border-line grid w-full min-w-0 gap-4.25 rounded-2xl border p-4">
       <div className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-start gap-3">
-        <div className="border-line relative size-11 shrink-0 overflow-hidden rounded-2xl border">
+        <div className="relative size-11 shrink-0 overflow-hidden rounded-2xl">
           <Image src={image} alt={imageAlt} fill sizes="3.125rem" className="object-cover" />
         </div>
-        <div className="grid min-w-0 gap-0.5 self-center">
+        <div className="grid min-w-0 gap-1 self-center">
           <DashboardSmallText text={title} variant="default" bold />
         </div>
         <ViewDetailsButton ariaLabel={expandAriaLabel} />
